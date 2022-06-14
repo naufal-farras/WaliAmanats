@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index_OJK";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Laporan Tahunan Otoritas Jasa Keuangan (OJK)</h3>
+
+<hr />
+<div class="form-group row">
+    <label class="col-sm-2 control-label" for="tahun">Tahun Pelaporan</label>
+    <div class="col-sm-3">
+        <input type="text" class="form-control" id="tahun" placeholder="Pilih Tahun Laporan" autocomplete="off" />
+    </div>
+
+    <label class="col-sm-1 control-label" for="periode">Periode</label>
+    <div class="col-sm-5">
+        <select class="form-control" id="periode">
+            <option value="0" selected>-- Pilih Periode --</option>
+            <option value="false">Januari - Juni (6 Bulan)</option>
+            <option value="true">Januari - Desember (1 Tahun)</option>
+        </select>
+    </div>
+</div>
+
+<input class="btn btn-primary" type="submit" id="Cetak" value="Cetak Laporan">
+
+
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#Cetak").click(function () {
+                var periode = $('#periode').val();;
+                var tahun = $("#tahun").val();
+
+                if (periode == '0' || tahun == '') {
+                    alert("Form tidak boleh kosong");
+                } else {
+                    @*var url = "@Url.Action('LaporanOJK', 'CetakSurat')";*@
+                    var url = '@Url.Action("LaporanOJK", "CetakSurat")?periode=' + periode + '&tahun=' + tahun;
+                    document.location = url;
+                }
+
+            });
+        });
+
+
+
+
+        // *** (year only) ***
+        $(function () {
+            $('#tahun').datepicker({
+                yearRange: "c-100:c",
+                changeMonth: false,
+                changeYear: true,
+                showButtonPanel: true,
+                closeText: 'Select',
+                currentText: 'This year',
+                onClose: function (dateText, inst) {
+                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                    $(this).val($.datepicker.formatDate("yy", new Date(year, 0, 1)));
+                },
+                beforeShow: function (input, inst) {
+                    if ($(this).val() != '') {
+                        var tmpyear = $(this).val();
+                        $(this).datepicker('option', 'defaultDate', new Date(tmpyear, 0, 1));
+                    }
+                }
+            }).focus(function () {
+                $(".ui-datepicker-month").hide();
+                $(".ui-datepicker-calendar").hide();
+                $(".ui-datepicker-current").hide();
+                /*$(".ui-datepicker-close").hide();*/
+                $(".ui-datepicker-prev").hide();
+                $(".ui-datepicker-next").hide();
+                $("#ui-datepicker-div").position({
+                    my: "left top",
+                    at: "left bottom",
+                    of: $(this)
+                });
+            }).attr("readonly", false);
+        });
+        // --------------------------------
+
+
+    </script>
+}

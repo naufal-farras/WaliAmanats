@@ -1,0 +1,260 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="text-align:center;">Master Hari Libur</h1>
+
+<hr />
+<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="ClearScreen()" data-backdrop="static" data-keyboard="false";>Tambah</button>
+<hr />
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Input Data</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <input type="hidden" id="HariLiburId" />
+                        <label class="col-sm-3 control-label">Hari Libur</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="N_HariLiburTxt" placeholder="Tahun Baru 2020" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Tanggal</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control" id="T_LiburTxt" value="<%:DateTime.Now.ToString('o')%>" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="Save" onclick="Validation();">Tambah</button>
+                <button type="button" class="btn btn-primary" id="Update" onclick="Validation();">Perbarui</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table id="table" class="table-bordered">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Hari Libur</th>
+            <th>Tanggal</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+</table>
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script src="~/Scripts/moment-with-locales.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var t = $("#table").DataTable({
+                "ajax": {
+                    "url": "@Url.Action("GetAll","HariLibur")",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "order": [2,'asc']
+              
+
+                ,
+                "columns": [
+                    { "data": null },
+                    { "data": "Nama" },
+
+                    {
+                        "data": "TanggalLibur", "render": function (d) {
+                            var date = formatDates2(d);
+                            return "<div style='display:none'>" + date + "</div>" +' ' + moment(d).locale('id').format('dddd, ll');
+                            
+                        }
+                    },
+                    {
+                        "render": function (data, type, row) {
+                            return "<a class='btn btn-warning btn-sm' onclick = GetById('" + row.Id + "');><i class='fa fa-edit'></i></a> <a class='btn btn-danger btn-sm' onclick = Delete('" + row.Id + "');><i class='fa fa-trash'></i></a> ";
+                        },
+
+                    },
+                ]
+            })
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+        })
+        function formatDates2(dates) {
+            date = new Date(parseInt(dates.substr(6)));
+            var year = date.getFullYear().toString().substr(-2);
+            var month = (1 + date.getMonth()).toString();
+            month = month.length > 1 ? month : '0' + month;
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+            var all = month + '/' + day + '/' + year;
+            return all;
+        }
+        function Save() {
+            var hariLibur = new Object();
+            hariLibur.Nama = $("#N_HariLiburTxt").val();
+            hariLibur.TanggalLibur = $("#T_LiburTxt").val();
+            $.ajax({
+                "url": "@Url.Action("Save","HariLibur")",
+                "type": "POST",
+                "datatype": "json",
+                "data": hariLibur
+            }).then((result) => {
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Data Berhasil Diinput!.',
+                        'success'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+                else {
+                    Swal.fire(
+                        'Failed!',
+                        'Data Tidak Berhasil Diinput!.',
+                        'Failed'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+        function Edit(Id) {
+            debugger;
+            var hariLibur = new Object();
+            hariLibur.Id = $("#HariLiburId").val();
+            hariLibur.Nama = $("#N_HariLiburTxt").val();
+            hariLibur.TanggalLibur = $("#T_LiburTxt").val();
+            $.ajax({
+                "url": "@Url.Action("Save","HariLibur")",
+                "type": "POST",
+                "datatype": "json",
+                "data": { Id: hariLibur.Id, Nama: hariLibur.Nama, TanggalLibur: hariLibur.TanggalLibur }
+            }).then((result) => {
+                debugger;
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Data berhasil Diupdate.',
+                        'success'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+                else {
+                    Swal.fire(
+                        'Failed!',
+                        'Data Tidak berhasil Diupdate.',
+                        'Failed'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+
+            })
+        }
+        function GetById(Id) {
+            debugger
+            $.ajax({
+                "url": "@Url.Action("GetById","HariLibur")",
+                "type": "GET",
+                "datatype": "json",
+                "data": { Id: Id }
+            }).then((result) => {
+                var d = moment(result.data.TanggalLibur).format('YYYY-MM-DD')
+                console.log(d);
+                if (result != null) {
+                    $("#HariLiburId").val(result.data.Id);
+                    $("#N_HariLiburTxt").val(result.data.Nama);
+                    $("#T_LiburTxt").val(d);
+                    $("#myModal").modal('show');
+                    $("#Update").show();
+                    $("#Save").hide();
+                }
+            })
+        }
+        function Delete(Id) {
+            Swal.fire({
+                title: 'Apakah Anda Yakin?',
+                text: "Data Terhapus Tidak Bisa Dikembalikan!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, Hapus Data Ini!'
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("Delete","HariLibur")",
+                        "datatype": "json",
+                        "data": { Id: Id }
+                    }).then((result) => {
+                        debugger;
+                        if (result.data != 0) {
+                            Swal.fire(
+                                'Success!',
+                                'Data Terhapus.',
+                                'success'
+                            ).then(() => {
+                                $('#table').DataTable().ajax.reload();
+                            })
+                        }
+                        else {
+                            Swal.fire(
+                                'Failed!',
+                                'Data Tidak Terhapus.',
+                                'failed'
+                            ).then(() => {
+                                $('#table').DataTable().ajax.reload();
+                            })
+                        }
+                        $("#myModal").modal('hide');
+                        $('#table_role').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+
+        function ClearScreen() {
+            $("#HariLiburId").val('');
+            $("#N_HariLiburTxt").val('');
+            $("#T_LiburTxt").val('');
+            $("#Update").hide();
+            $("#Save").show();
+        }
+        function Validation() {
+            if ($("#N_HariLiburTxt").val() == "" || $("#N_HariLiburTxt").val() == " ") {
+                Swal.fire('Hari Libur Belum di Isi!');
+            }
+            else if ($("#T_LiburTxt").val() == "" || $("#T_LiburTxt").val() == " ") {
+                Swal.fire('Tanggal Libur Belum di Isi!');
+            }
+            else if ($("#HariLiburId").val() == "" || $("#HariLiburId").val() == " ") {
+                Save();
+            }
+            else {
+                Edit($("#HariLiburId").val());
+            }
+        }
+    </script>
+}

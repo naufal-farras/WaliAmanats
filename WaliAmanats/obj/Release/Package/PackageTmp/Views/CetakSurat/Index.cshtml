@@ -1,0 +1,236 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2 style="text-align:center">Cetak Surat Utang</h2>
+<button class="btn btn-warning pull-right" id="Join">Gabung Surat</button>
+<div class="clearfix"></div>
+<hr />
+<table id="table" class="table-bordered">
+    <thead>
+        <tr>
+            @*<th></th>*@
+            <th>No.</th>
+            <th>Perusahaan</th>
+            <th>Produk</th>
+            <th>Nama Produk</th>
+            <th>Tanggal Cetak</th>
+            <th>Tanggal Bunga</th>
+            <th>Status Cetak</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+</table>
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="~/Content/select.dataTables.min.css" rel="stylesheet" />
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script src="~/Scripts/moment-with-locales.min.js"></script>
+    <script src="~/Scripts/dataTables.select.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var t = $("#table").DataTable({
+                "ajax": {
+                    "url": "@Url.Action("GetAll", "CetakSurat")",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "order": [[1, 'asc']],
+                "columns": [
+                    { "data": null },
+                    { "data": "Perusahaan.Nama" },
+                    { "data": "Produk.Nama" },
+                    { "data": "NamaProduk" },
+                    {
+                        "data": "TglCetak", "render": function (d) {
+                            return moment(d).locale('id').format('dddd, LL');
+                        }
+                    },
+                    {
+                        "data": "TglSuratTerdekat", "render": function (d) {
+                            return moment(d).locale('id').format('dddd, LL');
+                        }
+                    },
+                    {
+                        "render": function (data, type, row) {
+                            var now = row.TglHariIni;
+                            var cetak = row.TglCetak;
+                            var bunga = row.TglSuratTerdekat;
+
+                            if (cetak <= now && now <= bunga) {
+                                return "<span class='label label-primary'>Perlu Dicetak</span>";
+                            } else {
+                                return "<span class='label label-" + row.StatusCetak.Warna + "'>" + row.StatusCetak.Nama + "</span>";
+                            }
+                        }
+                    },
+                    {
+                        "render": function (data, type, row) {
+                            //cetak surat
+                            var now = row.TglHariIni;
+                            var cetak = row.TglCetak;
+                            var bunga = row.TglSuratTerdekat;
+                            if (row.StatusCetak.Id == 4 || row.StatusCetak.Id == 5) {
+                                return "<a class='btn btn-warning btn-sm' href='@Url.Action("View", "CetakSurat")/" + row.Id + "'><i class='fa fa-eye'></i></a> &nbsp;"
+                                + "<a class='btn btn-success btn-sm' title='Status Pembayaran' onclick = Pembayaran('" + row.Id + "');><i class='fa fa-check'></i></a>"
+                            }
+                            else if (row.StatusCetak.Id == 1 && cetak <= now && now <= bunga) {
+                                return "<a class='btn btn-warning btn-sm' href='@Url.Action("View","CetakSurat")/" + row.Id + "'><i class='fa fa-eye'></i></a> &nbsp;"
+                                + "<a class='btn btn-success btn-sm' title='Kirim Untuk Otorisasi' onclick = Send('" + row.Id + "');><i class='fa fa-share'></i></a>"
+                            }
+                            else if (row.StatusCetak.Id == 4 && row.Status == true || row.StatusCetak.Id == 5 && row.Status == true) {
+                                return "<a class='btn btn-warning btn-sm' href='@Url.Action("View","CetakSurat")/" + row.Id + "'><i class='fa fa-eye'></i></a> &nbsp;"
+                            }
+                            else {
+                                return null;
+                            }
+
+                        },
+
+                    },
+                ],
+
+                "select": {
+                    "style": 'multi',
+                }
+            })
+
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+
+            $('#Join').click(function () {
+                var data = t.rows({ selected: true }).data().toArray();
+
+                if (data.length == 0) {
+                    alert("Belum ada surat yang dipilih");
+                } else if (data.length < 2 || data.length > 2) {
+                    alert("Pilih 2 surat untuk di gabung");
+                } else {
+                    var id = [];
+                    var perusahaan = [];
+                    var tglSurat = [];
+                    for (var i = 0; i < data.length ; i++) {
+                        id.push(data[i]['Id']);
+                        perusahaan.push(data[i]['Perusahaan']['Id']);
+                        tglSurat.push(data[i]['TglSuratTerdekat']);
+                    }
+
+
+                    var sData = id.join();
+                    var date1 = moment(tglSurat[0]).format("YYYY-MM-DD");
+                    var date2 = moment(tglSurat[1]).format("YYYY-MM-DD");
+
+
+                    if (perusahaan[0] != perusahaan[1]) {
+                        alert("Surat yang di pilih harus dari Perusahaan yang sama")
+                    } else {
+                        if (date1 != date2) {
+                            alert("Surat yang di pilih harus memiliki Tanggal Bunga yang sama")
+                        } else {
+                            debugger;
+                            var ids = "Id=" + id[0] + "&Id=" + id[1];
+                            var url = '@Url.Action("JoinSurat", "CetakSurat")';
+                            url = url + '?' + ids + '&tanggal=' + date1;
+                            console.log(url);
+                            window.location.href = url;
+                            @*$.ajax({
+                                "url": "@Url.Action("JoinSurat", "CetakSurat")",
+                                "type": "POST",
+                                "datatype": "json",
+                                "data": { Id: id, tanggal: date1 }
+                            }).then((data) => {
+                                alert("Sampai disini")
+                            })*@
+                        }
+
+
+                    }
+
+                }
+            });
+        })
+
+        function Pembayaran(Id) {
+            var StatusCetak = true;
+
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-info btn-lg',
+                    cancelButton: 'btn btn-danger btn-lg'
+                },
+                buttonsStyling: false
+            })
+
+            swalWithBootstrapButtons.fire({
+                title: 'Status Pembayaran?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Lunas',
+                cancelButtonText: 'Tidak Jadi',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("StatusPembayaran", "CetakSurat")",
+                        "type": "POST",
+                        "datatype": "json",
+                        "data": { Id: Id, StatusCetak: StatusCetak }
+                }).then((data) => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    $('#table').DataTable().ajax.reload();
+                })
+            }
+            })
+        }
+
+        function Send(Id) {
+            var StatusCetak = true;
+
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-info btn-lg',
+                    cancelButton: 'btn btn-danger btn-lg'
+                },
+                buttonsStyling: false
+            })
+
+            swalWithBootstrapButtons.fire({
+                title: 'Kirim Untuk Otorisasi?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("SendOtorisasi", "CetakSurat")",
+                        "type": "POST",
+                        "datatype": "json",
+                        "data": { Id: Id, StatusCetak: StatusCetak }
+                    }).then((data) => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Terkirim',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+    </script>
+}

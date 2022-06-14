@@ -1,0 +1,379 @@
+﻿@model IEnumerable<WaliAmanats.ViewModel.ViewDanaVM>
+@{
+    ViewBag.Title = "ViewDana";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var TglCetak = Request.Params["tglCetak"];
+}
+
+<section class="content-header">
+    <h1>
+        View Penggunaan Dana
+    </h1>
+</section>
+<section>
+    <div class="well">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-xs-12">
+                    <br />
+
+                    <div class="form-group col-md-12">
+                        <input type="hidden" class="form-control" id="Id" value="@item.IdPerusahaan" />
+                        <input type="hidden" class="Id" id="IdDana" value="@item.Iddana" />
+                        <label class="col-sm-2 control-label">Emiten</label>
+                        <div class="col-sm-4">
+                            <input readonly type="text" value="@item.NamaPerusahaan" class="form-control" />
+                        </div>
+                        <label class="col-sm-2 control-label">Tanggal Input</label>
+                        <div class="col-sm-4">
+                            <input readonly type="text" value="@item.TransaksiPenggunaanDana.TanggalInput.ToString("dd/MM/yyyy")" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-sm-2 control-label">Tanggal Cetak</label>
+                        <div class="col-sm-4">
+                            <input readonly type="text" name="TglCetak" value="@item.TransaksiPenggunaanDana.TanggalCetak.ToString("dd/MM/yyyy")" class="form-control" />
+                        </div>
+                        <label class="col-sm-2 control-label">File Balasan</label>
+                        <div class="col-sm-4">
+                            <a href="~/Files/Dana/@item.TransaksiPenggunaanDana.Path" target="_blank" class="btn btn-default"><i class="fa fa-download"> @item.TransaksiPenggunaanDana.Path</i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12">
+
+                    <div class="panel-group">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapse1">Detail Surat</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <ul class="list-group">
+                                    @{int index = 0;}
+                                    @foreach (var item2 in item.ProdukVM)
+                                    {
+
+                                        <li class="list-group-item">
+                                            <input type="hidden" class="IdLaporan" id="IdLap" value="@item2.IdLaporan" />
+                                            <input type="hidden" class="IdP" id="IdProd" value="@item2.IdProduk" />
+                                            <div class="form-group row">
+                                                <label class="col-sm-1 control-label">Produk</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" id="JenisPengiriman" class="form-control" value="@item2.Produk" disabled>
+                                                </div>
+                                                <label class="col-sm-2 control-label">Nama Produk</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" id="JenisPengiriman" class="form-control" value="@item2.NamaProduk" style="min-width:100%" disabled>
+                                                    <input class="form-check-input" type="checkbox" value="@index" id="CheckBox" name="CheckBox[]"/>
+                                                    <label class="form-check-label">
+                                                        Pilih Untuk Dicetak
+                                                    </label>
+
+                                                 </div>
+                                            </div>
+                                            <table class="table table-responsive">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Seri</th>
+                                                        <th>Outstanding</th>
+
+                                                    </tr>
+                                                </thead>
+                                                @{int no = 1;}
+                                                @foreach (var item3 in item2.DetailProdukVM)
+                                                {
+                                                    <tbody class="tbody">
+                                                        <tr>
+                                                            <td>@no</td>
+                                                            <td>@item3.Seri</td>
+                                                            <td>@item3.Nominal.ToString("N2")</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    {
+                                                        no++;
+                                                    }
+                                                }
+                                            </table>
+
+                                        </li>
+                                                        {
+                                                            index++;
+                                                        }
+                                                    }
+                                </ul>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="ModalCore" tabindex="-1" role="dialog" aria-labelledby="ModalCoreLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="ModalCoreLabel"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">File Balasan</label>
+                                            <div class="col-sm-9" id="divFile">
+                                                <input type="file" class="form-control" id="File" accept="application/pdf" style="min-width:100%">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="AddCore" onclick="SaveCore()">Add</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer col-xs-12">
+                    <a class="btn btn-default pull-right"  href="@Url.Action("CetakDana", "TransaksiDana")">Kembali</a>
+                    <button type="button" class="btn btn-success pull-right" style="margin-right:6px"; data-dismiss="modal" id="CetakGabung">Cetak yang di Centang</button>
+
+                    <span class="pull-right" style="margin:5px;"></span>
+                    @foreach (var items in Model)
+                    {
+
+                        <a class="btn btn-warning pull-right" data-toggle="modal" data-target="#tglModal" data-backdrop="static" data-keyboard="false" id="modalCetak">Cetak</a>
+                        if (items.TransaksiPenggunaanDana.StatusCetak_Id == 5 && items.TransaksiPenggunaanDana.Status == false)
+                        {
+                            <a class="btn btn-primary" id="" onclick="Done();">Done</a>
+                            <a class="btn btn-success" onclick="AddModalCore()" data-target="#ModalCore" data-toggle="modal">Upload Bukti</a>
+                        }
+                        else
+                        {
+                            <span class="pull-right" style="margin:5px;"></span>
+                        }
+                        <span class="pull-right" style="margin:5px;"></span>
+                        <span class="pull-right" style="margin:5px;"></span>
+                        <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    }
+
+                    <span class="pull-right" style="margin:5px;"></span>
+                    <div class="clearfix"></div>
+
+
+                </div>                                      }
+        </div>
+
+    </div>
+    <div class="modal fade" id="tglModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-sm-3 control-label">Produk</label>
+                        <div class="col-sm-4" id="divProduk">
+                            <input type="hidden" class="modalhide" id="ProdukHidden" value="0">
+                            <select required id="IProduk" data-placement="Choose" class="form-control select2" style="width: 100%"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-success pull-right" style="margin:5px;" type="submit" id="Cetak" value="Cetak">
+                    <button type="button" class="btn btn-default" style="margin:5px;" data-dismiss="modal" onclick="ClearScreen()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#CetakGabung').on("click", function () {
+
+                var Id = $("#Id").val();
+                var Produk2 = $("#IProduk").val();
+                var Idc = $("#IdDana").val();
+                var tgl = '@TglCetak';
+                var val = [];
+                var str = "";
+
+
+                $(':checkbox:checked').each(function (i) {
+                    debugger;
+                     
+                    val[i] = $(this).val();
+                    debugger;
+
+                    if (str == "") {
+                        str = val[i];
+
+                    }
+                    else {
+                        str = str + "," + val[i];
+                    }
+                }); 
+
+                console.log(str);
+                var index = "[" + str + "]";
+                if (str == "") {
+                    alert("Tidak ada CheckBox yang di Centang");
+
+                } else
+                {
+
+                    var url = '@Url.Action("CetakDanaGabung", "TransaksiDana")?Idc=' + Idc + '&Id=' + Id + '&index=' + index;
+
+                    document.location = url;
+                }
+             
+
+
+               
+
+            });
+
+            $("#Cetak").click(function () {
+
+                var Id = $("#Id").val();
+                var Produk = $("#IProduk").val();
+                var Idc = $("#IdDana").val();
+                var tgl = '@TglCetak';
+                debugger;
+
+                var url = '@Url.Action("CetakDanaa", "TransaksiDana")?Idc=' + Idc + '&Produk=' + Produk + '&Tanggal=' + tgl + '&Id=' + Id;
+                document.location = url;
+
+
+            });
+        });
+        $("#modalCetak").click(function () {
+            LoadProduk();
+            $("#myModalLabel").html("Pilih Produk");
+        });
+        function AddModalCore() {
+            $("#ModalCoreLabel").html("Upload File");
+        }
+        function LoadProduk() {
+            $.ajax({
+                url: "@Url.Action("GetDataProduk", "TransaksiDana")",
+                type: 'GET',
+                dataType: 'JSON',
+                success: function (result) {
+                    console.log(result);
+                    var Nasabah = $("#IProduk");
+
+                    Nasabah.html('');
+                    $("<option></option>").val('').text('Pilih Produk').appendTo(Nasabah);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.Nama).appendTo(Nasabah);
+                    });
+
+                }
+            });
+        }
+        function ClearScreen() {
+            $("#Iproduk").val('');
+        }
+        function SaveCore() {
+            debugger;
+            var Id = $('#IdDana').val();
+            console.log($('#IdDana'));
+            $.ajax({
+                url: "@Url.Action("GetById", "TransaksiDana")",
+                type: 'GET',
+                dataType: 'json',
+
+                data: { 'Id': Id },
+                success: function (result) {
+                    //   console.log(result);
+                    var formData = new FormData();
+                    var filepp = $("#File").get(0).files[0];
+                    formData.append("file", filepp);
+
+                    var DetBuku = result.Id;
+                    formData.append('Id', DetBuku);
+
+                    $.ajax({
+                        url: "@Url.Action("SubmitFile", "TransaksiDana")",
+                        type: 'POST',
+                        contentType: false,
+                        processData: false,
+                        data: formData,
+                        success: function (result1) {
+                            Swal.fire({
+                                title: "Success!",
+                                text: "The data has been saved!",
+                                type: "success",
+                                showCancelButton: false,
+                                showConfirmButton: false,
+                                timer: 3000,
+                            });
+                            $("#Id").val(result.Id);
+                            window.location.reload();
+
+                        },
+                        error: function (response) {
+                            Swal.fire("Oops", "We couldn't connect to the server!", "error");
+                        }
+                    });
+                },
+                error: function (response) {
+                    Swal.fire("Oops", "We couldn't connect to the server!", "error");
+                }
+            });
+        }
+        function Done() {
+            Swal.fire({
+                title: 'Tandai Telah Selesai?',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya'
+            }).then((result) => {
+                if (result.value) {
+                    debugger;
+                    var id = [];
+                    $('.Id').each(function () {
+                        id.push($(this).val());
+                    })
+
+                    var Id = new Object;
+                    Id = id;
+
+                    $.ajax({
+                        "type": "POST",
+                        "url": "@Url.Action("Done","TransaksiDana")",
+                        "datatype": "json",
+                        "data": { Id: Id }
+                    }).then((result) => {
+                        if (result.data != 0) {
+                            Swal.fire(
+                                'Success!',
+                                '',
+                                'success'
+                            ).then(() => {
+                                location.reload();
+                            })
+                        }
+                    })
+                }
+            })
+        }
+    </script>
+}

@@ -1,0 +1,1140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA168FBB-743E-412B-8656-4940F9E23FEF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WaliAmanats</RootNamespace>
+    <AssemblyName>WaliAmanats</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accordion, Version=3.5.40128.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accordion.1.0.0\lib\Accordion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Syncfusion.Compression.Base, Version=18.1460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.18.1.0.59\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base, Version=18.1450.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.DocIO.AspNet.Mvc5.18.1.0.59\lib\net45\Syncfusion.DocIO.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.1460.0.59, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.18.1.0.59\lib\net46\Syncfusion.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChart.Base, Version=18.1460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.OfficeChart.Base.18.1.0.59\lib\net46\Syncfusion.OfficeChart.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Controllers\Transactions\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Master\AturanOJKController.cs" />
+    <Compile Include="Controllers\Master\HariLiburController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Master\MataUangController.cs" />
+    <Compile Include="Controllers\Master\OJKController.cs" />
+    <Compile Include="Controllers\Master\PerusahaanController.cs" />
+    <Compile Include="Controllers\Master\PerwakilanController.cs" />
+    <Compile Include="Controllers\Master\ProdukController.cs" />
+    <Compile Include="Controllers\Master\RatingController.cs" />
+    <Compile Include="Controllers\Master\RatioController.cs" />
+    <Compile Include="Controllers\Master\TugasController.cs" />
+    <Compile Include="Controllers\Transactions\CetakSuratController.cs" />
+    <Compile Include="Controllers\Transactions\KejadianPentingController.cs" />
+    <Compile Include="Controllers\Transactions\OJKKejadianController.cs" />
+    <Compile Include="Controllers\Transactions\TransaksiDanaController.cs" />
+    <Compile Include="Controllers\Transactions\TransaksiJaminansController.cs" />
+    <Compile Include="Controllers\Transactions\TransaksiKeuanganController.cs" />
+    <Compile Include="Controllers\Transactions\TransaksiOJKController.cs" />
+    <Compile Include="Controllers\Transactions\TransaksiLaporansController.cs" />
+    <Compile Include="Controllers\Master\UserManagementController.cs" />
+    <Compile Include="Controllers\Transactions\TransaksiRatingsController.cs" />
+    <Compile Include="Controllers\Transactions\TransaksiRatiosController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005120646308_addModels.cs" />
+    <Compile Include="Migrations\202005120646308_addModels.Designer.cs">
+      <DependentUpon>202005120646308_addModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005140448433_addNewModels.cs" />
+    <Compile Include="Migrations\202005140448433_addNewModels.Designer.cs">
+      <DependentUpon>202005140448433_addNewModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005150135536_add-model.cs" />
+    <Compile Include="Migrations\202005150135536_add-model.Designer.cs">
+      <DependentUpon>202005150135536_add-model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005170944474_addkodeefek.cs" />
+    <Compile Include="Migrations\202005170944474_addkodeefek.Designer.cs">
+      <DependentUpon>202005170944474_addkodeefek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005171613316_addModelPeriode.cs" />
+    <Compile Include="Migrations\202005171613316_addModelPeriode.Designer.cs">
+      <DependentUpon>202005171613316_addModelPeriode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005190826568_addContactPerusahaan.cs" />
+    <Compile Include="Migrations\202005190826568_addContactPerusahaan.Designer.cs">
+      <DependentUpon>202005190826568_addContactPerusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005200333109_addtglbunga.cs" />
+    <Compile Include="Migrations\202005200333109_addtglbunga.Designer.cs">
+      <DependentUpon>202005200333109_addtglbunga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005220927189_addm.cs" />
+    <Compile Include="Migrations\202005220927189_addm.Designer.cs">
+      <DependentUpon>202005220927189_addm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006020724164_addUserTransaction.cs" />
+    <Compile Include="Migrations\202006020724164_addUserTransaction.Designer.cs">
+      <DependentUpon>202006020724164_addUserTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006040616536_addmodelchild.cs" />
+    <Compile Include="Migrations\202006040616536_addmodelchild.Designer.cs">
+      <DependentUpon>202006040616536_addmodelchild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006040907113_fktransdet.cs" />
+    <Compile Include="Migrations\202006040907113_fktransdet.Designer.cs">
+      <DependentUpon>202006040907113_fktransdet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006040926020_fktranstgl.cs" />
+    <Compile Include="Migrations\202006040926020_fktranstgl.Designer.cs">
+      <DependentUpon>202006040926020_fktranstgl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006100612161_isdelete.cs" />
+    <Compile Include="Migrations\202006100612161_isdelete.Designer.cs">
+      <DependentUpon>202006100612161_isdelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006150743120_addParam.cs" />
+    <Compile Include="Migrations\202006150743120_addParam.Designer.cs">
+      <DependentUpon>202006150743120_addParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006150815461_addParambool.cs" />
+    <Compile Include="Migrations\202006150815461_addParambool.Designer.cs">
+      <DependentUpon>202006150815461_addParambool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006171146359_addModelOJK.cs" />
+    <Compile Include="Migrations\202006171146359_addModelOJK.Designer.cs">
+      <DependentUpon>202006171146359_addModelOJK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008311013380_addmodelstatus.cs" />
+    <Compile Include="Migrations\202008311013380_addmodelstatus.Designer.cs">
+      <DependentUpon>202008311013380_addmodelstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109210421416_addnewDB.cs" />
+    <Compile Include="Migrations\202109210421416_addnewDB.Designer.cs">
+      <DependentUpon>202109210421416_addnewDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109220212041_ratiotabel.cs" />
+    <Compile Include="Migrations\202109220212041_ratiotabel.Designer.cs">
+      <DependentUpon>202109220212041_ratiotabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109220239486_ratiotabelupdate.cs" />
+    <Compile Include="Migrations\202109220239486_ratiotabelupdate.Designer.cs">
+      <DependentUpon>202109220239486_ratiotabelupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109220936475_updaterating.cs" />
+    <Compile Include="Migrations\202109220936475_updaterating.Designer.cs">
+      <DependentUpon>202109220936475_updaterating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109221407022_ubahrating.cs" />
+    <Compile Include="Migrations\202109221407022_ubahrating.Designer.cs">
+      <DependentUpon>202109221407022_ubahrating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109231335259_ubahratingratio.cs" />
+    <Compile Include="Migrations\202109231335259_ubahratingratio.Designer.cs">
+      <DependentUpon>202109231335259_ubahratingratio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109240220318_tambahnilairating.cs" />
+    <Compile Include="Migrations\202109240220318_tambahnilairating.Designer.cs">
+      <DependentUpon>202109240220318_tambahnilairating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109240301579_tambahnilairat.cs" />
+    <Compile Include="Migrations\202109240301579_tambahnilairat.Designer.cs">
+      <DependentUpon>202109240301579_tambahnilairat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109240850541_addRealisasi.cs" />
+    <Compile Include="Migrations\202109240850541_addRealisasi.Designer.cs">
+      <DependentUpon>202109240850541_addRealisasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109280911591_updatedetailperusahaan.cs" />
+    <Compile Include="Migrations\202109280911591_updatedetailperusahaan.Designer.cs">
+      <DependentUpon>202109280911591_updatedetailperusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109290632071_ubahdbdetail.cs" />
+    <Compile Include="Migrations\202109290632071_ubahdbdetail.Designer.cs">
+      <DependentUpon>202109290632071_ubahdbdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109300848410_subdetailperusahaan.cs" />
+    <Compile Include="Migrations\202109300848410_subdetailperusahaan.Designer.cs">
+      <DependentUpon>202109300848410_subdetailperusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110010650313_newadd.cs" />
+    <Compile Include="Migrations\202110010650313_newadd.Designer.cs">
+      <DependentUpon>202110010650313_newadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110050746012_laporankeuangantanggal.cs" />
+    <Compile Include="Migrations\202110050746012_laporankeuangantanggal.Designer.cs">
+      <DependentUpon>202110050746012_laporankeuangantanggal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110090938109_penambahantabelbaru.cs" />
+    <Compile Include="Migrations\202110090938109_penambahantabelbaru.Designer.cs">
+      <DependentUpon>202110090938109_penambahantabelbaru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110101347280_tambahnominal.cs" />
+    <Compile Include="Migrations\202110101347280_tambahnominal.Designer.cs">
+      <DependentUpon>202110101347280_tambahnominal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110140842279_ubahtransaksidana.cs" />
+    <Compile Include="Migrations\202110140842279_ubahtransaksidana.Designer.cs">
+      <DependentUpon>202110140842279_ubahtransaksidana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110140950383_ubahtransdana.cs" />
+    <Compile Include="Migrations\202110140950383_ubahtransdana.Designer.cs">
+      <DependentUpon>202110140950383_ubahtransdana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110190645588_ubahjaminan.cs" />
+    <Compile Include="Migrations\202110190645588_ubahjaminan.Designer.cs">
+      <DependentUpon>202110190645588_ubahjaminan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110210315325_tabelkejadian.cs" />
+    <Compile Include="Migrations\202110210315325_tabelkejadian.Designer.cs">
+      <DependentUpon>202110210315325_tabelkejadian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110210651067_tambahkejadian.cs" />
+    <Compile Include="Migrations\202110210651067_tambahkejadian.Designer.cs">
+      <DependentUpon>202110210651067_tambahkejadian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111220458082_UpdateTargetTosString.cs" />
+    <Compile Include="Migrations\202111220458082_UpdateTargetTosString.Designer.cs">
+      <DependentUpon>202111220458082_UpdateTargetTosString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111221253573_addNewString2.cs" />
+    <Compile Include="Migrations\202111221253573_addNewString2.Designer.cs">
+      <DependentUpon>202111221253573_addNewString2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111230522032_addNewFieldTransaksiKejadian.cs" />
+    <Compile Include="Migrations\202111230522032_addNewFieldTransaksiKejadian.Designer.cs">
+      <DependentUpon>202111230522032_addNewFieldTransaksiKejadian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111240448543_test.cs" />
+    <Compile Include="Migrations\202111240448543_test.Designer.cs">
+      <DependentUpon>202111240448543_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111250327088_addModelPerusahaan.cs" />
+    <Compile Include="Migrations\202111250327088_addModelPerusahaan.Designer.cs">
+      <DependentUpon>202111250327088_addModelPerusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111250347272_DropIdPer.cs" />
+    <Compile Include="Migrations\202111250347272_DropIdPer.Designer.cs">
+      <DependentUpon>202111250347272_DropIdPer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111250355562_AddPerushaan.cs" />
+    <Compile Include="Migrations\202111250355562_AddPerushaan.Designer.cs">
+      <DependentUpon>202111250355562_AddPerushaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111250401392_AddPerushaan3.cs" />
+    <Compile Include="Migrations\202111250401392_AddPerushaan3.Designer.cs">
+      <DependentUpon>202111250401392_AddPerushaan3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111250637286_FixTransaksiKeajdian.cs" />
+    <Compile Include="Migrations\202111250637286_FixTransaksiKeajdian.Designer.cs">
+      <DependentUpon>202111250637286_FixTransaksiKeajdian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Base\BaseModel.cs" />
+    <Compile Include="Models\Master\AturanOJK.cs" />
+    <Compile Include="Models\Master\EmitenNotes.cs" />
+    <Compile Include="Models\Master\HariLibur.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Master\Jabatan.cs" />
+    <Compile Include="Models\Master\Jaminan.cs" />
+    <Compile Include="Models\Master\KejadianPenting.cs" />
+    <Compile Include="Models\Master\MataUang.cs" />
+    <Compile Include="Models\Master\Matching.cs" />
+    <Compile Include="Models\Master\Measurement.cs" />
+    <Compile Include="Models\Master\OJK.cs" />
+    <Compile Include="Models\Master\Periode.cs" />
+    <Compile Include="Models\Master\Perusahaan.cs" />
+    <Compile Include="Models\Master\PerwakilanPerusahaan.cs" />
+    <Compile Include="Models\Master\Produk.cs" />
+    <Compile Include="Models\Master\JenisTugas.cs" />
+    <Compile Include="Models\Master\Rating.cs" />
+    <Compile Include="Models\Master\Ratio.cs" />
+    <Compile Include="Models\Master\SettingRatio.cs" />
+    <Compile Include="Models\Master\Status.cs" />
+    <Compile Include="Models\Master\StatusCetak.cs" />
+    <Compile Include="Models\Transaksi\DetailKeuangan.cs" />
+    <Compile Include="Models\Transaksi\DetailCetak.cs" />
+    <Compile Include="Models\Transaksi\DetailPerusahaan.cs" />
+    <Compile Include="Models\Transaksi\KopSurat.cs" />
+    <Compile Include="Models\Transaksi\SubDetailCetak.cs" />
+    <Compile Include="Models\Transaksi\SubDetailTanggal.cs" />
+    <Compile Include="Models\Transaksi\TransaksiCetak.cs" />
+    <Compile Include="Models\Transaksi\TransaksiDetail.cs" />
+    <Compile Include="Models\Transaksi\TransaksiJaminan.cs" />
+    <Compile Include="Models\Transaksi\TransaksiKejadian.cs" />
+    <Compile Include="Models\Transaksi\TransaksiKeuangan.cs" />
+    <Compile Include="Models\Transaksi\TransaksiLaporan.cs" />
+    <Compile Include="Models\Transaksi\TransaksiPenggunaanDana.cs" />
+    <Compile Include="Models\Transaksi\TransaksiRating.cs" />
+    <Compile Include="Models\Transaksi\TransaksiTanggal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\CetakMTNVM.cs" />
+    <Compile Include="ViewModel\CetakDanaVM.cs" />
+    <Compile Include="ViewModel\CetakDetailVM.cs" />
+    <Compile Include="ViewModel\DashBoardVm.cs" />
+    <Compile Include="ViewModel\DetailLpVM.cs" />
+    <Compile Include="ViewModel\FilterVM.cs" />
+    <Compile Include="ViewModel\MtnVM.cs" />
+    <Compile Include="ViewModel\KejadianVM.cs" />
+    <Compile Include="ViewModel\LaporanOJKVM.cs" />
+    <Compile Include="ViewModel\PerwakilanVM.cs" />
+    <Compile Include="ViewModel\RatingVM.cs" />
+    <Compile Include="ViewModel\RatiosVM.cs" />
+    <Compile Include="ViewModel\RatioVM.cs" />
+    <Compile Include="ViewModel\TransaksiCetakVM.cs" />
+    <Compile Include="ViewModel\TransaksiLaporanVM.cs" />
+    <Compile Include="ViewModel\UserVM.cs" />
+    <Compile Include="ViewModel\ViewDanaVM.cs" />
+    <Compile Include="ViewModel\ViewDetailCetakVM.cs" />
+    <Compile Include="ViewModel\ViewJoinVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.standalone.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker3.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datetimepicker\bootstrap-datetimepicker.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datetimepicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\AdminLTE\bower\datatables.net-bs\buttons.dataTables.min.css" />
+    <Content Include="Content\AdminLTE\bower\datatables.net-bs\dataTables.bootstrap.css" />
+    <Content Include="Content\AdminLTE\bower\datatables.net-bs\dataTables.bootstrap.min.css" />
+    <Content Include="Content\AdminLTE\bower\datatables.net-bs\searchPanes.dataTables.min.css" />
+    <Content Include="Content\AdminLTE\bower\datatables.net-bs\select.dataTables.min.css" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\AdminLTE\bower\Ionicons\css\ionicons.css" />
+    <Content Include="Content\AdminLTE\bower\Ionicons\css\ionicons.min.css" />
+    <Content Include="Content\AdminLTE\bower\Ionicons\fonts\ionicons.svg" />
+    <Content Include="Content\AdminLTE\bower\select2\select2.css" />
+    <Content Include="Content\AdminLTE\bower\select2\select2.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\AdminLTE.css" />
+    <Content Include="Content\AdminLTE\dist\css\AdminLTE.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\alt\AdminLTE-bootstrap-social.css" />
+    <Content Include="Content\AdminLTE\dist\css\alt\AdminLTE-bootstrap-social.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\alt\AdminLTE-fullcalendar.css" />
+    <Content Include="Content\AdminLTE\dist\css\alt\AdminLTE-fullcalendar.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\alt\AdminLTE-select2.css" />
+    <Content Include="Content\AdminLTE\dist\css\alt\AdminLTE-select2.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\alt\AdminLTE-without-plugins.css" />
+    <Content Include="Content\AdminLTE\dist\css\alt\AdminLTE-without-plugins.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-black-light.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-black-light.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-black.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-black.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-blue-light.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-blue-light.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-blue.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-blue.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-green-light.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-green-light.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-green.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-green.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-purple-light.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-purple-light.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-purple.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-purple.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-red-light.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-red-light.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-red.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-red.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-yellow-light.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-yellow-light.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-yellow.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\skin-yellow.min.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\_all-skins.css" />
+    <Content Include="Content\AdminLTE\dist\css\skins\_all-skins.min.css" />
+    <Content Include="Content\AdminLTE\dist\img\avatar.png" />
+    <Content Include="Content\AdminLTE\dist\img\avatar04.png" />
+    <Content Include="Content\AdminLTE\dist\img\avatar2.png" />
+    <Content Include="Content\AdminLTE\dist\img\avatar3.png" />
+    <Content Include="Content\AdminLTE\dist\img\avatar5.png" />
+    <Content Include="Content\AdminLTE\dist\img\cat.png" />
+    <Content Include="Content\AdminLTE\dist\img\credit\american-express.png" />
+    <Content Include="Content\AdminLTE\dist\img\credit\cirrus.png" />
+    <Content Include="Content\AdminLTE\dist\img\credit\mastercard.png" />
+    <Content Include="Content\AdminLTE\dist\img\credit\mestro.png" />
+    <Content Include="Content\AdminLTE\dist\img\credit\paypal.png" />
+    <Content Include="Content\AdminLTE\dist\img\credit\paypal2.png" />
+    <Content Include="Content\AdminLTE\dist\img\credit\visa.png" />
+    <Content Include="Content\AdminLTE\dist\img\default-50x50.gif" />
+    <Content Include="Content\AdminLTE\dist\img\icons.png" />
+    <Content Include="Content\AdminLTE\dist\img\photo1.png" />
+    <Content Include="Content\AdminLTE\dist\img\photo2.png" />
+    <Content Include="Content\AdminLTE\dist\img\photo3.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\photo4.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\user1-128x128.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\user2-160x160.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\user3-128x128.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\user4-128x128.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\user5-128x128.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\user6-128x128.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\user7-128x128.jpg" />
+    <Content Include="Content\AdminLTE\dist\img\user8-128x128.jpg" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Assets\bg-login.jpg" />
+    <Content Include="Content\Img\favicon.ico" />
+    <Content Include="Content\Img\img-01.png" />
+    <Content Include="Content\Img\plus.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery.dataTables.min.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\select.dataTables.min.css" />
+    <Content Include="Content\Select2\select2.min.css" />
+    <Content Include="Content\Select2\select2.min.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Content\sweetalert\sweetalert.css" />
+    <Content Include="Content\_bootstrap.css" />
+    <Content Include="Content\util.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\sort_asc.png" />
+    <Content Include="Images\sort_asc_disabled.png" />
+    <Content Include="Images\sort_both.png" />
+    <Content Include="Images\sort_desc.png" />
+    <Content Include="Images\sort_desc_disabled.png" />
+    <Content Include="Scripts\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="Scripts\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Scripts\AdminLTE\bower\bootstrap-datetimepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\AdminLTE\bower\bootstrap-datetimepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\AdminLTE\bower\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\bootstrap\npm.js" />
+    <Content Include="Scripts\AdminLTE\bower\chart.js\Chart.js" />
+    <Content Include="Scripts\AdminLTE\bower\chart.js\Chart.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\datatables.net-bs\dataTables.bootstrap.js" />
+    <Content Include="Scripts\AdminLTE\bower\datatables.net-bs\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\datatables.net\dataTables.buttons.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\datatables.net\dataTables.searchPanes.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\datatables.net\dataTables.select.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\datatables.net\jquery.dataTables.js" />
+    <Content Include="Scripts\AdminLTE\bower\datatables.net\jquery.dataTables.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\fastclick\fastclick.js" />
+    <Content Include="Scripts\AdminLTE\bower\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="Scripts\AdminLTE\bower\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\jquery\core.js" />
+    <Content Include="Scripts\AdminLTE\bower\jquery\jquery.js" />
+    <Content Include="Scripts\AdminLTE\bower\jquery\jquery.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\jquery\jquery.slim.js" />
+    <Content Include="Scripts\AdminLTE\bower\jquery\jquery.slim.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\moment\locales.js" />
+    <Content Include="Scripts\AdminLTE\bower\moment\locales.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\moment\moment-with-locales.js" />
+    <Content Include="Scripts\AdminLTE\bower\moment\moment-with-locales.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\moment\moment.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\af.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\ar.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\az.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\bg.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\bs.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\ca.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\cs.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\da.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\de.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\dsb.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\el.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\en.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\es.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\et.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\eu.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\fa.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\fi.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\fr.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\gl.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\he.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\hi.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\hr.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\hsb.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\hu.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\hy.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\id.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\is.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\it.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\ja.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\km.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\ko.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\lt.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\lv.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\mk.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\ms.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\nb.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\nl.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\pl.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\ps.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\pt-BR.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\pt.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\ro.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\ru.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\sk.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\sl.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\sr-Cyrl.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\sr.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\sv.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\th.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\tr.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\uk.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\vi.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\zh-CN.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\i18n\zh-TW.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\select2.full.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\select2.full.min.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\select2.js" />
+    <Content Include="Scripts\AdminLTE\bower\select2\select2.min.js" />
+    <Content Include="Scripts\AdminLTE\dist\adminlte.js" />
+    <Content Include="Scripts\AdminLTE\dist\adminlte.min.js" />
+    <Content Include="Scripts\AdminLTE\dist\demo.js" />
+    <Content Include="Scripts\AdminLTE\dist\pages\dashboard.js" />
+    <Content Include="Scripts\AdminLTE\dist\pages\dashboard2.js" />
+    <Content Include="Scripts\bootbox\bootbox.js" />
+    <Content Include="Scripts\bootbox\bootbox.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\Template\OJK6.docx" />
+    <Content Include="Content\Template\Templatedoc2.doc" />
+    <Content Include="Content\Template\TemplateGabung.doc" />
+    <Content Include="Content\poppins\Poppins-Black.ttf" />
+    <Content Include="Content\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Content\poppins\Poppins-Bold.ttf" />
+    <Content Include="Content\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Content\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Content\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Content\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Content\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Content\poppins\Poppins-Italic.ttf" />
+    <Content Include="Content\poppins\Poppins-Light.ttf" />
+    <Content Include="Content\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Content\poppins\Poppins-Medium.ttf" />
+    <Content Include="Content\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Content\poppins\Poppins-Regular.ttf" />
+    <Content Include="Content\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Content\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Content\poppins\Poppins-Thin.ttf" />
+    <Content Include="Content\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap.min.css.bak" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\AdminLTE\bower\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.css.map" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker3.css.map" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datetimepicker\bootstrap-datetimepicker-build.less" />
+    <Content Include="Content\AdminLTE\bower\bootstrap-datetimepicker\_bootstrap-datetimepicker.less" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\AdminLTE\bower\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\AdminLTE\bower\Ionicons\fonts\ionicons.eot" />
+    <Content Include="Content\AdminLTE\bower\Ionicons\fonts\ionicons.ttf" />
+    <Content Include="Content\AdminLTE\bower\Ionicons\fonts\ionicons.woff" />
+    <Content Include="Content\AdminLTE\dist\css\adminlte.css.map" />
+    <Content Include="Content\AdminLTE\dist\css\adminlte.min.css.map" />
+    <Content Include="Content\Template\OJKBuyback.docx" />
+    <Content Include="Content\Template\OJKGagalBayar.docx" />
+    <Content Include="Content\Template\TemplateKejadian.docx" />
+    <Content Include="Content\Template\TemplateDana.docx" />
+    <Content Include="Content\Template\Template_LJ.doc" />
+    <Content Include="Content\Template\Template_LK.doc" />
+    <Content Include="Content\Template\Template_Rasio.doc" />
+    <Content Include="Content\Template\Template_Rating.doc" />
+    <Content Include="Content\Template\TemplateDanaGabung.docx" />
+    <Content Include="Content\Template\Template_GB_Investor.docx" />
+    <Content Include="Content\Template\OJKBuybackUMUM.docx" />
+    <Content Include="Content\Template\Template_Daftar-MTN.docx" />
+    <None Include="Properties\PublishProfiles\WaliAmanat.pubxml" />
+    <Content Include="Scripts\AdminLTE\bower\jquery\jquery.min.map" />
+    <Content Include="Scripts\AdminLTE\bower\jquery\jquery.slim.min.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\dataTables.select.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\af.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\ar.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\az.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\bg.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\bs.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\ca.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\cs.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\da.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\de.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\dsb.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\el.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\en.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\es.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\et.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\eu.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\fa.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\fi.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\fr.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\gl.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\he.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\hi.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\hr.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\hsb.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\hu.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\hy.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\id.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\is.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\it.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\ja.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\km.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\ko.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\lt.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\lv.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\mk.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\ms.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\nb.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\nl.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\pl.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\ps.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\pt.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\ro.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\ru.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\sk.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\sl.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\sr-Cyrl.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\sr.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\sv.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\th.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\tr.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\uk.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\vi.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="Scripts\select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="Scripts\select2\dist\js\select2.full.js" />
+    <Content Include="Scripts\select2\dist\js\select2.full.min.js" />
+    <Content Include="Scripts\select2\dist\js\select2.js" />
+    <Content Include="Scripts\select2\dist\js\select2.min.js" />
+    <Content Include="Scripts\sweetalert2.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\sweetalert\sweetalert.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\TransaksiLaporans\Index.cshtml" />
+    <Content Include="Views\Perusahaan\Index.cshtml" />
+    <Content Include="Views\Perwakilan\Index.cshtml" />
+    <Content Include="Views\HariLibur\Index.cshtml" />
+    <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Shared\_Sidebar.cshtml" />
+    <Content Include="Views\Shared\_NavbarNew.cshtml" />
+    <Content Include="Views\UserManagement\Index.cshtml" />
+    <Content Include="Views\Produk\Index.cshtml" />
+    <Content Include="Views\Tugas\Index.cshtml" />
+    <Content Include="Views\MataUang\Index.cshtml" />
+    <Content Include="Views\TransaksiLaporans\Otorisasi.cshtml" />
+    <Content Include="Views\CetakSurat\Index.cshtml" />
+    <Content Include="Views\CetakSurat\View.cshtml" />
+    <Content Include="Views\CetakSurat\Otorisasi.cshtml" />
+    <Content Include="Views\TransaksiLaporans\History.cshtml" />
+    <Content Include="Views\CetakSurat\History.cshtml" />
+    <Content Include="Views\TransaksiOJK\Index.cshtml" />
+    <Content Include="Views\CetakSurat\Index_OJK.cshtml" />
+    <Content Include="Views\CetakSurat\ViewJoin.cshtml" />
+    <Content Include="Views\CetakSurat\DetailCetak.cshtml" />
+    <Content Include="Views\CetakSurat\DetailOtorisasi.cshtml" />
+    <Content Include="Views\TransaksiOJK\Index_OJK.cshtml" />
+    <Content Include="Views\CetakSurat\Cek.cshtml" />
+    <Content Include="Views\AturanOJK\Index.cshtml" />
+    <Content Include="Views\OJK\Index.cshtml" />
+    <Content Include="Views\CetakSurat\listCetak.cshtml" />
+    <Content Include="Views\Ratio\Index.cshtml" />
+    <Content Include="Views\Rating\Index.cshtml" />
+    <Content Include="Views\TransaksiRatios\Index.cshtml" />
+    <Content Include="Views\TransaksiRatings\Index.cshtml" />
+    <Content Include="Views\Perusahaan\TambahRatio.cshtml" />
+    <Content Include="Views\TransaksiRatios\Index - Copy.cshtml" />
+    <Content Include="Views\TransaksiRatios\Index - Copy %282%29.cshtml" />
+    <Content Include="Views\TransaksiKeuangan\Index.cshtml" />
+    <Content Include="Views\TransaksiJaminans\Index.cshtml" />
+    <Content Include="Views\TransaksiDana\Index.cshtml" />
+    <Content Include="Views\TransaksiRatios\Index - Copy %283%29.cshtml" />
+    <Content Include="Views\TransaksiRatios\ViewDetail.cshtml" />
+    <Content Include="Views\TransaksiRatings\ViewRating.cshtml" />
+    <Content Include="Views\TransaksiKeuangan\ViewLK.cshtml" />
+    <Content Include="Views\TransaksiKeuangan\CetakLK.cshtml" />
+    <Content Include="Views\TransaksiJaminans\CetakJaminan.cshtml" />
+    <Content Include="Views\TransaksiJaminans\ViewJaminan.cshtml" />
+    <Content Include="Views\TransaksiJaminans\MasterJaminan.cshtml" />
+    <Content Include="Views\TransaksiDana\CetakDana.cshtml" />
+    <Content Include="Views\TransaksiDana\ViewDana.cshtml" />
+    <Content Include="Views\KejadianPenting\Index.cshtml" />
+    <Content Include="Views\KejadianPenting\CetakKejadian.cshtml" />
+    <Content Include="Views\KejadianPenting\ViewKejadian.cshtml" />
+    <Content Include="Views\OJKKejadian\Index.cshtml" />
+    <Content Include="Views\KejadianPenting\MasterKejadian.cshtml" />
+    <Content Include="Views\KejadianPenting\ViewKejadianMTN.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Files\Dana\" />
+    <Folder Include="Files\Jaminan\" />
+    <Folder Include="Files\Kejadian\" />
+    <Folder Include="Files\Keuangan\" />
+    <Folder Include="Files\Rating\" />
+    <Folder Include="Files\Ratio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005120646308_addModels.resx">
+      <DependentUpon>202005120646308_addModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005140448433_addNewModels.resx">
+      <DependentUpon>202005140448433_addNewModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005150135536_add-model.resx">
+      <DependentUpon>202005150135536_add-model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005170944474_addkodeefek.resx">
+      <DependentUpon>202005170944474_addkodeefek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005171613316_addModelPeriode.resx">
+      <DependentUpon>202005171613316_addModelPeriode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005190826568_addContactPerusahaan.resx">
+      <DependentUpon>202005190826568_addContactPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005200333109_addtglbunga.resx">
+      <DependentUpon>202005200333109_addtglbunga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005220927189_addm.resx">
+      <DependentUpon>202005220927189_addm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006020724164_addUserTransaction.resx">
+      <DependentUpon>202006020724164_addUserTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006040616536_addmodelchild.resx">
+      <DependentUpon>202006040616536_addmodelchild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006040907113_fktransdet.resx">
+      <DependentUpon>202006040907113_fktransdet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006040926020_fktranstgl.resx">
+      <DependentUpon>202006040926020_fktranstgl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006100612161_isdelete.resx">
+      <DependentUpon>202006100612161_isdelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006150743120_addParam.resx">
+      <DependentUpon>202006150743120_addParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006150815461_addParambool.resx">
+      <DependentUpon>202006150815461_addParambool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006171146359_addModelOJK.resx">
+      <DependentUpon>202006171146359_addModelOJK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008311013380_addmodelstatus.resx">
+      <DependentUpon>202008311013380_addmodelstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109210421416_addnewDB.resx">
+      <DependentUpon>202109210421416_addnewDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109220212041_ratiotabel.resx">
+      <DependentUpon>202109220212041_ratiotabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109220239486_ratiotabelupdate.resx">
+      <DependentUpon>202109220239486_ratiotabelupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109220936475_updaterating.resx">
+      <DependentUpon>202109220936475_updaterating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109221407022_ubahrating.resx">
+      <DependentUpon>202109221407022_ubahrating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109231335259_ubahratingratio.resx">
+      <DependentUpon>202109231335259_ubahratingratio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109240220318_tambahnilairating.resx">
+      <DependentUpon>202109240220318_tambahnilairating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109240301579_tambahnilairat.resx">
+      <DependentUpon>202109240301579_tambahnilairat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109240850541_addRealisasi.resx">
+      <DependentUpon>202109240850541_addRealisasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109280911591_updatedetailperusahaan.resx">
+      <DependentUpon>202109280911591_updatedetailperusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109290632071_ubahdbdetail.resx">
+      <DependentUpon>202109290632071_ubahdbdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109300848410_subdetailperusahaan.resx">
+      <DependentUpon>202109300848410_subdetailperusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110010650313_newadd.resx">
+      <DependentUpon>202110010650313_newadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110050746012_laporankeuangantanggal.resx">
+      <DependentUpon>202110050746012_laporankeuangantanggal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110090938109_penambahantabelbaru.resx">
+      <DependentUpon>202110090938109_penambahantabelbaru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110101347280_tambahnominal.resx">
+      <DependentUpon>202110101347280_tambahnominal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110140842279_ubahtransaksidana.resx">
+      <DependentUpon>202110140842279_ubahtransaksidana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110140950383_ubahtransdana.resx">
+      <DependentUpon>202110140950383_ubahtransdana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110190645588_ubahjaminan.resx">
+      <DependentUpon>202110190645588_ubahjaminan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110210315325_tabelkejadian.resx">
+      <DependentUpon>202110210315325_tabelkejadian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110210651067_tambahkejadian.resx">
+      <DependentUpon>202110210651067_tambahkejadian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111220458082_UpdateTargetTosString.resx">
+      <DependentUpon>202111220458082_UpdateTargetTosString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111221253573_addNewString2.resx">
+      <DependentUpon>202111221253573_addNewString2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111230522032_addNewFieldTransaksiKejadian.resx">
+      <DependentUpon>202111230522032_addNewFieldTransaksiKejadian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111240448543_test.resx">
+      <DependentUpon>202111240448543_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111250327088_addModelPerusahaan.resx">
+      <DependentUpon>202111250327088_addModelPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111250347272_DropIdPer.resx">
+      <DependentUpon>202111250347272_DropIdPer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111250355562_AddPerushaan.resx">
+      <DependentUpon>202111250355562_AddPerushaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111250401392_AddPerushaan3.resx">
+      <DependentUpon>202111250401392_AddPerushaan3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111250637286_FixTransaksiKeajdian.resx">
+      <DependentUpon>202111250637286_FixTransaksiKeajdian.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54925</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54925/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Alia</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        body {
+            padding-top: 0;
+        }
+
+        .wrapper .content-wrapper {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-yellow-light sidebar-mini sidebar-collapse">
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="#" class="logo">
+                <span class="logo-mini"><b>Alia</b></span>
+                <span class="logo-lg"><b>Alia</b></span>
+            </a>
+            <nav class="navbar navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a></li>
+                        @Html.Partial("_LoginPartial")
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                @if (Request.IsAuthenticated)
+                {
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="header">MAIN NAVIGATION</li>
+                        <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+
+                        @if (User.IsInRole("Maker"))
+                        {
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-archive"></i><span>Master Data</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="@Url.Action("Index", "Perusahaan")"><i class="fa fa-building"></i><span>Master Perusahaan</span></a></li>
+                                    <li><a href="@Url.Action("Index", "Perwakilan")"><i class="fa fa-user-secret"></i><span>Master PIC</span></a></li>
+                                    <li><a href="@Url.Action("Index", "HariLibur")"><i class="fa fa-folder"></i><span>Master Hari Libur</span></a></li>
+                                    <li><a href="@Url.Action("Index", "AturanOJK")"><i class="fa fa-file-archive-o"></i><span>Master Aturan OJK</span></a></li>
+                                    <li><a href="@Url.Action("Index", "OJK")"><i class="fa fa-address-book"></i><span>Master Alamat OJK</span></a></li>
+                                    <li><a href="@Url.Action("Index", "Rating")"><i class="fa fa-bar-chart"></i><span>Master Rating</span></a></li>
+                                    <li><a href="@Url.Action("Index", "Ratio")"><i class="fa fa-pie-chart"></i><span>Master Ratio</span></a></li>
+                                    <li><a href="@Url.Action("MasterJaminan", "TransaksiJaminans")"><i class="fa fa-money"></i><span>Master Jaminan</span></a></li>
+                                    <li><a href="@Url.Action("MasterKejadian", "KejadianPenting")"><i class="fa fa-money"></i><span>Master Kejadian</span></a></li>
+                                </ul>
+                            </li>
+                        }
+                        @if (User.IsInRole("Checker"))
+                        {
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-envelope-open"></i><span>Surat Utang</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="@Url.Action("Otorisasi", "TransaksiLaporans")"><i class="fa fa-envelope"></i><span>Cek Input</span></a></li>
+                                    <li><a href="@Url.Action("History", "TransaksiLaporans")"><i class="fa fa-envelope-square"></i><span>History</span></a></li>
+                                </ul>
+                            </li>
+                        }
+                        @if (User.IsInRole("Maker"))
+                        {
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-envelope-open"></i><span>Surat Utang</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+
+                                    <li><a href="@Url.Action("Index", "TransaksiLaporans")"><i class="fa fa-envelope"></i><span>Kelola Surat Utang</span></a></li>
+                                  
+                                </ul>
+                            </li>
+                        }
+                        @if (User.IsInRole("Maker") || (User.IsInRole("Checker")))
+                        {
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i><span>Surat</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="@Url.Action("Index", "TransaksiKeuangan")"><i class="fa fa-envelope-square"></i><span>Laporan Keuangan</span></a></li>
+                                    <li><a href="@Url.Action("Index", "TransaksiRatios")"><i class="fa fa-envelope-square"></i><span>Realisasi Ratio</span></a></li>
+                                    <li><a href="@Url.Action("Index", "TransaksiJaminans")"><i class="fa fa-envelope-square"></i><span>Jaminan</span></a></li>
+                                    <li><a href="@Url.Action("Index", "TransaksiRatings")"><i class="fa fa-envelope-square"></i><span>Realisasi Rating</span></a></li>
+                                    <li><a href="@Url.Action("Index", "TransaksiDana")"><i class="fa fa-envelope-square"></i><span>Penggunaan Dana</span></a></li>
+                                    <li><a href="@Url.Action("Index", "KejadianPenting")"><i class="fa fa-envelope-square"></i><span>Kejadian Penting</span></a></li>
+                                </ul>
+                            </li>
+                        }
+                        @if(User.IsInRole("Maker") || (User.IsInRole("Checker")))
+                        {
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-send"></i><span>Cetak Kelola Surat</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="@Url.Action("CetakLK", "TransaksiKeuangan")"><i class="fa fa-send-o"></i><span>Cetak LK</span></a></li>
+                                    <li><a href="@Url.Action("CetakJaminan", "TransaksiJaminans")"><i class="fa fa-send-o"></i><span>Cetak Jaminan</span></a></li>
+                                    <li><a href="@Url.Action("CetakDana", "TransaksiDana")"><i class="fa fa-send-o"></i><span>Cetak Dana</span></a></li>
+                                    <li><a href="@Url.Action("CetakKejadian", "KejadianPenting")"><i class="fa fa-send-o"></i><span>Cetak Kejadian</span></a></li>
+                                    <li><a href="@Url.Action("Index", "OJKKejadian")"><i class="fa fa-print"></i><span>Cetak OJK Kejadian</span></a></li>
+                                </ul>
+                            </li>
+                        }
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-book"></i><span>Proses Pembuatan Surat</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="treeview-menu">
+
+                                @if (User.IsInRole("Maker"))
+                                {
+                                    <li><a href="@Url.Action("Index", "CetakSurat")"><i class="fa fa-send"></i><span>Kirim Untuk Dicek</span></a></li>
+                                    <li><a href="@Url.Action("Index_OJK", "TransaksiOJK")"><i class="fa fa-print"></i><span>Cetak Surat OJK</span></a></li>
+                          
+
+
+                                }
+                                @if (User.IsInRole("Checker"))
+                                {
+
+                                    <li><a href="@Url.Action("cek", "CetakSurat")"><i class="fa fa-check-circle"></i><span>Cek Surat</span></a></li>
+                                }
+                                @if (User.IsInRole("Pimkel"))
+                                {
+
+                                    <li><a href="@Url.Action("Otorisasi", "CetakSurat")"><i class="fa fa-pencil-square"></i><span>Otorisasi</span></a></li>
+
+                                }
+                              
+                                <li><a href="@Url.Action("History", "CetakSurat")"><i class="fa fa-paper-plane"></i><span>Cetak Surat Emiten</span></a></li>
+                           
+                            </ul>
+                        </li>
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li><a href="@Url.Action("Index", "UserManagement")"><i class="fa fa-user"></i><span>User Management</span></a></li>
+
+                        }
+
+
+                    </ul>
+                }
+            </section>
+        </aside>
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.0
+            </div>
+            <p>&copy; @DateTime.Now.Year - Wali Amanat Application</p>
+        </footer>
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+       
+
+        $(function () {
+            $('.select2').select2()
+        });
+
+        function LoadNotif() {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetNotif", "Notifications")",
+                dataType: "JSON",
+                success: function (result) {
+                    $('#notif_count').html(result.Count);
+                    var html = '';
+                    $.each(result.DetailNotificationVM, function (index, val) {
+                        html += '<li>' + val.Message + '</li>';
+                    });
+                    $('#notif_detail').html(html);
+                }
+            });
+        }
+
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

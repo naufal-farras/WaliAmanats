@@ -1,0 +1,335 @@
+﻿@model IEnumerable<WaliAmanats.ViewModel.CetakDetailVM>
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Id = Request.Params["Id"];
+}
+<hr />
+<h2>Detail Cetak Dokumen</h2>
+<hr />
+
+<div class="form-horizontal">
+    @foreach (var item in Model)
+    {
+
+        <input type="hidden" id="TransaksiId" value="@item.Id" />
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Perusahaan</label>
+            <div class="col-sm-3">
+                <select required id="Perusahaan" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.Perusahaan_Id">@item.Perusahaan</option>
+                </select>
+            </div>
+            <label class="col-sm-1 control-label">Produk</label>
+            <div class="col-sm-3">
+                <select required id="Produk" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.Produk_Id">@item.Produk</option>
+                </select>
+            </div>
+            <label class="col-sm-1 control-label">Nama Produk</label>
+            <div class="col-sm-3">
+                <textarea type="text" id="NamaProduk" class="form-control" disabled>@item.NamaProduk</textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Perwakilan</label>
+            <div class="col-sm-3">
+                <select required id="Perwakilan" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.NamaPerwakilan_Id">@item.Perwakilan</option>
+                </select>
+            </div>
+            <label class="col-sm-1 control-label">Jabatan</label>
+            <div class="col-sm-3">
+                <input type="text" id="Jabatan" class="form-control" placeholder="" readonly value="@item.Jabatan">
+            </div>
+            <label class="col-sm-1 control-label">Jenis Tugas</label>
+            <div class="col-sm-3">
+                <select required id="Tugas" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.JenisTugas_Id">@item.JenisTugas</option>
+                </select>
+            </div>
+        </div>
+
+        <br />
+
+        <h4>Pembayaran</h4>
+        <hr />
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Jenis Pengiriman</label>
+            <div class="col-sm-3">
+                <input type="text" id="JenisPengiriman" class="form-control" value="@item.JenisPengiriman" disabled>
+            </div>
+            <label class="col-sm-1 control-label">Nama Bank</label>
+            <div class="col-sm-3">
+                <input type="text" id="NamaBank" class="form-control" value="@item.NamaBank" disabled>
+            </div>
+            <label class="col-sm-1 control-label">Nama Penerima</label>
+            <div class="col-sm-3">
+                <input type="text" id="NamaPenerima" class="form-control" value="@item.NamaPenerima" disabled>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">No. Rekening</label>
+            <div class="col-sm-3">
+                <input type="text" id="NoRekening" class="form-control" value="@item.NoRekening" disabled>
+            </div>
+        </div>
+
+        <br />
+        <h4>Detail</h4>
+
+        <div class="detail">
+
+            @foreach (var item2 in item.Details)
+            {
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#col@(item2.Seri.Replace(" ", ""))">@item2.Seri</a>
+                            </h4>
+                        </div>
+                        <div id="col@(item2.Seri.Replace(" ", ""))" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <table class="table table-responsive">
+                                    <tr>
+                                        <td style="display:none;"></td>
+                                        <td>Seri</td>
+                                        <td>Nominal</td>
+                                        <td>Bunga</td>
+                                        <td>Tanggal Terbit</td>
+                                        <td>Jatuh Tempo</td>
+                                    </tr>
+                                    <tr class="mycontainer">
+                                        <td>
+                                            <input type="text" class="seri form-control" value="@item2.Seri" disabled />
+                                        </td>
+                                        <td>
+                                            <input type="text" class="nominal form-control number" value="@item2.Nominal.ToString("N2")" disabled />
+                                        </td>
+                                        <td>
+                                            <div class="input-group">
+                                                <input type="text" class="bunga form-control" value="@item2.Bunga" disabled />
+                                                <span class="input-group-addon" id="prepreiode">%</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="jatuhtempo form-control" value="@item2.TglTerbit.ToString("dd-MM-yyyy")" disabled />
+                                        </td>
+                                        <td>
+                                            <input type="text" class="jatuhtempo form-control" value="@item2.TglJatuhTempo.ToString("dd-MM-yyyy")" disabled />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Tanggal Bunga</th>
+                                            <th>Kupon ke-</th>
+                                            <th>Bunga</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    @{int no = 1;}
+                                    @foreach (var item3 in item2.Tanggal)
+                                    {
+                                        <tbody class="tbody">
+                                            <tr>
+                                                <td>@no</td>
+                                                <td>@item3.TglSuratBunga.ToShortDateString()</td>
+                                                <td>@item3.NoKupon</td>
+                                                <td>@item3.NilaiBunga.ToString("N2")</td>
+                                                @if (item3.Status == false)
+                                                {
+                                                    <td>
+                                                        <span class="label label-default">Belum Lunas</span>
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        <span class="label label-success">Lunas</span>
+                                                    </td>
+                                                }
+                                            </tr>
+                                        </tbody>
+                                        { no++; }
+                                    }
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                                        }
+
+            <a class="btn btn-default pull-right" href="@Url.Action("Index", "CetakSurat")">Kembali</a>
+            <span class="pull-right" style="margin:5px;"></span>
+            <a class="btn btn-primary pull-right" onclick="Send(@item.Id)">Kirim Untuk Otorisasi</a>
+            @*<a class="btn btn-primary pull-right" data-toggle="modal" data-target="#tglModal" data-backdrop="static" data-keyboard="false" id="modalCetak">Cetak</a>*@
+            <div class="clearfix"></div>
+        </div>
+
+                                        }
+</div>
+
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script src="~/Scripts/moment-with-locales.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            ClearScreen();
+
+            $('#modalCetak').on('click', function () {
+                var Id = $('#TransaksiId').val();
+
+                var t = $("#table").DataTable({
+                    "destroy": true,
+                    "paging": false,
+                    "info": false,
+                    "searching": false,
+                    "sorting": false,
+                    "ajax": {
+                        "url": "@Url.Action("CetakList", "CetakSurat")/" + Id,
+                        "type": "GET",
+                        "datatype": "json"
+                    },
+                    "columns": [
+                        { "data": null },
+                        { "data": "TransaksiDetail.Seri" },
+                        {
+                            "data": "TglSuratBunga", "render": function (d) {
+                                return moment(d).locale('id').format('dddd, LL');
+                            }
+                        },
+                        { "data": "NoKupon" },
+                        { "data": "NilaiBunga" },
+                        {
+                            "render": function (data, type, row) {
+                                if (row.Status == false) {
+                                    return "<span class='label label-default'>Belum Lunas</span>";
+                                } else {
+                                    return "<span class='label label-success'>Lunas</span>";
+                                }
+                            }
+                        },
+                    ]
+                })
+                t.on('order.dt search.dt', function () {
+                    t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                        cell.innerHTML = i + 1;
+                    });
+                }).draw();
+            })
+
+            $('#SaveNoRef').click(function () {
+                var Id = $('#TransaksiId').val();
+                var noref = $('#NoRef')
+                var status = noref.data('status');
+
+
+                if (status == 0) {
+                    if (noref.val() == '') {
+                        $('span.error').show();
+                    } else {
+                        $('span.error').hide();
+                        noref.prop('readonly', true);
+                        noref.data('status', 1);
+                        $(this).removeClass('btn btn-success');
+                        $(this).addClass('btn btn-warning');
+                        $(this).find('i').removeClass('fa fa-check');
+                        $(this).find('i').addClass('fa fa-remove');
+                        //$('#Save').load('Url.Action("Cetak", "CetakSurat")?noref=' + noref.val() + '');
+
+                    }
+                } else {
+                    noref.prop('readonly', false);
+                    noref.data('status', 0);
+                    $(this).removeClass('btn btn-warning');
+                    $(this).addClass('btn btn-success');
+                    $(this).find('i').removeClass('fa fa-remove');
+                    $(this).find('i').addClass('fa fa-check');
+                }
+
+            });
+        });
+
+        function Check() {
+            debugger;
+            if ($('#NoRef').val() == "" || $('#NoRef').val() == " ") {
+                Swal.fire('Failed!',
+                            'Inputkan Noref!',
+                            'Failed').then(() => {
+                                $('modalCetak').modal('hide');
+                            })
+            }
+            else {
+                $('#Save').attr('href', '@Url.Action("Cetak", "CetakSurat")/' + $('#TransaksiId').val() + '?noref=' + $('#NoRef').val() + '');
+            }
+        }
+
+        @*function reload() {
+            var noref = $('#NoRef').val();
+            if (noref == '') {
+                $('span.error').text('Mohon diisi');
+                $('span.error').show();
+            } else {
+                $('span.error').delay(500).fadeOut();
+                $('span.error').show();
+                $('#NoRef').prop('readonly', true);
+                $('#Save').load('@Url.Action("Cetak", "CetakSurat")?noref='+ noref +'');
+            }
+        }*@
+
+        function Send(Id) {
+            debugger;
+            var StatusCetak = true;
+
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-info btn-lg',
+                    cancelButton: 'btn btn-danger btn-lg'
+                },
+                buttonsStyling: false
+            })
+
+            swalWithBootstrapButtons.fire({
+                title: 'Kirim Untuk Otorisasi?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("SendOtorisasi", "CetakSurat")",
+                        "type": "POST",
+                        "datatype": "json",
+                        "data": { Id: Id, StatusCetak: StatusCetak }
+                }).then((data) => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Terkirim',
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function(){
+                            @*window.location.href = "@Url.Action("Index","TransaksiCetak")/";*@
+                            window.location = "@Url.Action("History","CetakSurat")/";
+                    });
+                })
+            }
+            })
+        }
+
+        function ClearScreen() {
+            $('span.error').hide();
+        }
+    </script>
+}

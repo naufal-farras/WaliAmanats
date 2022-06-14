@@ -1,0 +1,837 @@
+﻿@model WaliAmanats.ViewModel.RatiosVM
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+	<h1>
+		INPUT REALISASI
+	</h1>
+</section>
+
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box">
+				<div class="box-header with-border">
+					<div class="col-md-12">
+						<div class="pull-left">
+							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalKopSurat" onclick="AddModal()"><i class="fa fa-plus-circle"></i> Tambah</button>
+						</div>
+					</div>
+				</div>
+				<div class="box-body">
+					<div class="table-responsive">
+						<table id="example1" class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th width="4%" class="text-center" style="vertical-align:middle;">No</th>
+									<th class="text-center" style="vertical-align:middle;">Emiten</th>
+									<th class="text-center" style="vertical-align:middle;">No Surat</th>
+									<th class="text-center" style="vertical-align:middle;">Tgl. Surat</th>
+									<th class="text-center" style="vertical-align:middle;">Status</th>
+									<th class="text-center" style="vertical-align:middle;">Status Cetak</th>
+									<th class="text-center" style="vertical-align:middle;">Aksi</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						   
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--Modal Input Kop Surat-->
+<div class="example-modal">
+	<div id="myModalKopSurat" class="modal fade" data-backdrop="static" data-keyboard="false" role="dialog" style="display:none;">
+		<div class="modal-dialog" style="width:80%;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabelSurat"></h4>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<input type="hidden" class="form-control" id="IdKopSurat" value="0" />
+						<div class="form-group col-md-12">
+							<label class="col-sm-2 control-label">Emiten</label>
+							<div class="col-sm-4" id="divEmiten">
+								<input type="hidden" class="modalhide" id="EmitenHidden" value="0">
+							
+								<div id="divEmitens">
+									<select required="required" class="form-control select2 headsection" id="EmitenId" @*onchange="Emiten()"*@ style="width: 100%;">
+								 </select>
+
+								</div>
+								
+								<div id="divEmitenss">
+									<input type="text" class="form-control" id="EmitenNama" disabled />
+									<input type="hidden" class="form-control" id="EmitenEdit" />
+								</div>
+						   </div>
+
+							<label class="col-sm-2 control-label">Nomor Surat</label>
+							<div class="col-sm-4" id="divInpJenisPremi">
+								<input type="text" class="form-control" id="NoSurat" placeholder="No. Surat"/>
+							</div>
+						</div>
+						<div class="form-group col-md-12">
+							<label class="col-sm-2 control-label">Tanggal Surat</label>
+							<div class="col-sm-4" id="divStartDate">
+								<input required type="date" id="TglSurat" class="form-control" />
+							</div>
+							<label class="col-sm-2 control-label">Periode</label>
+							<div class="col-sm-4" id="divPeriode">
+								<input type="text" class="form-control" id="Periode" placeholder="Periode" />
+							</div>
+						</div>
+						
+						<div id="detailratio" count="0">
+						   
+							</div>
+						
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<div class="pull-right">
+						<button type="button" class="btn btn-success" id="Add" onclick="Save();">Submit</button>
+						<button type="button" class="btn btn-primary" id="Edit"  onclick="Edit();">Perbarui</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearScreen();">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@*modal Edit*@
+
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+@section Scripts{
+	<script src="~/Scripts/moment-with-locales.min.js"></script>
+	<script src="~/Scripts/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function () {
+			LoadEmiten();
+			Emiten();
+
+
+			$('#example1 thead tr').clone(true).appendTo('#example1 thead');
+
+			$.ajax({
+				type: "GET",
+				url: "@Url.Action("GetFilter", "TransaksiRatings")",
+				async: false,
+				dataType: "JSON",
+				success: function (result) {
+					//console.log(result)
+					$('#example1 thead tr:eq(1) th').each(function (i) {
+						if (i == 0 || i == 6) {
+							$(this).html('');
+						} else if (i == 1) {
+							var title = $(this).text();
+							var res = title.replace(" ", "").replace(" ", "").replace("-", "");
+							var data = eval("result." + res);
+							var html = '';
+							html += '<select class="form-control select2 filter">';
+							html += '<option value="" selected="selected">Search</option>';
+							//html += '<option selected="selected">Search ' + title + '</option>';
+							$.each(data, function (index, val) {
+								html += '<option>' + val + '</option>';
+							});
+							html += '</select>';
+							$(this).html(html);
+
+							$('select', this).on('keyup change', function () {
+								if ($("#example1").DataTable().column(i).search() !== this.value) {
+									//t.column(i).search(this.value).draw();
+									$("#example1").DataTable().column(i).search(this.value ? '^' + this.value + '$' : '', true, false).draw();
+								}
+							});
+
+
+						}
+						else if (i == 3) {
+							var title = $(this).text();
+							$(this).html('<input type="date" class="form-control filter" placeholder="Search" />');
+							$('input', this).on('keyup change', function () {
+								var year = this.value.substr(0, 4);
+								var month = this.value.substr(5, 2);
+								var day = this.value.substr(8, 2);
+								var newdate = day + "/" + month + "/" + year;
+								if (t.column(i).search() !== newdate) {
+									t.column(i).search(newdate).draw();
+								}
+							});
+						} else {
+							var title = $(this).text();
+							$(this).html('<input type="text" class="form-control filter" placeholder="Search" />');
+							//$(this).html('<input type="text" class="form-control" placeholder="Search ' + title + '" />');
+
+							$('input', this).on('keyup change', function () {
+								if ($("#example1").DataTable().column(i).search() !== this.value) {
+									$("#example1").DataTable().column(i).search(this.value).draw();
+								}
+							});
+						}
+
+					});
+				}
+			});
+
+			var t = $("#example1").DataTable({
+				"orderCellsTop": true,
+				"ajax": {
+					"url": "@Url.Action("GetDataAll", "TransaksiRatios")",
+					"type": "GET",
+					"datatype": "json"
+				},
+				"columns": [
+			{ "data": null },
+			{ "data": "Perusahaan.Nama" },
+
+		   {
+			   "render": function (data, type, val) {
+				   if (val.NoSurat == null) {
+					   return '<td class="text-center">-</td>';
+				   } else {
+					   return '<td class="text-center">'+val.NoSurat +'</td>';
+				   }
+
+			   }
+		   },
+
+
+			{
+				"render": function (data, type, val) {
+					if (val.TanggalSurat == null) {
+						return '<td class="text-center">-</td>';
+					} else {
+						return formatDates(val.TanggalSurat);
+					}
+
+				}
+			},
+				 {
+					 "render": function (data, type, val) {
+
+
+
+						 if (val.Status == true) {
+							 return '<td class="text-center"><span class="label label-info">Done</span></td>';
+
+						 } else {
+							 return '<td class="text-center"><span class="label label-warning">Unfinisihed</span></td>';
+						 }
+					 }
+				 },
+				   {
+					   "render": function (data, type, row) {
+						   return "<span class='label label-" + row.StatusCetak.Warna + "'>" + row.StatusCetak.Nama + "</span>";
+					   }
+				   },
+
+		{
+			"render": function (data, type, val) {
+
+
+			    if (val.Status==false) {
+			        return "<a class='btn btn-info btn-sm' href='@Url.Action("ViewDetail","TransaksiRatios")/" + val.Id + "'><i class='fa fa-eye'></i></a> &nbsp;"
+					+ "<a class='btn btn-warning btn-sm' onclick=EditModal('" + val.Id + "');><i class='fa fa-pencil'></i></a>&nbsp;"
+						+ "<a class='btn btn-danger btn-sm' onclick=Delete('" + val.Id + "');><i class='fa fa-trash'></i></a>"
+			    }
+			    else if (val.Status == true) {
+			        return "<a class='btn btn-info btn-sm' href='@Url.Action("ViewDetail","TransaksiRatios")/" + val.Id + "'><i class='fa fa-eye'></i></a> &nbsp;"
+			    }
+				  
+
+			}
+		}
+
+
+				],
+				"pageLength": 10,
+				"scrollX": true,
+				"scrollCollapse": true,
+				"dom": "<'row'<'col-sm-4'B><'col-sm-2'l><'col-sm-6'p>>" + "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+				"columnDefs": [
+					{
+
+						"visible": false,
+						"searchable": false
+					},
+					{
+						"searchPanes": {
+							"show": true,
+						},
+						"targets": [1, 2, 3, 4, 5],
+					}, {
+						"searchPanes": {
+							"show": false,
+						},
+						"targets": [1, 2, 3, 4, 5],
+					}, {
+						"sortable": false,
+						"class": "index",
+						"targets": [0, 6]
+					}, {
+						"width": 200,
+						"targets": 6
+
+					}],
+				"searchPanes": {
+					"layout": 'columns-6'
+				},
+				"select": {
+					"style": 'multi'
+				},
+				"buttons": {
+					"buttons": [
+						{
+							"text": '<i class="fa fa-file-excel-o"></i> Download',
+							"extend": 'excelHtml5',
+							"className": 'btn-success',
+							"autoFilter": false,
+							"sheetName": 'Data',
+							"title": "Report Data Rating",
+							"exportOptions": {
+								"columns": [1, 2, 3, 4]
+							}
+
+						},
+						{
+							"extend": 'searchPanes',
+							"config": {
+								"cascadePanes": true
+							},
+							"className": 'btn-info'
+						},
+						{
+							"text": '<i class="fa fa-refresh"></i> Reset',
+							"className": 'btn-warning',
+							"action": function (e, dt, node, config) {
+								$('.filter').each(function () {
+									$(this).val('').change();
+								})
+
+								//// Redraw table (and reset main search filter)
+								$("#example1").DataTable().search('').draw();
+								$("#example1").DataTable().column(7).search('').draw();
+
+
+							},
+						}
+					],
+					"dom": {
+						"button": {
+							"className": 'btn btn-sm'
+						},
+						"buttonLiner": {
+							"tag": null
+						}
+					}
+				},
+				"language": {
+					"searchPanes": {
+						"clearMessage": 'Clear',
+						"collapse": { 0: '<i class="fa fa-search"></i> Search', _: '<i class="fa fa-search"></i> Search (%d)' }
+					}
+				}
+
+			});
+
+			t.on('order.dt search.dt', function () {
+				t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+					cell.innerHTML = i + 1;
+				});
+			}).draw();
+		});
+
+		function AddModal() {
+			ClearError();
+			ClearScreen();
+			$('#myModalLabelSurat').html('Tambah Realisasi');
+			$('#Edit').hide();
+			$('#divEmitenss').hide();
+			$("#divEmitens").show();
+
+			$('#Add').show();
+		}
+
+		function ClearError() {
+			$(".has-error").removeClass("has-error");
+		}
+		function Realisasi() {
+			//   var TglSurat = $("#datepicker1").data("DatePicker").date();
+			var perusahaan = new Object();
+			perusahaan.Perusahaan_Id = $("#Idperusahaan").val();
+			perusahaan.Id = $("#Id").val();
+			perusahaan.Periode = $('#Periode').val();
+			perusahaan.NoSurat = $("#NoSurat").val();
+			perusahaan.TanggalSurat = $("#TglSurat").val();
+			console.log($("#TglSurat").val());
+			$.ajax({
+				type: "POST",
+				url: "@Url.Action("SaveSuratNew", "TransaksiRatios")",
+				data: { 'surat': perusahaan },
+				success: function (result) {
+
+					swal({
+						position: 'center',
+						type: 'success',
+						title: 'Insert Successfully'
+
+					},
+				function () {
+					$('#myModalKopSurat').modal('hide');
+					window.location.reload();
+					//  $('#myModal').modal('show');
+				});
+				},
+				error: function (response) {
+					swal('Error', 'Insert Fail', 'error');
+					// ClearCore();
+				}
+			});
+
+		}
+		function LoadEmiten() {
+			var kate = $('#EmitenHidden').val();
+			$.ajax({
+				url: "@Url.Action("GetPerusahaan", "TransaksiRatings")",
+				type: 'GET',
+				dataType: 'json',
+				success: function (result) {
+					var kategori = $("#EmitenId");
+					kategori.html('');
+					$("<option></option>").val('').text('Pilih Emiten').appendTo(kategori);
+					$.each(result, function (i, value) {
+
+						$("<option></option>").val(value.Id).text(value.Nama).appendTo(kategori);
+						//console.log(value.Nama);
+					});
+					if (kate != 0) {
+						$("#EmitenId").val(kate).trigger('change');
+						//LoadNasabah();
+					}
+				}
+			});
+		}
+
+		@*function Emitenn() {
+			var EmitenId = $("#EmitenId").val();
+			$.ajax({
+				"url": "@Url.Action("GetEmiten", "TransaksiRatios")",
+				"type": "GET",
+				"datatype": "json"
+			}).then((result) => {
+				var Emiten = $("#EmitenId");
+				Emiten.html('');
+				$("<option></option>").val('').text('Pilih Emiten').appendTo(Emiten);
+				$.each(result, function (i, value) {
+					$("<option></option>").val(value.Id).text(value.Nama).appendTo(Emiten);
+				});
+			})
+		}*@
+
+
+		function Emiten(){
+			$('#EmitenId').on("change", function () {
+				var EmitenId = $("#EmitenId").val();
+				$('#detailratio').empty();
+				$.ajax({
+					"url": "@Url.Action("GetSetting","TransaksiRatios")",
+					"type": "GET",
+					"datatype": "json",
+					"data": { EmitenId: EmitenId },
+					"success": function (result) {
+						var markup = '';
+						var count = 0;
+						$.each(result.data, function (i, value) {
+							markup += '<div class="form-group col-md-12">';
+							markup += '<input type="hidden" class="form-control" id="Iddetail' + i + '" />';
+							markup += '<label class="col-sm-2 control-label">Ratio</label>';
+							markup += '<div class="col-sm-4">';
+							markup += '<input type="hidden" readonly class="form-control" id="Ratio' + i + '"  value="' + value.Ratio.Id + '" />';
+							markup += '<input type="text" readonly class="form-control"  value="' + value.Ratio.Nama + '" />';
+							markup += '</div>';
+							markup += '<label class="col-sm-2 control-label">Measurement</label>';
+							markup += '<div class="col-sm-4">';
+							markup += '<input type="hidden" readonly class="form-control" id="Measure' + i + '" value="' + value.Measurement.Id + '" />';
+							markup += '<input type="text" readonly class="form-control" value="' + value.Measurement.Nama + '" />';
+							markup += '</div>';
+							markup += '</div>';
+							markup += '<div class="form-group col-md-12">';
+							markup += '<label class="col-sm-2 control-label">Target</label>';
+							markup += '<div class="col-sm-4">';
+							markup += '<input type="text"readonly class="form-control" id="Target' + i + '"  value="' +reptitik(value.Target) + '" />';
+							markup += '</div>';
+							markup += '<label class="col-sm-2 control-label">Realisasi</label>';
+							markup += '<div class="col-sm-4">';
+							markup += '<input type="text"  class="form-control" onkeypress="return Angkasaja(event)" id="Realisasi' + i + '" />';
+							markup += '<label style="color:silver;">*Sesuaikan dengan inputan target </label> ';
+							markup += '</div>';
+							markup += '</div>';
+							count = i;
+						});
+
+						$("#detailratio").html(markup);
+						$("#detailratio").attr('count', count);
+					}
+			})
+		})
+		}
+
+		function reptitik(tt) {
+			return tt = tt.toString().split('.').join(',');
+
+			
+		}
+
+		function Angkasaja(evt) {
+		    var charCode = (evt.which) ? evt.which : event.keyCode
+		    if (charCode > 58)
+		        return false;
+		    return true;
+		}
+	
+		
+		//var tt = reptitik(3.5);
+		//console.log(tt);
+
+	
+		function EditModal(Id) {
+			debugger;
+
+			//var tanggal = $("#TglSurat").val("");
+			debugger;
+			$.ajax({
+				url: "@Url.Action("GetByIdRatio", "TransaksiRatios")",
+				type: "GET",
+			data: { 'Id': Id },
+			dataType: "json",
+			success: function (result) {
+				console.log(result);
+					//debugger;
+					ClearError();
+					//ClearCore();
+					//console.log(result);
+
+					if (result.TanggalSurat == null) {
+						$("#TglSurat").val("");
+
+					} else {
+						$("#TglSurat").val(formatDate(result.TanggalSurat)).trigger('change');
+						console.log(formatDate(result.TanggalSurat));
+					}
+					//var IdEm = result.Perusahaan_Id;
+
+					$("#EmitenEdit").val(result.Perusahaan_Id);
+					$("#EmitenNama").val(result.Nama);
+					 //surat.Perusahaan_Id = $("#EmitenId").find(":selected").val();
+
+					$("#NoSurat").val(result.NoSurat);
+
+					$("#Periode").val(result.Periode);
+
+					var markups = '';
+					var count = 0;
+					$.each(result.Detail, function (i, value) {
+						markups += '<div class="form-group col-md-12">';
+						markups += '<input type="hidden" class="form-control" id="Iddetail' + i + '" value="' + value.Id + '"/>';
+						markups += '<label class="col-sm-2 control-label">Ratio</label>';
+						markups += '<div class="col-sm-4">';
+						markups += '<input type="hidden" readonly class="form-control" id="Ratio' + i + '"  value="' + value.Ratio_Id + '" />';
+						markups += '<input type="text" readonly class="form-control"  value="' + value.rationama + '" />';
+						markups += '</div>';
+						markups += '<label class="col-sm-2 control-label">Measurement</label>';
+						markups += '<div class="col-sm-4">';
+						markups += '<input type="hidden" readonly class="form-control" id="Measure' + i + '" value="' + value.Measurement_Id + '" />';
+						markups += '<input type="text" readonly class="form-control" value="' + value.measurementnama + '" />';
+						markups += '</div>';
+						markups += '</div>';
+						markups += '<div class="form-group col-md-12">';
+						markups += '<label class="col-sm-2 control-label">Target</label>';
+						markups += '<div class="col-sm-4">';
+						markups += '<input type="text"readonly class="form-control" onkeypress="return Angkasaja(event)" id="Target' + i + '"  value="' + reptitik(value.Target) + '" />';
+						markups += '</div>';
+						markups += '<label class="col-sm-2 control-label">Realisasi</label>';
+						markups += '<div class="col-sm-4">';
+						markups += '<input type="text" class="form-control" onkeypress="return Angkasaja(event)" id="Realisasi' + i + '" value="' + reptitik(value.Realisasi) + '" />';
+						markups += '</div>';
+						markups += '</div>';
+						count = i;
+					});
+
+
+					$('#Edit').show();
+					$('#Add').hide();
+
+					$("#detailratio").html(markups);
+					$("#detailratio").attr('count', count);
+					$("#myModalKopSurat").modal('show');
+					$("#EmitenId").attr('hidden', true);
+					$("#divEmitenss").show();
+
+					$("#divEmitens").hide();
+
+
+
+				}
+			})
+		}
+
+		function Edit() {
+			debugger;
+			//   var TglSurat = $("#datepicker1").data("DatePicker").date();
+			var surat = new Object();
+			surat.Id = $("#IdKopSurat").val();
+			//surat.Perusahaan_Id = $("#EmitenId").val();
+			surat.Perusahaan_Id = $("#EmitenEdit").val();
+			surat.NoSurat = $("#NoSurat").val();
+			surat.TanggalSurat = $("#TglSurat").val();
+			surat.Periode = $("#Periode").val();
+
+			var Details = new Array();
+			var count = $("#detailratio").attr('count');
+			for (var i = 0; i <= count; i++) {
+
+				if ($("#Iddetail" + i).length) {
+					var detail = new Object();
+					detail.Id = $("#Iddetail" + i).val();
+					detail.Ratio_Id = $('#Ratio' + i).val();
+					detail.Target = $('#Target' + i).val();
+					detail.Measurement_Id = $('#Measure' + i).val();
+					detail.Realisasi = $("#Realisasi" + i).val();
+
+					Details.push(detail);
+				}
+			}
+
+			//console.log(Details)
+			if (Details == "" || detail.Realisasi=="") {
+				swal({
+					position: 'center',
+					type: 'warning',
+					title: 'Gagal Tambah Ratio',
+					text: "Harap inputkan Emiten/Ratio/Realisasi dahulu",
+
+				})
+
+			}
+			else {
+				$.ajax({
+					type: "POST",
+					url: "@Url.Action("EditSurat", "TransaksiRatios")",
+					data: { 'surat': surat, 'detail': Details },
+				success: function (result) {
+					swal({
+						position: 'center',
+						type: 'success',
+						title: 'Update Successfully'
+
+					},
+				function () {
+
+					window.location.href = "@Url.Action("Index", "TransaksiRatios")";
+				});
+				},
+				error: function (response) {
+					swal('Error', 'Update Fail', 'error');
+
+				}
+			});
+		}
+
+
+
+
+		}
+		function Save() {
+
+			//   var TglSurat = $("#datepicker1").data("DatePicker").date();
+			var surat = new Object();
+			surat.Id = $("#IdKopSurat").val();
+			surat.Perusahaan_Id = $("#EmitenId").find(":selected").val();
+			surat.NoSurat = $("#NoSurat").val();
+			surat.TanggalSurat = $("#TglSurat").val();
+			surat.Periode = $("#Periode").val();
+
+
+			var Details = new Array();
+			var count = $("#detailratio").attr('count');
+			for (var i = 0; i <= count; i++) {
+
+				if ($("#Iddetail" + i).length) {
+					var detail = new Object();
+					detail.Id = $("#Iddetail" + i).val();
+					detail.Ratio_Id = $('#Ratio' + i).val();
+					detail.Target = $('#Target' + i).val();
+					detail.Measurement_Id = $('#Measure' + i).val();
+					detail.Realisasi = $("#Realisasi" + i).val();
+
+					Details.push(detail);
+				}
+			}
+
+			//console.log(Details)
+			if (Details == "" || detail.Realisasi=="") {
+				swal({
+					position: 'center',
+					type: 'warning',
+					title: 'Gagal Tambah Ratio',
+					text: "Harap inputkan Emiten/Ratio/Realisasi dahulu",
+
+				})
+
+			}
+			else {
+				$.ajax({
+					 type: "POST",
+					 url: "@Url.Action("SaveSuratNew", "TransaksiRatios")",
+					data: { 'surat': surat, 'detail': Details },
+				success: function (result) {
+					swal({
+						position: 'center',
+						type: 'success',
+						title: 'Insert Successfully'
+
+					},
+				function () {
+
+					window.location.href = "@Url.Action("Index", "TransaksiRatios")";
+				});
+				},
+				error: function (response) {
+					swal('Error', 'Insert Fail', 'error');
+
+				}
+			});
+			}
+		}
+
+		function Delete(Id) {
+			swal({
+				title: "Are you sure to delete this?",
+				text: "You will not be able to recover this imaginary data!",
+				type: "warning",
+				showCancelButton: true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Yes",
+				closeOnConfirm: false
+			}, function () {
+				$.ajax({
+					url: "@Url.Action("Delete", "TransaksiRatios")",
+					type: "POST",
+				data: { 'Id': Id },
+				success: function (response) {
+					swal({
+						title: "Deleted!",
+						text: "That data has been delete!",
+						type: "success"
+					},
+					function () {
+						window.location.href = '@Url.Action("Index", "TransaksiRatios")';
+					});
+				},
+				error: function (response) {
+					swal("Oops", "We couldn't connect to the server!", "error");
+				}
+			});
+		});
+		}
+		function ClearScreen() {
+			$("#Iddetail").val('');
+			$("#IdKopSurat").val('');
+			$("#EmitenId").val('').trigger('change');
+			$("#Periode").val('');
+			$("#Target").val('');
+			$("#Realisasi").val('');
+			$("#NoSurat").val('');
+			$("#TglSurat").val('');
+			$("#Edit").hide();
+			$("#Add").show();
+			var x = document.getElementsByClassName("modalhide");
+			for (var i = 0; i < x.length; i++) {
+				x[i].value = 0;
+			}
+		}
+		@*$("#Emiten").change(function () {
+			var id = $("#Emiten").val();
+			$("#Emiten").removeAttr("disabled");
+			@*if (id == '') {
+				$("#Emiten").attr("disabled");
+			}
+			else {
+				$.ajax({
+					"url": "@Url.Action("GetProduk", "TransaksiRatios")",
+					"type": "GET",
+					"datatype": "json",
+					"data": { EmitenId: id }
+				}).then((result) => {
+					var Produk = $("#Produk");
+					Produk.html('');
+					$("<option></option>").val('').text('Pilih Produk').appendTo(Produk);
+					$.each(result, function (i, value) {
+						$("<option></option>").val(value.Id).text(value.NamaProduk).appendTo(Produk);
+					});
+				})
+			}
+			$('#detailsItems').empty();
+			$.ajax({
+				"url": "@Url.Action("GetRatio", "TransaksiRatios")",
+				"type": "GET",
+				"datatype": "json",
+				"data": { Id: id },
+				"success": function (result) {
+					$.each(result.data, function (i, value) {
+						var markup =
+							'<tr class="mycontainer" id="mainrow">' +
+							'<td class="hidden"><input type="hidden" disabled  id="Idperusahaan" class="form-control" value="' + value.Perusahaan_Id + '" /></td>' +
+							'<td class="hidden"><input type="hidden" disabled  id="Iddetail" class="form-control" value="' + value.Id + '" /></td>' +
+							'<td><input type="text" disabled  id="Ratio" class="form-control" value="' + value.Ratio.Nama + '" /></td>' +
+							 '<td><input type="text" disabled id="Measure" class="form-control" value="' + value.Measurement.Nama + '" /></td>' +
+							'<td><input type="text" disabled id="Target" class="form-control" value="' + value.Target + '" /></td>' +
+							'<td><input type="text" class="form-control" id="Audit" value="' + value.Realisasi + '" /></td>' +
+							'<td><input type="text" class="form-control" id="NoSurat" value="' + value.NoSurat + '" /></td>' +
+							'<td><input type="date" id="TanggalSurat" class="form-control" value="' + moment(value.TanggalSurat).format("YYYY-MM-DD") + '"/></td>' +
+							//'<td><a class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a></td>' +
+							'</tr>';
+
+						$('#detailsItems').append(markup);
+					});
+					//$('.daterange').datepicker({
+					//    opens: 'center'
+					//}, function (start, end, label) {
+					//});
+				}
+			})
+		})*@
+
+				function formatDate(dates) {
+					date = new Date(parseInt(dates.substr(6)));
+					var year = date.getFullYear();
+					var month = (1 + date.getMonth()).toString();
+					month = month.length > 1 ? month : '0' + month;
+					var day = date.getDate().toString();
+					day = day.length > 1 ? day : '0' + day;
+					//return day + '/' + month + '/' + year;
+					return year + '-' + month + '-' + day;
+				}
+				function formatDates(dates) {
+					date = new Date(parseInt(dates.substr(6)));
+					var year = date.getFullYear();
+					var month = (1 + date.getMonth()).toString();
+					month = month.length > 1 ? month : '0' + month;
+					var day = date.getDate().toString();
+					day = day.length > 1 ? day : '0' + day;
+					return day + '/' + month + '/' + year;
+				}
+
+	</script>
+}

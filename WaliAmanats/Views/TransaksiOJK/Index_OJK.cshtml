@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "Index_OJK";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+<h3 style="text-align:center">Pelaporan Tengah/Akhir Tahun Otoritas Jasa Keuangan (OJK)</h3>
+
+<hr />
+<div class="form-group row">
+    <label class="col-sm-2 control-label" for="tahun">Tanggal Awal</label>
+    <div class="col-sm-3">
+        <input type="text" class="form-control" id="startDate" placeholder="Pilih Tanggal Awal" autocomplete="off" />
+    </div>
+
+    <label class="col-sm-2 control-label" for="tahun">Tahun Akhir</label>
+    <div class="col-sm-3">
+        <input type="text" class="form-control" id="endDate" placeholder="Pilih Tanggal Akhir" autocomplete="off" />
+    </div>
+    
+
+    @*<label class="col-sm-1 control-label" for="periode">Periode</label>
+        <div class="col-sm-5">
+            <select class="form-control" id="periode">
+                <option value="0" selected>-- Pilih Periode --</option>
+                <option value="false">Januari - Juni (6 Bulan)</option>
+                <option value="true">Januari - Desember (1 Tahun)</option>
+            </select>
+        </div>*@
+</div>
+<div class="form-group row">
+    <label class="col-sm-2 control-label" for="Aturan">Aturan OJK</label>
+    <div class="col-sm-3">
+        <select required Id="Aturan" data-placement="choose" class="form-control"></select>
+    </div>
+    <label class="col-sm-2 control-label" for="Pimkel">Pimkel</label>
+    <div class="col-sm-3">
+        <select required Id="User" data-placement="choose" class="form-control"></select>
+    </div>
+</div>
+
+<input class="btn btn-primary" type="submit" id="Cetak" value="Cetak Laporan">
+
+
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            GetAturan();
+            GetUser();
+
+            $('#startDate').datepicker({
+                showAnim: "slide"
+            });
+
+            $('#endDate').datepicker({
+                showAnim: "slide"
+            });
+            $("#Cetak").click(function () {
+                var startDate = $('#startDate').val();;
+                var endDate = $("#endDate").val();
+                var Aturan = $("#Aturan").val();
+                var User = $("#User").val();
+
+                if (startDate == '' || endDate == '') {
+                    alert("Form tidak boleh kosong");
+                } else if (endDate <= startDate) {
+                    alert("Tanggal yang dipilih tidak valid")
+                }
+                else {
+                    debugger;
+                    var url = '@Url.Action("LaporanOJKalt", "TransaksiOJK")?startDate=' + startDate + '&endDate=' + endDate + '&Aturan=' + Aturan + '&User=' + User;
+                    document.location = url;
+                }
+
+            });
+        });
+
+        function GetAturan() {
+            $.ajax({
+                "url": "@Url.Action("GetAturan", "AturanOJK")",
+                "type": "Get",
+                "datatype": "json"
+        }).then((result) => {
+            var Aturan = $("#Aturan");
+            Aturan.html('');
+            $("<option></option>").val('').text('Pilih Aturan OJK').appendTo(Aturan);
+            $.each(result, function (i, value) {
+                $("<option></option>").val(value.Id).text(value.Aturan).appendTo(Aturan);
+            });
+        })
+        }
+
+        function GetUser() {
+            $.ajax({
+                "url": "@Url.Action("GetUser", "AturanOJK")",
+                "type": "Get",
+                "datatype": "json"
+        }).then((result) => {
+            var User = $("#User");
+            User.html('');
+            $("<option></option>").val('').text('Pilih Pimkel').appendTo(User);
+            $.each(result, function (i, value) {
+                $("<option></option>").val(value.Nama).text(value.Nama).appendTo(User);
+            });
+        })
+        }
+
+
+        // *** (year only) ***
+        //$(function () {
+        //    $('#tahun').datepicker({
+        //        yearRange: "c-100:c",
+        //        changeMonth: false,
+        //        changeYear: true,
+        //        showButtonPanel: true,
+        //        closeText: 'Select',
+        //        currentText: 'This year',
+        //        onClose: function (dateText, inst) {
+        //            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+        //            $(this).val($.datepicker.formatDate("yy", new Date(year, 0, 1)));
+        //        },
+        //        beforeShow: function (input, inst) {
+        //            if ($(this).val() != '') {
+        //                var tmpyear = $(this).val();
+        //                $(this).datepicker('option', 'defaultDate', new Date(tmpyear, 0, 1));
+        //            }
+        //        }
+        //    }).focus(function () {
+        //        $(".ui-datepicker-month").hide();
+        //        $(".ui-datepicker-calendar").hide();
+        //        $(".ui-datepicker-current").hide();
+        //        /*$(".ui-datepicker-close").hide();*/
+        //        $(".ui-datepicker-prev").hide();
+        //        $(".ui-datepicker-next").hide();
+        //        $("#ui-datepicker-div").position({
+        //            my: "left top",
+        //            at: "left bottom",
+        //            of: $(this)
+        //        });
+        //    }).attr("readonly", false);
+        //});
+        // --------------------------------
+
+
+    </script>
+}

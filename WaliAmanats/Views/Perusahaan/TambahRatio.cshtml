@@ -1,0 +1,349 @@
+﻿@model WaliAmanats.ViewModel.RatioVM
+@{
+    ViewBag.Title = "TambahRatio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+    <h1>
+        Tambah Ratio
+    </h1>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+
+                <div class="box-header with-border">
+                    <div class="col-md-6">
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right">
+
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-plus">Add Ratio</i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Ratio</th>
+                                <th>Measurement</th>
+                                <th>Target</th>
+                                <th>Tanggal Input</th>
+                                <th>Update/Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            @{
+                                var a = 1;
+                            }
+                            @foreach (var item2 in Model.Setting)
+                            {
+                                <tr>
+                                    <td>@a</td>
+                                    @{ a++; }
+                                    <td>@item2.Ratio.Nama</td>
+                                    <td>@item2.Measurement.Nama</td>
+                                    <td>@item2.Target</td>
+                                    <td>@string.Format("{0:dd/MM/yyyy}", item2.ModifiedDate)</td>
+                                    <td>
+
+                                        <a onclick="ViewRatio(@item2.Id)" class="btn btn-warning" data-toggle="modal" data-target="#myModal" data-placement="right" title="View"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-danger" onclick="Delete(@item2.Id)"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                        }
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <fieldset>
+                            <input type="hidden" id="Iddetail">
+                            <div class="form-group">
+                                @*<label class="col-sm-2 control-label">Id Perusahaan</label>*@
+                               
+                                    <input type="hidden" readonly disabled class="form-control" id="Idperusahaan" value="@Model.IdPerusahaan"/>
+                                
+                                <label class="col-sm-2 control-label">Ratio</label>
+                                <div class="col-sm-4">
+                                    <input type="hidden" class="modalhide" id="RatioHidden" value="0">
+                                    <select required id="Ratio" class="form-control ratio" style="min-width:100%" data-placement="choose"></select>
+                                </div>
+                                <label class="col-sm-2 control-label">Tanggal Input</label>
+                                <div class="col-sm-4">
+                                    <input type="date" class="form-control" id="Tanggalinput" style="min-width:100%">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Measurement</label>
+                                <div class="col-sm-4">
+                                    <input type="hidden" class="modalhide" id="MeasureHidden" value="0">
+                                    <select required id="Measure" class="form-control measure" style="min-width:100%" data-placement="choose"></select>
+                                </div>
+                                <label class="col-sm-2 control-label">Target</label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="Target" onkeypress="return Angkasaja(event)" class="target form-control" placeholder="Target" style="min-width:100%" />
+                                    <label style="color:silver;">*Inputan koma(,) tetap gunakan koma</label>    
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                               
+                            </div>
+
+
+                            <div class="panel-group" id="accordionbuku">
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearScreen()">Close</button>
+                    <button type="button" class="btn btn-success" id="Save" onclick="Save();">Save</button>
+                    <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="Update();">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+@section Scripts{
+<script src="~/Scripts/moment-with-locales.min.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            LoadRatio();
+            LoadMeasure();
+        })
+        function Angkasaja(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 58  )
+                return false;
+            return true;
+        }
+        function Save() {
+            debugger;
+            var perusahaan = new Object();
+            perusahaan.Perusahaan_Id = $("#Idperusahaan").val();
+            perusahaan.Id = $("#Iddetail").val();
+            perusahaan.Ratio_Id = $("#Ratio").find(":selected").val();
+            perusahaan.Measurement_Id = $('#Measure').find(":selected").val();
+            perusahaan.Target = $("#Target").val();
+            perusahaan.ModifiedDate = $("#Tanggalinput").val();
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddRatio", "Perusahaan")",
+                data: { 'ratio': perusahaan },
+            success: function (result) {
+                swal({
+                    position: 'center',
+                    type: 'success',
+                    title: 'Insert Successfully'
+
+                },
+            function () {
+                $('#myModal').modal('hide');
+                window.location.href = "@Url.Action("TambahRatio", "Perusahaan")";
+            });
+            },
+            error: function (response) {
+                swal('Error', 'Insert Fail', 'error');
+                ClearScreen();
+            }
+        });
+        }
+
+        function Delete(Id) {
+            swal({
+                title: "Apakah yakin ingin menghapus data ini?",
+                text: "Data tidak dapat dikembalikan!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes",
+                closeOnConfirm: false
+            }, function () {
+                $.ajax({
+                    url: "@Url.Action("DeleteRatio", "Perusahaan")",
+                    type: "POST",
+                data: { 'Id': Id },
+                success: function (response) {
+                    swal({
+                        title: "Deleted!",
+                        text: "Data berhasil di hapus!",
+                        type: "success"
+                    },
+                    function () {
+                        window.location.href = '@Url.Action("TambahRatio", "Perusahaan")';
+                    });
+                },
+                error: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                }
+            });
+        });
+        }
+        function Update() {
+            var perusahaan = new Object();
+            perusahaan.Perusahaan_Id = $("#Idperusahaan").val();
+            perusahaan.Id = $("#Iddetail").val();
+            perusahaan.Ratio_Id = $("#Ratio").val();
+            perusahaan.Measurement_Id = $('#Measure').val();
+            perusahaan.Target = $("#Target").val();
+            perusahaan.ModifiedDate = $("#Tanggalinput").val();
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddRatio", "Perusahaan")",
+                data: { 'ratio': perusahaan },
+            success: function (result) {
+                swal({
+                    position: 'center',
+                    type: 'success',
+                    title: 'Insert Successfully'
+
+                },
+            function () {
+                $('#myModal').modal('hide');
+                window.location.href = "@Url.Action("TambahRatio", "Perusahaan")";
+            });
+            },
+            error: function (response) {
+                swal('Error', 'Insert Fail', 'error');
+                ClearScreen();
+            }
+        });
+        }
+        function ViewRatio(Id) {
+            debugger;
+            $.ajax({
+                url: "@Url.Action("GetDetail", "Perusahaan")/" + Id,
+                type: "GET",
+                dataType: "JSON",
+                success: function (result) {
+                    //console.log(moment(result.data.CreateDate).format('DD/MM/YYYY'));
+                    $('#Iddetail').val(result.data.Id);
+                    $('#Idperusahaan').val(result.data.Perusahaan_Id);
+                    $('#Ratio').val(result.data.Ratio_Id).change();
+                    $('#Measure').val(result.data.Measurement_Id).change();
+                    $('#Target').val(result.data.Target);
+                   // $('#Tanggalinput').val(moment(result.data.CreateDate).format("DD-MM-YYYY"));
+                    $('#Tanggalinput').val(formatDate(result.data.ModifiedDate)).trigger('change');
+                    $('#myModal').modal('show');
+                    $('#Update').show();
+                    $('#Save').hide();
+                },
+                error: function (errormessage) {
+                    alert(errormessage.responseText);
+                }
+            });
+            //return false;
+        }
+        function LoadRatio() {
+            var rat = $('#RatioHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetData","Ratio")",
+                type: 'GET',
+
+                dataType: 'JSON',
+                success: function (result) {
+                    var Rating = $("#Ratio");
+                    Rating.removeAttr("readonly");
+                    Rating.removeAttr("disabled");
+                    Rating.html('');
+                    $("<option></option>").val('').text('Pilih Ratio').appendTo(Rating);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.Nama).appendTo(Rating);
+                    });
+                    if (rat != 0) {
+                        $("#Ratio").val(rat).trigger('change');
+
+                    }
+                }
+            });
+        }
+        function LoadMeasure() {
+            var rat = $('#MeasureHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetMeasure","Perusahaan")",
+                type: 'GET',
+                dataType: 'JSON',
+                success: function (result) {
+                    var Rating = $("#Measure");
+                    Rating.removeAttr("readonly");
+                    Rating.removeAttr("disabled");
+                    Rating.html('');
+                    $("<option></option>").val('').text('Pilih Measurement').appendTo(Rating);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.Nama).appendTo(Rating);
+                    });
+                    if (rat != 0) {
+                        $("#Measure").val(rat).trigger('change');
+
+                    }
+                }
+            });
+        }
+
+        function ClearScreen() {
+            $("#Iddetail").val("");
+            $("Idperusahaan").val("");
+            $("#Measure").val("");
+            $("#Tanggalinput").val("");
+            $("#Ratio").val("");
+            $("#Target").val("");
+            $('#Update').hide();
+            $('#Save').show();
+        }
+        function formatDate(dates) {
+            date = new Date(parseInt(dates.substr(6)));
+            var year = date.getFullYear();
+            var month = (1 + date.getMonth()).toString();
+            month = month.length > 1 ? month : '0' + month;
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+            //return day + '/' + month + '/' + year;
+            return year + '-' + month + '-' + day;
+        }
+        function formatDates(dates) {
+            date = new Date(parseInt(dates.substr(6)));
+            var year = date.getFullYear();
+            var month = (1 + date.getMonth()).toString();
+            month = month.length > 1 ? month : '0' + month;
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+            return day + '/' + month + '/' + year;
+        }
+
+        $(function () {
+            $('.daterange').datepicker({
+                opens: 'left',
+                format: 'dd-mm-yyyy'
+            }, function (start, end, label) {
+            });
+        });
+
+    </script>
+}
+
+

@@ -1,0 +1,316 @@
+﻿@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using WaliAmanats.Models;
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron">
+        <h1>Halo!,</h1>
+        <p class="lead">Selamat Datang Di Aplikasi WaliAmanat</p>
+    </div>*@
+
+<div class="container">
+    <hr />
+    <h1>DashBoard</h1>
+    <hr />
+    @if (Request.IsAuthenticated)
+    {
+
+        <div class="panel-group col-sm-5 col-lg-offset-1">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h4 style="text-align:center">Emiten</h4></div>
+                <div class="panel-body primary">
+                    <h1 style="text-align:center;"><a class="primary" href="@Url.Action("Index", "Perusahaan")">@ViewBag.Emiten</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-5">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h4 style="text-align:center">Pemeriksaan Input</h4></div>
+                <div class="panel-body primary">
+                    @if (User.IsInRole("Checker"))
+                    {
+                         <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("Otorisasi", "TransaksiLaporans")">@ViewBag.CekInput</a></h1>
+                    }
+                    else
+                    {
+                        <h1 style="text-align:center;" ><p class="text-warning">@ViewBag.CekInput</p></h1>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="panel-group col-sm-10 col-lg-offset-1">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h4 style="text-align:center">Jumlah Sedia Dana</h4></div>
+                <div class="panel-body primary">
+                    <h1 style="text-align:center;">@ViewBag.sediadana.ToString("N2")</h1>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group col-sm-2 col-lg-offset-1">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h4 style="text-align:center">Dicetak H-15</h4></div>
+                <div class="panel-body warning">
+                    @if (User.IsInRole("Maker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("Index", "CetakSurat")">@ViewBag.PerluDiCetak</a></h1>
+                    }
+                    else if (User.IsInRole("Checker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("listCetak", "CetakSurat")">@ViewBag.PerluDiCetak</a></h1>
+                    }
+                    else
+                    {
+                        <h1 style="text-align:center;">@ViewBag.PerluDiCetak</h1>
+
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h4 style="text-align:center">Checker</h4></div>
+                <div class="panel-body warning">
+                    @if (User.IsInRole("Checker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-warning" href="@Url.Action("Cek", "CetakSurat")">@ViewBag.PerluDiCek</a></h1>
+                    }
+                    else
+                    {
+                        <h1 style="text-align:center;">@ViewBag.PerluDiCek</h1>
+
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h4 style="text-align:center">Approval</h4></div>
+                <div class="panel-body warning">
+                    @if (User.IsInRole("Pimkel"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-primary" href="@Url.Action("Otorisasi", "CetakSurat")">@ViewBag.PerluApproval</a></h1>
+                    }
+                    else
+                    {
+                        <h1 style="text-align:center;">@ViewBag.PerluApproval</h1>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h4 style="text-align:center">Dicetak Maker</h4></div>
+                <div class="panel-body warning">
+                    @if (User.IsInRole("Maker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-success" href="@Url.Action("History", "CetakSurat")">@ViewBag.SiapDiCetak</a></h1>
+                    }
+                    else
+                    {
+                        <h1 style="text-align:center;">@ViewBag.SiapDiCetak</h1>
+
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h4 style="text-align:center">Tercetak</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-success" href="@Url.Action("History", "CetakSurat")">@ViewBag.Done</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2 col-lg-offset-1">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h4 style="text-align:center">H-15 LK</h4></div>
+                <div class="panel-body warning">
+                    @if (User.IsInRole("Maker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("CetakLK", "TransaksiKeuangan")">@ViewBag.CetakKeuangan</a></h1>
+                    }
+                    @*else if (User.IsInRole("Checker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("listCetak", "CetakSurat")">@ViewBag.PerluDiCetak</a></h1>
+                    }*@
+                    else
+                    {
+                        <h1 style="text-align:center;">@ViewBag.CetakKeuangan</h1>
+
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h4 style="text-align:center">H-15 Jaminan</h4></div>
+                <div class="panel-body warning">
+                    @if (User.IsInRole("Maker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("CetakJaminan", "TransaksiJaminans")">@ViewBag.CetakJaminan</a></h1>
+                    }
+                    else
+                    {
+                        <h1 style="text-align:center;">@ViewBag.CetakJaminan</h1>
+
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="panel-group col-sm-3">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h4 style="text-align:center">H-15 Penggunaan Dana</h4></div>
+                <div class="panel-body warning">
+                    @if (User.IsInRole("Maker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("CetakDana", "TransaksiDana")">@ViewBag.CetakDana</a></h1>
+                    }
+                    else
+                    {
+                        <h1 style="text-align:center;">@ViewBag.CetakDana</h1>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="panel-group col-sm-3">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h4 style="text-align:center">H+1 Kejadian Penting</h4></div>
+                <div class="panel-body warning">
+                    @if (User.IsInRole("Maker"))
+                    {
+                        <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("CetakKejadian", "KejadianPenting")">@ViewBag.CetakKejadian</a></h1>
+                    }
+                    else
+                    {
+                        <h1 style="text-align:center;">@ViewBag.CetakKejadian</h1>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+    @*<hr />
+        <h1>Progres Minggu Ini</h1>
+        <hr />
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h4 style="text-align:center">Cek Input</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-warning" href="@Url.Action("","")">@ViewBag.Otorisasi</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h4 style="text-align:center">Perlu Dicetak</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("","")">@ViewBag.PerluCetak</a></h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h4 style="text-align:center">Cek Cetak</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-warning" href="@Url.Action("","")">@ViewBag.Cek</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h4 style="text-align:center">Otorisasi</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-primary" href="@Url.Action("","")">@ViewBag.verifikasicetak</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h4 style="text-align:center">Tercetak</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-success" href="@Url.Action("","")">@ViewBag.Done</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h4 style="text-align:center">Jumlah Dana</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-success" href="@Url.Action("","")">@ViewBag.Done</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <h1>Progres Total</h1>
+        <hr />
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h4 style="text-align:center">Cek Input</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-warning" href="@Url.Action("","")">@ViewBag.Otorisasi</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h4 style="text-align:center">Perlu Dicetak</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-danger" href="@Url.Action("","")">@ViewBag.PerluCetak</a></h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h4 style="text-align:center">Cek Cetak</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-warning" href="@Url.Action("","")">@ViewBag.Cek</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h4 style="text-align:center">Otorisasi</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-primary" href="@Url.Action("","")">@ViewBag.verifikasicetak</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h4 style="text-align:center">Tercetak</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-success" href="@Url.Action("","")">@ViewBag.Done</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group col-sm-2">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h4 style="text-align:center">Jumlah Dana</h4></div>
+                <div class="panel-body warning">
+                    <h1 style="text-align:center;"><a class="text-success" href="@Url.Action("","")">@ViewBag.Done</a></h1>
+                </div>
+            </div>
+        </div>*@
+</div>

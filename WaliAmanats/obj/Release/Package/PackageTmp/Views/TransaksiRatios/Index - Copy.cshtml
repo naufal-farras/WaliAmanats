@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+        Input Realisasi
+    </h1>
+</section>
+<section>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+
+                <div class="box-header with-border">
+
+                    @*<div class="col-md-6">
+                            <div class="pull-left">
+                                <a href="@Url.Action("InputRatio","TransaksiRatios")" class="btn btn-success"><i class="glyphicon glyphicon-plus">Tambah</i></a>
+                            </div>
+                        </div>*@
+                </div>
+
+                <div class="box-body">
+
+
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-1 offset-sm-1">Emiten</label>
+                            <div class="col-md-6">
+                                <select required id="Emiten" class="form-control disabled" data-placement="choose"></select>
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                                <label class="control-label col-md-3">Produk</label>
+                                <div class="col-md-6">
+                                    <select required id="Produk" class="form-control disabled" data-placement="choose"></select>
+                                </div>
+                            </div>*@
+                        <div class="tableDiv">
+                            <table class="table">
+                                <thead>
+                                    <tr class="bg-aqua">
+                                        <td style="width:150px">Ratio</td>
+                                        <td style="width:150px">Target</td>
+                                        <td style="width:150px">Realisasi</td>
+                                        <td style="width:150px">No Surat</td>
+                                        <td style="width:150px">Tanggal Surat</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div id="orderItems">
+                                <table class="table table-responsive " id="detailsItems"></table>
+                                <span id="ItemError" style="color:red"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+@section Scripts{
+<script src="~/Scripts/moment-with-locales.min.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            GetEmiten();
+        });
+        function formatDates(dates) {
+            date = new Date(parseInt(dates.substr(6)));
+            var year = date.getFullYear();
+            var month = (1 + date.getMonth()).toString();
+            month = month.length > 1 ? month : '0' + month;
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+            return day + '/' + month + '/' + year;
+        }
+
+        function GetEmiten() {
+            $.ajax({
+                "url": "@Url.Action("GetPerusahaan", "TransaksiRatios")",
+                "type": "GET",
+                "datatype": "json"
+            }).then((result) => {
+                var Emiten = $("#Emiten");
+                Emiten.html('');
+                $("<option></option>").val('').text('Pilih Emiten').appendTo(Emiten);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(Emiten);
+                });
+            })
+        }
+
+        $("#Emiten").change(function () {
+            var id = $("#Emiten").val();
+            $("#Emiten").removeAttr("disabled");
+            @*if (id == '') {
+                $("#Emiten").attr("disabled");
+            }
+            else {
+                $.ajax({
+                    "url": "@Url.Action("GetProduk", "TransaksiRatios")",
+                    "type": "GET",
+                    "datatype": "json",
+                    "data": { EmitenId: id }
+                }).then((result) => {
+                    var Produk = $("#Produk");
+                    Produk.html('');
+                    $("<option></option>").val('').text('Pilih Produk').appendTo(Produk);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.NamaProduk).appendTo(Produk);
+                    });
+                })
+            }*@
+            $('#detailsItems').empty();
+            $.ajax({
+                "url": "@Url.Action("GetRatio", "TransaksiRatios")",
+                "type": "GET",
+                "datatype": "json",
+                "data": {Id: id},
+                "success": function(result){
+                    $.each(result.data, function (i, value) {
+                        var markup =
+                        '<tr class="mycontainer" id="mainrow">' +
+                            '<td><input type="text" disabled class="form-control" value="' + value.Ratio.Nama + '" /></td>' +
+                            '<td><input type="text" disabled class="form-control" value="' + value.Target + '" /></td>' +
+                            '<td><input type="text" class="form-control" value="' + '" /></td>' +
+                            '<td><input type="text" class="form-control" value="' + '" /></td>' +
+                            '<td><input type="text" class="form-control daterange" /></td>' +
+                            '<td><a class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a></td>' +
+                            '</tr>';
+                            
+                        $('#detailsItems').append(markup);
+                    });
+                    $('.daterange').datepicker({
+                        opens: 'center'
+                    }, function (start, end, label) {
+                    });
+                }
+            })
+        })
+        $(function () {
+            $('.daterange').datepicker({
+                opens: 'center'
+            }, function (start, end, label) {
+            });
+        });
+        //$("#Produk").change(function () {
+
+        //})
+
+    </script>
+}

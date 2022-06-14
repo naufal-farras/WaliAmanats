@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewBag.Title = "MasterJaminan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 style="text-align:center;">  Master Jaminan</h2>
+
+<section>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+
+                <div class="box-header with-border">
+                    
+                    <div class="col-md-6">
+                        <div class="pull-left">
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle"> Tambah</i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Jaminan</th>
+                                <th>Update/Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody"></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<div class="example-modal">
+    <div id="myModal" class="modal fade" role="dialog" style="display:none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <input type="hidden" class="form-control" id="Id" />
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Nama</label>
+                            <div class="col-sm-9" id="divNama">
+                                <input type="text" class="form-control" id="Nama" placeholder="Nama" required />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearScreen()" ;>Close</button>
+                        <button type="button" class="btn btn-success" id="Save" onclick="Save();">Save</button>
+                        <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="Update();">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            // var katId = 0;
+
+            $('#example1').DataTable({
+                "aoColumns": [null, null,{ "bSortable": false }],
+                "ajax": LoadIndexKategori(),
+                "responsive": true
+            });
+        });
+        function LoadIndexKategori() {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetDataMaster", "TransaksiJaminans")",
+                async: false,
+            // data: { katId : katId },
+            dataType: "JSON",
+            success: function (data) {
+                var html = '';
+                var i = 1;
+                $.each(data, function (index, val) {
+                    html += '<tr>';
+                    html += '<td>' + i + '</td>';
+                    html += '<td>' + val.Nama + '</td>';
+                    html += '<td><a href="#" class="btn btn-warning" onclick="return GetById(' + val.Id + ')"><i class="glyphicon glyphicon-edit"></i></a> <a href="#" class="btn btn-danger" onclick="Delete(' + val.Id + ')"><i class="glyphicon glyphicon-trash"></i></a>';
+
+                    html += '</tr>';
+                    i++;
+                });
+                $('.tbody').html(html);
+            }
+        })
+        }
+       
+        function Save() {
+            debugger;
+            var mapping = new Object();
+            mapping = {
+                Id: $('#Id').val(),
+                Nama: $('#Nama').val(),
+               // Initial: $('#Initial').val(),
+                //Persentase: $('#Persentase').val()
+
+            }
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Savemaster", "TransaksiJaminans")",
+                data: { 'jaminan': mapping },
+            success: function (result) {
+                swal({
+                    position: 'center',
+                    type: 'success',
+                    title: 'Insert Successfully'
+
+                },
+            function () {
+                $('#myModal').modal('hide');
+                window.location.href = "@Url.Action("MasterJaminan", "TransaksiJaminans")";
+            });
+            },
+            error: function (response) {
+                swal('Error', 'Insert Fail', 'error');
+                ClearScreen();
+            }
+        });
+        }
+
+        function Delete(Id) {
+            swal({
+                title: "Apakah yakin ingin menghapus data ini?",
+                text: "Data tidak dapat dikembalikan!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes",
+                closeOnConfirm: false
+            }, function () {
+                $.ajax({
+                    url: "@Url.Action("DeleteMaster", "TransaksiJaminans")",
+                    type: "POST",
+                data: { 'Id': Id },
+                success: function (response) {
+                    swal({
+                        title: "Deleted!",
+                        text: "Data berhasil di hapus!",
+                        type: "success"
+                    },
+                    function () {
+                        window.location.href = '@Url.Action("MasterJaminan", "TransaksiJaminans")';
+                    });
+                },
+                error: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                }
+            });
+        });
+        }
+
+        function Update() {
+            var mapping = new Object();
+            mapping = {
+                Id: $('#Id').val(),
+                Nama: $('#Nama').val(),
+               // Initial: $('#Initial').val(),
+               // Persentase: $('#Persentase').val()
+
+
+            }
+            $.ajax({
+                url: "@Url.Action("Savemaster", "TransaksiJaminans")",
+                dataType: "JSON",
+            type: "POST",
+            data: { 'jaminan': mapping },
+            success: function (result) {
+
+                swal({
+                    title: "Updated!",
+                    text: "That data has been updated!",
+                    type: "success"
+                },
+                function () {
+                  window.location.href = "@Url.Action("MasterJaminan", "TransaksiJaminans")";
+                });
+            },
+            error: function (response) {
+                swal("Oops", "We couldn't updated!", "error");
+            }
+
+        });
+        }
+        function GetById(id) {
+            debugger;
+            $('#Nama').css('border-color', 'lightgrey');
+          //  $('#Persentase').css('border-color', 'lightgrey');
+
+
+            $.ajax({
+                url: "@Url.Action("GetById", "TransaksiJaminans")/" + id,
+                type: "GET",
+            dataType: "JSON",
+            async: false,
+            success: function (result) {
+                $('#Id').val(result.Id);
+                $('#Nama').val(result.Nama);
+          //      $('#Initial').val(result.Initial);
+               // $('#Persentase').val(result.Persentase);
+                $('#myModal').modal('show');
+                $('#Update').show();
+                $('#Save').hide();
+            },
+            error: function (errormessage) {
+                alert(errormessage.responseText);
+            }
+        });
+        return false;
+        }
+        function ClearScreen() {
+            $('#Id').val("");
+            $('#Nama').val("");
+           // $('#Initial').val("");
+           // $('#Persentase').val("");
+            $('#Update').hide();
+            $('#Save').show();
+            $('#Nama').css('border-color', 'lightgrey');
+        }
+    </script>
+}
+

@@ -1,0 +1,338 @@
+﻿
+@model IEnumerable<WaliAmanats.ViewModel.ViewDetailCetakVM>
+@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using WaliAmanats.Models;
+@{
+    ViewBag.Title = "DetailCetak";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var TglBunga = Request.Params["tglTempo"];
+    var Id = Request.QueryString["Id"];
+}
+
+<h3>Cetak Surat</h3>
+
+<br />
+
+<div class="form-horizontal">
+    <input type="hidden" id="IdCetak" value="@Id" />
+    @foreach (var item in Model)
+    {
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Tanggal Bunga</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="TglBunga" value="@item.TanggalBunga.ToString("dd/MM/yyyy")" disabled />
+            </div>
+        </div>
+        <hr />
+
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Perusahaan</label>
+            <div class="col-sm-3">
+                <select required id="Perusahaan" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.Perusahaan_Id">@item.Perusahaan</option>
+                </select>
+            </div>
+            <label class="col-sm-1 control-label">Perwakilan</label>
+            <div class="col-sm-3">
+                <select required id="Perwakilan" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.NamaPerwakilan_Id">@item.Perwakilan</option>
+                </select>
+            </div>
+            <label class="col-sm-1 control-label">Jabatan</label>
+            <div class="col-sm-3">
+                <input type="text" id="Jabatan" class="form-control" placeholder="" readonly value="@item.Jabatan">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Jenis Tugas</label>
+            <div class="col-sm-3">
+                <select required id="Tugas" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.JenisTugas_Id">@item.JenisTugas</option>
+                </select>
+            </div>
+        </div>
+
+        <br />
+
+        @*<h4>Detail Surat</h4>*@
+        <div class="detail">
+
+            <div class="panel-group">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1">Detail Surat</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <ul class="list-group">
+
+                            @foreach (var item2 in item.Listitem)
+                            {
+                                <li class="list-group-item">
+                                    <input type="hidden" class="IdLaporan" value="@item2.Id" />
+                                    <div class="form-group row">
+                                        <label class="col-sm-1 control-label">Produk</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" id="JenisPengiriman" class="form-control" value="@item2.Produk" disabled>
+                                        </div>
+                                        <label class="col-sm-2 control-label">Nama Produk</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" id="JenisPengiriman" class="form-control" value="@item2.NamaProduk" style="min-width:100%" disabled>
+                                        </div>
+                                    </div>
+                                    <table class="table table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Seri</th>
+                                                <th>Kupon ke-</th>
+                                                <th>Oustanding</th>
+                                                <th>Bunga</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        @{int no = 1;}
+                                        @foreach (var item3 in item2.ListBunga)
+                                        {
+                                            <tbody class="tbody">
+                                                <tr>
+                                                    <td>@no</td>
+                                                    <td>@item3.SubDetailCetak.TransaksiDetail.Seri</td>
+                                                    <td>@item3.TransaksiTanggal.NoKupon</td>
+                                                    <td>@item3.SubDetailCetak.TransaksiDetail.Nominal.ToString("N2")</td>
+                                                    <td>@item3.TransaksiTanggal.NilaiBunga.ToString("N2")</td>
+                                                    @if (item3.TransaksiTanggal.Status == false)
+                                                    {
+                                                        <td>
+                                                            <span class="label label-default">Undone</span>
+                                                        </td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>
+                                                            <span class="label label-success">Done</span>
+                                                        </td>
+                                                    }
+
+                                                </tr>
+                                            </tbody>
+                                            {
+                                                no++;
+                                            }
+                                        }
+                                    </table>
+
+                                </li>
+                                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <h4>Pembayaran Ke Rekening Emiten</h4>
+        <hr />
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Jenis Pembayaran</label>
+            <div class="col-sm-3">
+                <input type="text" id="JenisPengiriman" class="form-control" value="@item.JenisPengiriman" disabled>
+            </div>
+            <label class="col-sm-1 control-label">Nama Bank</label>
+            <div class="col-sm-3">
+                <input type="text" id="NamaBank" class="form-control" value="@item.NamaBank" disabled>
+            </div>
+            <label class="col-sm-1 control-label">Nama Penerima</label>
+            <div class="col-sm-3">
+                <input type="text" id="NamaPenerima" class="form-control" value="@item.NamaPenerima" disabled>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">No. Rekening</label>
+            <div class="col-sm-3">
+                <input type="text" id="NoRekening" class="form-control" value="@item.NoRekening" disabled>
+            </div>
+        </div>
+                                            }
+</div>
+
+
+<div class="footer">
+    @if (Request.IsAuthenticated)
+    {
+        if (User.IsInRole("Maker"))
+        {
+            <a class="btn btn-default pull-right" href="@Url.Action("History", "CetakSurat" )">Kembali</a>
+            <span class="pull-right" style="margin:5px;"></span>
+            foreach (var items in Model)
+            {
+                var x = items.Listitem.FirstOrDefault();
+                var y = x.ListBunga.FirstOrDefault();
+
+                var status = y.SubDetailCetak.DetailCetak.TransaksiCetak.StatusCetak.Id;
+                if (status == 5 || status == 4)
+                {
+                    <a class="btn btn-warning pull-right" data-toggle="modal" data-target="#tglModal" data-backdrop="static" data-keyboard="false" id="modalCetak">Cetak</a>
+                    if (status == 5)
+                    {
+                        if (y.TransaksiTanggal.Status == false)
+                        {
+                            <a class="btn btn-primary" id="" onclick="Delete();">Tandai Sebagai Done</a>
+                            <span class="pull-right" style="margin:5px;"></span>
+                        }
+                        else
+                        {
+                            <span class="pull-right" style="margin:5px;"></span>
+                        }
+                    }
+                    <div class="clearfix"></div>
+                }
+                else
+                {
+                    <div class="clearfix"></div>
+                }
+            }
+
+        }
+        else
+        {
+            <a class="btn btn-default pull-right" href="@Url.Action("History", "CetakSurat" )">Kembali</a>
+            <span class="pull-right" style="margin:5px;"></span>
+            <div class="clearfix"></div>
+        }
+
+    }
+
+</div>
+
+<div class="modal fade" id="tglModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Masukkan Nomor Referensi</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label class="col-sm-3 control-label">No. Referensi</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="NoRef" class="form-control" data-status="0">
+                    </div>
+                    <a class="btn btn-success btn-sm" id="SaveNoRef"><i class="fa fa-check"></i></a>
+                    <span class="error" style="color:red;">Mohon diisi</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" id="Save" href="">Simpan</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearScreen()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script src="~/Scripts/moment-with-locales.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            ClearScreen();
+
+            $('#SaveNoRef').click(function () {
+                var Id = $('#TransaksiId').val();
+                var noref = $('#NoRef')
+                var status = noref.data('status');
+                var cetakId = $('#IdCetak').val();
+
+
+                if (status == 0) {
+                    if (noref.val() == '') {
+                        $('span.error').show();
+                    } else {
+                        $('span.error').hide();
+                        noref.prop('readonly', true);
+                        noref.data('status', 1);
+                        $(this).removeClass('btn btn-success');
+                        $(this).addClass('btn btn-warning');
+                        $(this).find('i').removeClass('fa fa-check');
+                        $(this).find('i').addClass('fa fa-remove');
+
+                        debugger;
+                        var id = [];
+                        $('.IdLaporan').each(function () {
+                            id.push($(this).val());
+                        })
+
+                        var tgl = '@TglBunga';
+                        if (id.length > 1) {
+                            var ids = "Id=" + id[0] + "&Id=" + id[1];
+                            $('#Save').attr('href', '@Url.Action("CetakGabung", "CetakSurat")?' + ids + '&tanggal=' + tgl + '&noref=' + noref.val() + '&cetakId=' + cetakId + '');
+                        }
+                        else {
+                            var ids = "Id=" + id[0];
+                            $('#Save').attr('href', '@Url.Action("Cetak", "CetakSurat")?' + ids + '&tanggal=' + tgl + '&noref=' + noref.val() + '&cetakId=' + cetakId + '');
+                        }
+
+
+                    }
+                } else {
+                    noref.prop('readonly', false);
+                    noref.data('status', 0);
+                    $(this).removeClass('btn btn-warning');
+                    $(this).addClass('btn btn-success');
+                    $(this).find('i').removeClass('fa fa-remove');
+                    $(this).find('i').addClass('fa fa-check');
+                }
+
+            });
+        });
+
+        function Delete() {
+            Swal.fire({
+                title: 'Tandai Sebagai Lunas?',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya'
+            }).then((result) => {
+                if (result.value) {
+                    debugger;
+                    var id = [];
+                    $('.IdLaporan').each(function () {
+                        id.push($(this).val());
+                    })
+
+                    var Id = new Object;
+                    Id = id;
+
+                    $.ajax({
+                        "type": "POST",
+                        "url": "@Url.Action("Lunas","CetakSurat")",
+                        "datatype": "json",
+                        "data": { Id: Id }
+                    }).then((result) => {
+                        if (result.data != 0) {
+                            Swal.fire(
+                                'Success!',
+                                '',
+                                'success'
+                            ).then(() => {
+                                location.reload();
+                            })
+                        }
+                    })
+                }
+            })
+        }
+
+        function ClearScreen() {
+            $('span.error').hide();
+        }
+    </script>
+}

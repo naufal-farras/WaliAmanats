@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Laporan OJK</h2>
+<hr />
+<div class="form-group">
+    <label class="control-label col-sm-2">Tanggal Awal</label>
+    <input type="date" class="form-control col-sm-4" id="StartDate" />
+    <label class="control-label col-sm-2">Tanggal Akhir</label>
+    <input type="date" class="form-control col-sm-4" id="EndDate" /> &nbsp;
+    <a class="btn btn-primary" onclick="GetByRange();"><i class="fa fa-print"></i></a>
+</div>
+
+<div class="modal fade" id="tglModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Daftar Tanggal Bayar Bunga</h4>
+            </div>
+            <div class="modal-body">
+                <table id="tableTglBunga" class="table-bordered table-responsive">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Tanggal Bunga</th>
+                            <th>Kupon ke-</th>
+                            <th>Bunga</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table id="table" class="table-bordered">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Emiten</th>
+            <th>Produk</th>
+            <th>Nama Produk</th>
+            <th>Tanggal Emisi</th>
+            <th>Tanggal Jatuh Tempo</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+</table>
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script src="~/Scripts/moment-with-locales.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#table").hide();
+        })
+
+        function GetByRange() {
+            debugger
+            $("#table").show();
+            var StartDate = moment($("#StartDate").val()).format("YYYY-MM-DD");
+            var EndDate = moment($("#EndDate").val()).format("YYYY-MM-DD");
+            var t = $("#table").DataTable({
+                "ajax": {
+                    "url": "@Url.Action("GetByRangeDate", "TransaksiOJK")",
+                    "type": "GET",
+                    "data": { StartDate: StartDate, EndDate: EndDate },
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": null },
+                    { "data": "Perusahaan" },
+                    { "data": "Produk" },
+                    { "data": "NamaProduk" },
+                    {
+                        "data": "Details[0].TglTerbit", "render": function (d) {
+                            console.log(d);
+                            return moment(d).local('id').format('dddd, LL');
+                        }
+                    },
+                    {
+                        "data": "Details[0].TglJatuhTempo", "render": function (d) {
+                            return moment(d).locale('id').format('dddd, LL');
+                        }
+                    },
+                    {
+                        "render": function (data, type, row) {
+                            return "<a class='btn btn-warning btn-sm' onclick = GetById('" + row.Details[0].Id + "');><i class='fa fa-eye'></i></a>";
+                        },
+
+                    },
+                ]
+            })
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+        }
+
+        function GetById(Id) {
+            debugger
+            var StartDate = moment($("#StartDate").val()).format("YYYY-MM-DD");
+            var EndDate = moment($("#EndDate").val()).format("YYYY-MM-DD");
+            var t = $("#tableTglBunga").DataTable({
+                "ajax": {
+                    "url": "@Url.Action("GetById", "TransaksiOJK")",
+                    "type": "GET",
+                    "data": { Id: Id, StartDate: StartDate, EndDate: EndDate },
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": null },
+                    { "data": "NoKupon" },
+                    {
+                        "data": "TglSuratBunga", "render": function (d) {
+                            console.log(d);
+                            return moment(d).local('id').format('dddd, LL');
+                        }
+                    },
+                    { "data": "NilaiBunga" }
+                ]
+            })
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+            $("#tglModal").modal('show');
+        }
+
+        function Cetak() {
+            debugger
+            $.ajax({
+                "url": "@Url.Action("Cetak", "TransaksiOJK")",
+                "type": "GET",
+                "datatype": "json",
+        }).then((result) => {
+            
+        })
+        }
+    </script>
+}

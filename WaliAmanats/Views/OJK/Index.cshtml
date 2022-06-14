@@ -1,0 +1,255 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center;">Master Alamat OJK</h2>
+
+@*<hr />
+<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="ClearScreen()" data-backdrop="static" data-keyboard="false" ;>Tambah</button>
+<hr />*@
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Input Data</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <input type="hidden" id="OJKId" />
+                        <label class="col-sm-3 control-label">Gedung</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Gedung" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Jalan</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Jalan" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Kota</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Kota" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="Save" onclick="Validation();">Tambah</button>
+                <button type="button" class="btn btn-primary" id="Update" onclick="Validation();">Perbarui</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<table id="table" class="table-bordered">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Gedung</th>
+            <th>Jalan</th>
+            <th>Kota</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+</table>
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script>
+        $(document).ready(function () {
+            var t = $("#table").DataTable({
+                "ajax": {
+                    "url": "@Url.Action("GetAll", "OJK")",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": null },
+                    { "data": "Alamat1" },
+                    { "data": "Alamat2" },
+                    { "data": "Alamat3" },
+                    {
+                        "render": function (data, type, row) {
+                            return "<a class='btn btn-warning btn-sm' onclick = GetById('" + row.Id + "');><i class='fa fa-edit'></i></a>";
+                        },
+
+                    },
+                ]
+            })
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+        })
+
+        function Save() {
+            debugger;
+            var OJK = new Object();
+            OJK.Alamat1 = $("#Gedung").val();
+            OJK.Alamat2 = $("#Jalan").val();
+            OJK.Alamat3 = $("#Kota").val();
+            $.ajax({
+                "url": "@Url.Action("Save", "OJK")",
+                "type": "POST",
+                "datatype": "json",
+                "data": OJK
+            }).then((result) => {
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Data has been inserted!.',
+                        'success'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+                else {
+                    Swal.fire(
+                        'Failed!',
+                        'Data has not been inserted!.',
+                        'Failed'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+        function Edit(Id) {
+            debugger;
+            var OJK = new Object();
+            OJK.Id = $("#OJKId").val();
+            OJK.Alamat1 = $("#Gedung").val();
+            OJK.Alamat2 = $("#Jalan").val();
+            OJK.Alamat3 = $("#Kota").val();
+            $.ajax({
+                "url": "@Url.Action("Save", "OJK")",
+                "type": "POST",
+                "datatype": "json",
+                "data": { Id: OJK.Id, Alamat1: OJK.Alamat1, Alamat2: OJK.Alamat2, Alamat3: OJK.Alamat3 }
+            }).then((result) => {
+                debugger;
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Your file has been Updated.',
+                        'success'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+                else {
+                    Swal.fire(
+                        'Failed!',
+                        'Your file has not Updated.',
+                        'Failed'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+
+            })
+        }
+        function GetById(Id) {
+            debugger
+            $.ajax({
+                "url": "@Url.Action("GetById", "OJK")",
+                "type": "GET",
+                "datatype": "json",
+                "data": { Id: Id }
+            }).then((result) => {
+                debugger;
+                if (result != null) {
+                    $("#OJKId").val(result.data.Id);
+                    $("#Gedung").val(result.data.Alamat1);
+                    $("#Jalan").val(result.data.Alamat2);
+                    $("#Kota").val(result.data.Alamat3);
+                    $("#myModal").modal('show');
+                    $("#Update").show();
+                    $("#Save").hide();
+                }
+            })
+        }
+        function Delete(Id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("Delete", "OJK")",
+                        "datatype": "json",
+                        "data": { Id: Id }
+                    }).then((result) => {
+                        debugger;
+                        if (result.data != 0) {
+                            Swal.fire(
+                                'Success!',
+                                'Your file has been deleted.',
+                                'success'
+                            ).then(() => {
+                                $('#table').DataTable().ajax.reload();
+                            })
+                        }
+                        else {
+                            Swal.fire(
+                                'Failed!',
+                                'Your file not deleted.',
+                                'failed'
+                            ).then(() => {
+                                $('#table').DataTable().ajax.reload();
+                            })
+                        }
+                        $("#myModal").modal('hide');
+                        $('#table_role').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+
+        function ClearScreen() {
+            $("#OJKId").val('');
+            $("#Gedung").val('');
+            $("#Jalan").val('');
+            $("#Kota").val('');
+            $("#Update").hide();
+            $("#Save").show();
+        }
+        function Validation() {
+            if ($("#Gedung").val() == "" || $("#gedung").val() == " ") {
+                Swal.fire('Gedung Belum di Isi!');
+            }
+            else if ($("#Jalan").val() == "" || $("#Jalan").val() == " ") {
+                Swal.fire('Jalan Belum di Isi!');
+            }
+            else if ($("#Kota").val() == "" || $("#Kota").val() == " ") {
+                Swal.fire('Kota Belum di Isi!');
+            }
+            else if ($("#OJKId").val() == "" || $("#OJKId").val() == " ") {
+                Save();
+            }
+            else {
+                Edit($("#OJKId").val());
+            }
+        }
+    </script>
+}

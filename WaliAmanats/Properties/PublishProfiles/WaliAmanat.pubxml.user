@@ -1,0 +1,1522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Aplikasi-BNI\up</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Accordion.dll">
+      <publishTime>10/30/2012 14:52:48</publishTime>
+    </File>
+    <File Include="bin/Accordion.pdb">
+      <publishTime>10/30/2012 14:52:48</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>03/16/2020 13:50:15</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>03/16/2020 13:50:15</publishTime>
+    </File>
+    <File Include="bin/Dapper.dll">
+      <publishTime>06/22/2020 17:03:10</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/16/2020 13:50:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/16/2020 13:50:26</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>03/17/2020 10:15:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>03/16/2020 13:50:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>03/16/2020 13:50:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>03/16/2020 13:50:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>03/16/2020 13:50:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>03/16/2020 13:50:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>03/16/2020 13:50:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>03/16/2020 13:50:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>03/16/2020 13:50:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>03/16/2020 13:50:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>03/16/2020 13:50:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>03/16/2020 13:50:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>03/16/2020 13:50:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>03/16/2020 13:50:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/16/2020 13:50:13</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/16/2020 13:50:20</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>03/16/2020 13:50:31</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>03/16/2020 13:50:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>03/16/2020 13:50:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>03/16/2020 13:50:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>03/16/2020 13:50:35</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Compression.Base.dll">
+      <publishTime>07/02/2020 14:29:32</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.DocIO.Base.dll">
+      <publishTime>07/02/2020 14:35:00</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Licensing.dll">
+      <publishTime>07/02/2020 14:30:13</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.OfficeChart.Base.dll">
+      <publishTime>07/02/2020 14:33:46</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/28/2018 13:00:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/16/2020 13:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/16/2020 13:50:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>03/16/2020 13:50:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/16/2020 13:50:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>03/16/2020 13:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>03/16/2020 13:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>03/16/2020 13:50:12</publishTime>
+    </File>
+    <File Include="bin/WaliAmanats.dll">
+      <publishTime>11/30/2021 00:48:55</publishTime>
+    </File>
+    <File Include="bin/WaliAmanats.pdb">
+      <publishTime>01/05/2021 13:04:07</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>03/16/2020 13:50:15</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker.css">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker.css.map">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker.min.css">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker.standalone.css">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker.standalone.css.map">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker.standalone.min.css">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker3.css">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker3.css.map">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker3.min.css">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker3.standalone.css">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker3.standalone.css.map">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker3.standalone.min.css">
+      <publishTime>09/21/2021 10:28:53</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-daterangepicker/daterangepicker.css">
+      <publishTime>09/21/2021 10:29:09</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datetimepicker/bootstrap-datetimepicker-build.less">
+      <publishTime>09/21/2021 10:29:25</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+      <publishTime>09/21/2021 10:29:25</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+      <publishTime>09/21/2021 10:29:25</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap-datetimepicker/_bootstrap-datetimepicker.less">
+      <publishTime>09/21/2021 10:29:25</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap-theme.css">
+      <publishTime>09/21/2021 10:28:28</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap-theme.css.map">
+      <publishTime>09/21/2021 10:28:28</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap-theme.min.css">
+      <publishTime>09/21/2021 10:28:28</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap-theme.min.css.map">
+      <publishTime>09/21/2021 10:28:28</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap.css">
+      <publishTime>09/21/2021 10:28:29</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap.css.map">
+      <publishTime>09/21/2021 10:28:28</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap.min.css">
+      <publishTime>09/21/2021 10:28:28</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap.min.css.bak">
+      <publishTime>09/21/2021 10:28:28</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/css/bootstrap.min.css.map">
+      <publishTime>09/21/2021 10:28:28</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>09/21/2021 10:28:38</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>09/21/2021 10:28:38</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>09/21/2021 10:28:38</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>09/21/2021 10:28:38</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>09/21/2021 10:28:38</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/datatables.net-bs/buttons.dataTables.min.css">
+      <publishTime>09/21/2021 10:29:42</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/datatables.net-bs/dataTables.bootstrap.css">
+      <publishTime>09/21/2021 10:29:42</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/datatables.net-bs/dataTables.bootstrap.min.css">
+      <publishTime>09/21/2021 10:29:42</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/datatables.net-bs/searchPanes.dataTables.min.css">
+      <publishTime>09/21/2021 10:29:42</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/datatables.net-bs/select.dataTables.min.css">
+      <publishTime>09/21/2021 10:29:42</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/css/font-awesome.css">
+      <publishTime>09/21/2021 10:30:05</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/css/font-awesome.css.map">
+      <publishTime>09/21/2021 10:30:05</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/css/font-awesome.min.css">
+      <publishTime>09/21/2021 10:30:05</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>09/21/2021 10:30:35</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>09/21/2021 10:30:35</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>09/21/2021 10:30:35</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>09/21/2021 10:30:35</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>09/21/2021 10:30:35</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>09/21/2021 10:30:35</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/Ionicons/css/ionicons.css">
+      <publishTime>09/21/2021 10:32:12</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/Ionicons/css/ionicons.min.css">
+      <publishTime>09/21/2021 10:32:12</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/Ionicons/fonts/ionicons.eot">
+      <publishTime>09/21/2021 10:32:17</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/Ionicons/fonts/ionicons.svg">
+      <publishTime>09/21/2021 10:32:17</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/Ionicons/fonts/ionicons.ttf">
+      <publishTime>09/21/2021 10:32:17</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/Ionicons/fonts/ionicons.woff">
+      <publishTime>09/21/2021 10:32:17</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/select2/select2.css">
+      <publishTime>09/21/2021 10:32:31</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/bower/select2/select2.min.css">
+      <publishTime>09/21/2021 10:32:31</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/AdminLTE.css">
+      <publishTime>09/21/2021 10:33:27</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/adminlte.css.map">
+      <publishTime>09/21/2021 10:33:27</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/AdminLTE.min.css">
+      <publishTime>09/21/2021 10:33:27</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/adminlte.min.css.map">
+      <publishTime>09/21/2021 10:33:27</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/alt/AdminLTE-bootstrap-social.css">
+      <publishTime>09/21/2021 10:33:08</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/alt/AdminLTE-bootstrap-social.min.css">
+      <publishTime>09/21/2021 10:33:08</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/alt/AdminLTE-fullcalendar.css">
+      <publishTime>09/21/2021 10:33:08</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/alt/AdminLTE-fullcalendar.min.css">
+      <publishTime>09/21/2021 10:33:08</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/alt/AdminLTE-select2.css">
+      <publishTime>09/21/2021 10:33:08</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/alt/AdminLTE-select2.min.css">
+      <publishTime>09/21/2021 10:33:08</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/alt/AdminLTE-without-plugins.css">
+      <publishTime>09/21/2021 10:33:08</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/alt/AdminLTE-without-plugins.min.css">
+      <publishTime>09/21/2021 10:33:08</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-black-light.css">
+      <publishTime>09/21/2021 10:33:19</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-black-light.min.css">
+      <publishTime>09/21/2021 10:33:19</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-black.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-black.min.css">
+      <publishTime>09/21/2021 10:33:19</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-blue-light.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-blue-light.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-blue.css">
+      <publishTime>09/21/2021 10:33:19</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-blue.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-green-light.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-green-light.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-green.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-green.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-purple-light.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-purple-light.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-purple.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-purple.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-red-light.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-red-light.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-red.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-red.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-yellow-light.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-yellow-light.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-yellow.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/skin-yellow.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/_all-skins.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/css/skins/_all-skins.min.css">
+      <publishTime>09/21/2021 10:33:20</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/avatar.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/avatar04.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/avatar2.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/avatar3.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/avatar5.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/cat.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/credit/american-express.png">
+      <publishTime>09/21/2021 10:33:47</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/credit/cirrus.png">
+      <publishTime>09/21/2021 10:33:47</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/credit/mastercard.png">
+      <publishTime>09/21/2021 10:33:47</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/credit/mestro.png">
+      <publishTime>09/21/2021 10:33:47</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/credit/paypal.png">
+      <publishTime>09/21/2021 10:33:47</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/credit/paypal2.png">
+      <publishTime>09/21/2021 10:33:47</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/credit/visa.png">
+      <publishTime>09/21/2021 10:33:47</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/default-50x50.gif">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/icons.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/photo1.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/photo2.png">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/photo3.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/photo4.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/user1-128x128.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/user2-160x160.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/user3-128x128.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/user4-128x128.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/user5-128x128.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/user6-128x128.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/user7-128x128.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/AdminLTE/dist/img/user8-128x128.jpg">
+      <publishTime>09/21/2021 10:33:36</publishTime>
+    </File>
+    <File Include="Content/Assets/bg-login.jpg">
+      <publishTime>05/29/2020 14:24:37</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>05/29/2020 16:46:53</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>04/22/2020 09:57:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap.old.css">
+      <publishTime>05/29/2020 16:05:40</publishTime>
+    </File>
+    <File Include="Content/font-awesome.css">
+      <publishTime>04/22/2020 09:57:31</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>04/22/2020 09:57:31</publishTime>
+    </File>
+    <File Include="Content/Img/bg-01.jpg">
+      <publishTime>05/29/2020 14:24:37</publishTime>
+    </File>
+    <File Include="Content/Img/bg-login.jpg">
+      <publishTime>05/29/2020 14:24:37</publishTime>
+    </File>
+    <File Include="Content/Img/favicon.ico">
+      <publishTime>05/29/2020 14:37:56</publishTime>
+    </File>
+    <File Include="Content/Img/img-01.png">
+      <publishTime>05/29/2020 13:46:22</publishTime>
+    </File>
+    <File Include="Content/Img/plus.png">
+      <publishTime>09/22/2021 10:52:12</publishTime>
+    </File>
+    <File Include="Content/jquery-ui.css">
+      <publishTime>05/14/2020 11:34:42</publishTime>
+    </File>
+    <File Include="Content/jquery.dataTables.min.css">
+      <publishTime>04/22/2020 09:57:31</publishTime>
+    </File>
+    <File Include="Content/main.css">
+      <publishTime>06/02/2020 11:03:43</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-Black.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-BlackItalic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-Bold.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-BoldItalic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-ExtraBold.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-ExtraBoldItalic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-ExtraLight.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-ExtraLightItalic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-Italic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-Light.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-LightItalic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-Medium.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-MediumItalic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-Regular.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-SemiBold.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-SemiBoldItalic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-Thin.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/poppins/Poppins-ThinItalic.ttf">
+      <publishTime>05/29/2020 14:28:18</publishTime>
+    </File>
+    <File Include="Content/select.dataTables.min.css">
+      <publishTime>05/11/2020 09:31:08</publishTime>
+    </File>
+    <File Include="Content/Select2/select2.min.css">
+      <publishTime>09/21/2021 10:37:54</publishTime>
+    </File>
+    <File Include="Content/Select2/select2.min.js">
+      <publishTime>09/21/2021 10:37:54</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>05/29/2020 16:05:50</publishTime>
+    </File>
+    <File Include="Content/styles.css">
+      <publishTime>05/29/2020 08:52:39</publishTime>
+    </File>
+    <File Include="Content/sweetalert/sweetalert.css">
+      <publishTime>09/21/2021 10:37:42</publishTime>
+    </File>
+    <File Include="Content/Template/OJK6.docx">
+      <publishTime>06/18/2020 11:12:36</publishTime>
+    </File>
+    <File Include="Content/Template/OJKBuyback.docx">
+      <publishTime>10/28/2021 16:14:11</publishTime>
+    </File>
+    <File Include="Content/Template/OJKBuybackUMUM.docx">
+      <publishTime>11/19/2021 10:52:42</publishTime>
+    </File>
+    <File Include="Content/Template/OJKGagalBayar.docx">
+      <publishTime>10/25/2021 08:53:12</publishTime>
+    </File>
+    <File Include="Content/Template/Template.docx">
+      <publishTime>05/11/2020 09:11:49</publishTime>
+    </File>
+    <File Include="Content/Template/TemplateDana.docx">
+      <publishTime>10/28/2021 16:12:22</publishTime>
+    </File>
+    <File Include="Content/Template/TemplateDanaGabung.docx">
+      <publishTime>11/01/2021 10:22:24</publishTime>
+    </File>
+    <File Include="Content/Template/Templatedoc1.doc">
+      <publishTime>06/15/2020 13:46:25</publishTime>
+    </File>
+    <File Include="Content/Template/Templatedoc2.doc">
+      <publishTime>08/31/2020 08:21:27</publishTime>
+    </File>
+    <File Include="Content/Template/TemplateGabung.doc">
+      <publishTime>06/17/2020 14:21:50</publishTime>
+    </File>
+    <File Include="Content/Template/TemplateGabung.old.docx">
+      <publishTime>05/18/2020 14:48:26</publishTime>
+    </File>
+    <File Include="Content/Template/TemplateKejadian.docx">
+      <publishTime>10/25/2021 09:02:12</publishTime>
+    </File>
+    <File Include="Content/Template/Template_Daftar-MTN.docx">
+      <publishTime>11/22/2021 07:38:11</publishTime>
+    </File>
+    <File Include="Content/Template/Template_GB_Investor.docx">
+      <publishTime>11/19/2021 10:04:07</publishTime>
+    </File>
+    <File Include="Content/Template/Template_LJ.doc">
+      <publishTime>10/28/2021 16:13:24</publishTime>
+    </File>
+    <File Include="Content/Template/Template_LK.doc">
+      <publishTime>11/07/2021 20:25:40</publishTime>
+    </File>
+    <File Include="Content/Template/Template_Rasio.doc">
+      <publishTime>11/04/2021 10:12:08</publishTime>
+    </File>
+    <File Include="Content/Template/Template_Rating.doc">
+      <publishTime>10/28/2021 16:10:19</publishTime>
+    </File>
+    <File Include="Content/util.css">
+      <publishTime>05/29/2020 13:38:51</publishTime>
+    </File>
+    <File Include="Content/_bootstrap.css">
+      <publishTime>05/29/2020 16:46:53</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>03/16/2020 13:49:58</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>04/23/2020 10:58:10</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>04/23/2020 10:58:10</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>04/23/2020 10:58:10</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>04/23/2020 10:58:10</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>04/23/2020 10:58:10</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>04/23/2020 10:58:10</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/23/2020 10:58:11</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/23/2020 10:58:12</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/23/2020 10:58:12</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/23/2020 10:58:13</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/16/2020 13:49:58</publishTime>
+    </File>
+    <File Include="Images/sort_asc.png">
+      <publishTime>04/23/2020 14:41:48</publishTime>
+    </File>
+    <File Include="Images/sort_asc_disabled.png">
+      <publishTime>04/23/2020 14:41:48</publishTime>
+    </File>
+    <File Include="Images/sort_both.png">
+      <publishTime>04/23/2020 14:41:48</publishTime>
+    </File>
+    <File Include="Images/sort_desc.png">
+      <publishTime>04/23/2020 14:41:48</publishTime>
+    </File>
+    <File Include="Images/sort_desc_disabled.png">
+      <publishTime>04/23/2020 14:41:48</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/02/2020 14:35:01</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker.js">
+      <publishTime>09/21/2021 10:40:28</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/bootstrap-datepicker/bootstrap-datepicker.min.js">
+      <publishTime>09/21/2021 10:40:28</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/bootstrap-daterangepicker/daterangepicker.js">
+      <publishTime>09/21/2021 10:40:41</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/bootstrap-datetimepicker/bootstrap-datetimepicker.js">
+      <publishTime>09/21/2021 10:40:56</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js">
+      <publishTime>09/21/2021 10:40:56</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/bootstrap/bootstrap.js">
+      <publishTime>09/21/2021 10:40:14</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/bootstrap/bootstrap.min.js">
+      <publishTime>09/21/2021 10:40:14</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/bootstrap/npm.js">
+      <publishTime>09/21/2021 10:40:14</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/chart.js/Chart.js">
+      <publishTime>09/21/2021 10:41:08</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/chart.js/Chart.min.js">
+      <publishTime>09/21/2021 10:41:08</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/datatables.net-bs/dataTables.bootstrap.js">
+      <publishTime>09/21/2021 10:41:35</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/datatables.net-bs/dataTables.bootstrap.min.js">
+      <publishTime>09/21/2021 10:41:34</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/datatables.net/dataTables.buttons.min.js">
+      <publishTime>09/21/2021 10:41:21</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/datatables.net/dataTables.searchPanes.min.js">
+      <publishTime>09/21/2021 10:41:21</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/datatables.net/dataTables.select.min.js">
+      <publishTime>09/21/2021 10:41:21</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/datatables.net/jquery.dataTables.js">
+      <publishTime>09/21/2021 10:41:21</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/datatables.net/jquery.dataTables.min.js">
+      <publishTime>09/21/2021 10:41:21</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/fastclick/fastclick.js">
+      <publishTime>09/21/2021 10:41:46</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery-slimscroll/jquery.slimscroll.js">
+      <publishTime>09/21/2021 10:42:11</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery-slimscroll/jquery.slimscroll.min.js">
+      <publishTime>09/21/2021 10:42:11</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery/core.js">
+      <publishTime>09/21/2021 10:41:58</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery/jquery.js">
+      <publishTime>09/21/2021 10:41:58</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery/jquery.min.js">
+      <publishTime>09/21/2021 10:41:58</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery/jquery.min.map">
+      <publishTime>09/21/2021 10:41:58</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery/jquery.slim.js">
+      <publishTime>09/21/2021 10:41:58</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery/jquery.slim.min.js">
+      <publishTime>09/21/2021 10:41:58</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/jquery/jquery.slim.min.map">
+      <publishTime>09/21/2021 10:41:58</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/moment/locales.js">
+      <publishTime>09/21/2021 10:42:25</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/moment/locales.min.js">
+      <publishTime>09/21/2021 10:42:25</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/moment/moment-with-locales.js">
+      <publishTime>09/21/2021 10:42:25</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/moment/moment-with-locales.min.js">
+      <publishTime>09/21/2021 10:42:25</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/moment/moment.min.js">
+      <publishTime>09/21/2021 10:42:25</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/af.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/ar.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/az.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/bg.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/bs.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/ca.js">
+      <publishTime>09/21/2021 10:42:50</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/cs.js">
+      <publishTime>09/21/2021 10:42:50</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/da.js">
+      <publishTime>09/21/2021 10:42:50</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/de.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/dsb.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/el.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/en.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/es.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/et.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/eu.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/fa.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/fi.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/fr.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/gl.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/he.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/hi.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/hr.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/hsb.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/hu.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/hy.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/id.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/is.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/it.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/ja.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/km.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/ko.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/lt.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/lv.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/mk.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/ms.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/nb.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/nl.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/pl.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/ps.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/pt-BR.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/pt.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/ro.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/ru.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/sk.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/sl.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/sr-Cyrl.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/sr.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/sv.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/th.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/tr.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/uk.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/vi.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/zh-CN.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/i18n/zh-TW.js">
+      <publishTime>09/21/2021 10:42:51</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/select2.full.js">
+      <publishTime>09/21/2021 10:42:40</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/select2.full.min.js">
+      <publishTime>09/21/2021 10:42:40</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/select2.js">
+      <publishTime>09/21/2021 10:42:40</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/bower/select2/select2.min.js">
+      <publishTime>09/21/2021 10:42:40</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/dist/adminlte.js">
+      <publishTime>09/21/2021 10:39:52</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/dist/adminlte.min.js">
+      <publishTime>09/21/2021 10:39:52</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/dist/demo.js">
+      <publishTime>09/21/2021 10:39:52</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/dist/pages/dashboard.js">
+      <publishTime>09/21/2021 10:39:56</publishTime>
+    </File>
+    <File Include="Scripts/AdminLTE/dist/pages/dashboard2.js">
+      <publishTime>09/21/2021 10:39:56</publishTime>
+    </File>
+    <File Include="Scripts/bootbox/bootbox.js">
+      <publishTime>09/21/2021 10:39:28</publishTime>
+    </File>
+    <File Include="Scripts/bootbox/bootbox.min.js">
+      <publishTime>09/21/2021 10:39:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/22/2020 09:55:10</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/22/2020 09:55:10</publishTime>
+    </File>
+    <File Include="Scripts/dataTables.select.min.js">
+      <publishTime>05/11/2020 09:30:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/22/2020 09:55:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/22/2020 09:55:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>04/22/2020 09:55:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.js">
+      <publishTime>05/14/2020 11:34:55</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.min.css">
+      <publishTime>09/28/2021 15:23:33</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.min.js">
+      <publishTime>04/22/2020 09:55:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Scripts/main.js">
+      <publishTime>05/29/2020 11:34:16</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.min.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Scripts/scripts.js">
+      <publishTime>05/29/2020 08:50:43</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/af.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/ar.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/az.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/bg.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/bs.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/ca.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/cs.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/da.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/de.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/dsb.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/el.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/en.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/es.js">
+      <publishTime>09/21/2021 10:39:18</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/et.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/eu.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/fa.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/fi.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/fr.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/gl.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/he.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/hi.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/hr.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/hsb.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/hu.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/hy.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/id.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/is.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/it.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/ja.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/km.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/ko.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/lt.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/lv.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/mk.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/ms.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/nb.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/nl.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/pl.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/ps.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/pt-BR.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/pt.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/ro.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/ru.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/sk.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/sl.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/sr-Cyrl.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/sr.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/sv.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/th.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/tr.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/uk.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/vi.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/zh-CN.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/i18n/zh-TW.js">
+      <publishTime>09/21/2021 10:39:19</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/select2.full.js">
+      <publishTime>09/21/2021 10:39:14</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/select2.full.min.js">
+      <publishTime>09/21/2021 10:39:14</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/select2.js">
+      <publishTime>09/21/2021 10:39:14</publishTime>
+    </File>
+    <File Include="Scripts/select2/dist/js/select2.min.js">
+      <publishTime>09/21/2021 10:39:14</publishTime>
+    </File>
+    <File Include="Scripts/sweetalert/sweetalert.min.js">
+      <publishTime>09/21/2021 10:38:45</publishTime>
+    </File>
+    <File Include="Scripts/sweetalert2.js">
+      <publishTime>04/22/2020 09:55:11</publishTime>
+    </File>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>06/05/2020 13:49:23</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>04/17/2020 16:02:31</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/AturanOJK/AturanOJK.cshtml">
+      <publishTime>06/17/2020 19:54:08</publishTime>
+    </File>
+    <File Include="Views/AturanOJK/Index.cshtml">
+      <publishTime>11/03/2021 11:25:46</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/Cek.cshtml">
+      <publishTime>07/10/2020 14:25:00</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/DetailCetak.cshtml">
+      <publishTime>11/26/2020 08:41:16</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/DetailOtorisasi.cshtml">
+      <publishTime>06/18/2020 18:09:47</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/History.cshtml">
+      <publishTime>10/13/2020 10:08:52</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/Index.cshtml">
+      <publishTime>12/17/2020 10:17:07</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/Index_OJK.cshtml">
+      <publishTime>05/14/2020 11:37:10</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/listCetak.cshtml">
+      <publishTime>07/01/2020 09:51:31</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/Otorisasi.cshtml">
+      <publishTime>06/15/2020 15:10:30</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/View.cshtml">
+      <publishTime>05/28/2020 09:55:55</publishTime>
+    </File>
+    <File Include="Views/CetakSurat/ViewJoin.cshtml">
+      <publishTime>05/18/2020 01:27:45</publishTime>
+    </File>
+    <File Include="Views/HariLibur/Index.cshtml">
+      <publishTime>11/04/2021 14:09:13</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>03/16/2020 13:49:58</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>03/16/2020 13:49:58</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>10/28/2021 16:26:15</publishTime>
+    </File>
+    <File Include="Views/KejadianPenting/CetakKejadian.cshtml">
+      <publishTime>11/26/2021 14:09:28</publishTime>
+    </File>
+    <File Include="Views/KejadianPenting/Index.cshtml">
+      <publishTime>11/26/2021 14:06:16</publishTime>
+    </File>
+    <File Include="Views/KejadianPenting/MasterKejadian.cshtml">
+      <publishTime>11/04/2021 09:13:25</publishTime>
+    </File>
+    <File Include="Views/KejadianPenting/ViewKejadian.cshtml">
+      <publishTime>11/29/2021 08:49:22</publishTime>
+    </File>
+    <File Include="Views/KejadianPenting/ViewKejadianMTN.cshtml">
+      <publishTime>11/26/2021 09:23:45</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>03/16/2020 13:50:24</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>03/16/2020 13:50:25</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>06/02/2020 10:36:08</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>03/16/2020 13:50:25</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>03/16/2020 13:50:25</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>03/16/2020 13:50:25</publishTime>
+    </File>
+    <File Include="Views/MataUang/Index.cshtml">
+      <publishTime>06/17/2020 20:03:19</publishTime>
+    </File>
+    <File Include="Views/OJK/Index.cshtml">
+      <publishTime>06/17/2020 21:53:37</publishTime>
+    </File>
+    <File Include="Views/OJKKejadian/Index.cshtml">
+      <publishTime>10/29/2021 11:52:12</publishTime>
+    </File>
+    <File Include="Views/Perusahaan/Index.cshtml">
+      <publishTime>11/15/2021 01:12:53</publishTime>
+    </File>
+    <File Include="Views/Perusahaan/TambahRatio.cshtml">
+      <publishTime>11/23/2021 10:26:13</publishTime>
+    </File>
+    <File Include="Views/Perwakilan/Index.cshtml">
+      <publishTime>06/17/2020 20:57:16</publishTime>
+    </File>
+    <File Include="Views/Produk/Index.cshtml">
+      <publishTime>02/19/2021 21:35:31</publishTime>
+    </File>
+    <File Include="Views/Rating/Index.cshtml">
+      <publishTime>11/04/2021 08:58:02</publishTime>
+    </File>
+    <File Include="Views/Ratio/Index.cshtml">
+      <publishTime>11/04/2021 08:58:16</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/17/2020 13:48:02</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>04/17/2020 13:48:04</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/15/2021 00:35:59</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>09/21/2021 10:43:55</publishTime>
+    </File>
+    <File Include="Views/Shared/_Navbar.cshtml">
+      <publishTime>06/22/2020 17:09:52</publishTime>
+    </File>
+    <File Include="Views/Shared/_NavbarNew.cshtml">
+      <publishTime>04/17/2020 11:04:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_Sidebar.cshtml">
+      <publishTime>04/17/2020 11:31:47</publishTime>
+    </File>
+    <File Include="Views/TransaksiDana/CetakDana.cshtml">
+      <publishTime>11/04/2021 15:26:07</publishTime>
+    </File>
+    <File Include="Views/TransaksiDana/Index.cshtml">
+      <publishTime>11/10/2021 13:24:10</publishTime>
+    </File>
+    <File Include="Views/TransaksiDana/ViewDana.cshtml">
+      <publishTime>11/07/2021 20:33:14</publishTime>
+    </File>
+    <File Include="Views/TransaksiJaminans/CetakJaminan.cshtml">
+      <publishTime>11/04/2021 15:19:52</publishTime>
+    </File>
+    <File Include="Views/TransaksiJaminans/Index.cshtml">
+      <publishTime>11/29/2021 11:42:46</publishTime>
+    </File>
+    <File Include="Views/TransaksiJaminans/MasterJaminan.cshtml">
+      <publishTime>11/04/2021 09:05:39</publishTime>
+    </File>
+    <File Include="Views/TransaksiJaminans/ViewJaminan.cshtml">
+      <publishTime>10/26/2021 13:22:09</publishTime>
+    </File>
+    <File Include="Views/TransaksiKeuangan/CetakLK.cshtml">
+      <publishTime>11/04/2021 15:14:48</publishTime>
+    </File>
+    <File Include="Views/TransaksiKeuangan/Index.cshtml">
+      <publishTime>11/01/2021 13:16:51</publishTime>
+    </File>
+    <File Include="Views/TransaksiKeuangan/ViewLK.cshtml">
+      <publishTime>11/08/2021 22:12:31</publishTime>
+    </File>
+    <File Include="Views/TransaksiLaporans/History.cshtml">
+      <publishTime>11/15/2021 00:45:21</publishTime>
+    </File>
+    <File Include="Views/TransaksiLaporans/Index.cshtml">
+      <publishTime>10/27/2021 15:26:04</publishTime>
+    </File>
+    <File Include="Views/TransaksiLaporans/Otorisasi.cshtml">
+      <publishTime>07/20/2020 12:39:36</publishTime>
+    </File>
+    <File Include="Views/TransaksiOJK/Index.cshtml">
+      <publishTime>05/18/2020 15:01:01</publishTime>
+    </File>
+    <File Include="Views/TransaksiOJK/Index_OJK.cshtml">
+      <publishTime>01/04/2021 18:46:00</publishTime>
+    </File>
+    <File Include="Views/TransaksiRatings/Index.cshtml">
+      <publishTime>11/10/2021 13:37:36</publishTime>
+    </File>
+    <File Include="Views/TransaksiRatings/ViewRating.cshtml">
+      <publishTime>11/04/2021 20:43:33</publishTime>
+    </File>
+    <File Include="Views/TransaksiRatios/Index - Copy %282%29.cshtml">
+      <publishTime>10/04/2021 10:11:39</publishTime>
+    </File>
+    <File Include="Views/TransaksiRatios/Index - Copy %283%29.cshtml">
+      <publishTime>10/11/2021 09:08:07</publishTime>
+    </File>
+    <File Include="Views/TransaksiRatios/Index - Copy.cshtml">
+      <publishTime>10/04/2021 07:54:47</publishTime>
+    </File>
+    <File Include="Views/TransaksiRatios/Index.cshtml">
+      <publishTime>11/26/2021 15:36:02</publishTime>
+    </File>
+    <File Include="Views/TransaksiRatios/ViewDetail.cshtml">
+      <publishTime>11/22/2021 20:37:14</publishTime>
+    </File>
+    <File Include="Views/Tugas/Index.cshtml">
+      <publishTime>04/21/2020 11:34:15</publishTime>
+    </File>
+    <File Include="Views/UserManagement/Index.cshtml">
+      <publishTime>04/29/2020 12:24:38</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/02/2020 14:35:01</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>03/16/2020 13:49:58</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/30/2021 00:49:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

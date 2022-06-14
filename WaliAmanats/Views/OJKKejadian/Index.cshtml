@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <center>
+        <h3>
+            Pelaporan Kejadian Penting OJK
+        </h3>
+    </center>
+</section>
+<section>
+    <div class="row">
+        <div class="col-xs-12">
+            <hr />
+            <div class="form-group row">
+                <label class="col-sm-2 control-label" for="Emiten">Emiten</label>
+                <div class="col-sm-3">
+                    <select required Id="Emiten" data-placement="choose" class="form-control select2"></select>
+                </div>
+                <label class="col-sm-2 control-label" for="Aturan">Aturan OJK</label>
+                <div class="col-sm-3">
+                    <select required Id="Aturan" data-placement="choose" class="form-control select2"></select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 control-label" for="Tanggal">Tanggal Kejadian</label>
+                <div class="col-sm-3">
+                    <input required Id="Tanggal" type="date" class="form-control" />
+                </div>
+            </div>
+            <input class="btn btn-primary" type="submit" id="Cetak" value="Cetak OJK">
+            @*<input class="btn btn-primary c" type="submit" id="Cetak2" value="Cetak OJK Gagal Bayar">*@
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            GetAturan();
+            GetEmiten();
+            $("#Cetak").click(function () {
+
+                var Aturan = $("#Aturan").val();
+                var Emiten = $("#Emiten").val();
+                var Tanggal = $("#Tanggal").val();
+
+                debugger;
+                var url = '@Url.Action("LaporanOJKBuyback", "OJKKejadian")?Aturan=' + Aturan + '&Emiten=' + Emiten + '&Tanggal=' + Tanggal;
+                document.location = url;
+
+
+            });
+        });
+        function GetAturan() {
+            $.ajax({
+                "url": "@Url.Action("GetAturan", "AturanOJK")",
+                "type": "Get",
+                "datatype": "json"
+            }).then((result) => {
+                var Aturan = $("#Aturan");
+                Aturan.html('');
+                $("<option></option>").val('').text('Pilih Aturan OJK').appendTo(Aturan);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Aturan).appendTo(Aturan);
+                });
+            })
+        }
+        function GetEmiten() {
+            //  var kate = $('#EmitenHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetPerusahaan", "TransaksiKeuangan")",
+                type: 'GET',
+                dataType: 'json',
+                success: function (result) {
+                    var kategori = $("#Emiten");
+                    kategori.html('');
+                    $("<option></option>").val('').text('Pilih Emiten').appendTo(kategori);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.Nama).appendTo(kategori);
+                        //console.log(value.Nama);
+                    });
+                    
+                }
+            });
+        }
+    </script>
+}

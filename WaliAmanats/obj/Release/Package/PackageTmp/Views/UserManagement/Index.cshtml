@@ -1,0 +1,236 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User Management</h2>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Input Data</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <input type="hidden" id="UserId" />
+                        <label class="col-sm-3 control-label">Nama</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="NamaUser" placeholder="Nama" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Npp</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="NppUser" placeholder="Npp" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Role</label>
+                        <div class="col-sm-6">
+                            <select required Id="Role" data-placement="choose" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="Update" onclick="Validation();">Perbarui</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table id="table" class="table-bordered">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Nama</th>
+            <th>Npp</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+</table>
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            GetRole();
+            //data table
+            var t = $("#table").DataTable({
+                "ajax": {
+                    "url": "@Url.Action("GetAll","UserManagement")",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": null },
+                    { "data": "Nama" },
+                    { "data": "Npp" },
+                    { "data": "Role" },
+                    {
+                        "render": function (data, type, row) {
+                            return "<a class='btn btn-warning btn-sm' onclick = GetById('" + row.UserId + "');><i class='fa fa-edit'></i></a> <a class='btn btn-danger btn-sm' onclick = Delete('" + row.Id + "');><i class='fa fa-trash'></i></a>"
+                                + " <a class='btn btn-primary btn-sm' onclick = ResetPassword('" + row.UserId + "');><i class='fa fa-refresh'></i></a> ";
+                        },
+
+                    },
+                ]
+            })
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+        })
+
+        function GetRole() {
+            $.ajax({
+                "url": "@Url.Action("GetRole", "UserManagement")",
+                "type": "Get",
+                "datatype": "json"
+            }).then((result) => {
+                var Role = $("#Role");
+                Role.html('');
+                $("<option></option>").val('').text('Pilih Role').appendTo(Role);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Name).appendTo(Role);
+                });
+            })
+        }
+
+        function GetById(UserId) {
+            debugger
+            $.ajax({
+                "url": "@Url.Action("GetById","UserManagement")",
+                "type": "GET",
+                "datatype": "json",
+                "data": { Id: UserId }
+            }).then((result) => {
+                debugger;
+                if (result != null) {
+                    $("#UserId").val(result[0].UserId);
+                    $("#NamaUser").val(result[0].Nama);
+                    $("#NppUser").val(result[0].Npp);
+                    $("#Role").val(result[0].Role);
+                    $("#myModal").modal('show');
+                    $("#Update").show();
+                    $("#Save").hide();
+                }
+            })
+        }
+
+        function ResetPassword(UserId) {
+            debugger
+            $.ajax({
+                "url": "@Url.Action("PasswordReset", "UserManagement")",
+                "type": "POST",
+                "datatype": "json",
+                "data": { Id: UserId }
+            }).then((result) => {
+                debugger;
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Password berhasil di reset menjadi BNI(NPP). tanpa tanda kurung',
+                        'success'
+                    ).then(() => {
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+
+        function Edit(UserId) {
+            debugger;
+            var User = new Object();
+            User.UserId = $("#UserId").val();
+            User.Nama = $("#NamaUser").val();
+            User.NPP = $("#NppUser").val();
+            User.Role = $("#Role").val();
+            $.ajax({
+                "url": "@Url.Action("Save","UserManagement")",
+                "type": "POST",
+                "datatype": "json",
+                "data": { UserId: User.UserId, Nama: User.Nama, Npp: User.NPP, RoleId: User.Role }
+            }).then((result) => {
+                debugger;
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Your file has been Updated.',
+                        'success'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+                else {
+                    Swal.fire(
+                        'Failed!',
+                        'Your file has not Updated.',
+                        'Failed'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+
+            })
+        }
+
+        function Delete(UserId) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("Delete","UserManagement")",
+                        "datatype": "json",
+                        "data": { Id: UserId }
+                }).then((result) => {
+                    debugger;
+                    if (result.data != 0) {
+                        Swal.fire(
+                            'Success!',
+                            'Your file has been deleted.',
+                            'success'
+                        ).then(() => {
+                            $('#table').DataTable().ajax.reload();
+                        })
+                    }
+                    else {
+                        Swal.fire(
+                            'Failed!',
+                            'Your file not deleted.',
+                            'failed'
+                        ).then(() => {
+                            $('#table').DataTable().ajax.reload();
+                        })
+                    }
+                    $("#myModal").modal('hide');
+                    $('#table_role').DataTable().ajax.reload();
+                })
+            }
+            })
+        }
+
+        function Validation() {
+            Edit($("#UserId").val());
+        }
+    </script>
+}

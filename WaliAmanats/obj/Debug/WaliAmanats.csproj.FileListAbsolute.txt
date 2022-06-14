@@ -1,0 +1,1309 @@
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\csc.exe
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\vbc.exe
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll.config
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\WaliAmanats.pdb
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Accordion.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Dapper.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\EntityFramework.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\itextsharp.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Owin.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.Razor.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\WebGrease.dll
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Accordion.pdb
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Accordion.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Dapper.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\itextsharp.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.Razor.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.pdb
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\EntityFramework.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csprojResolveAssemblyReference.cache
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelMasterTransaksi.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRenameTableTransaksi.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtransaksilaporanmodel.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addBaseModel.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addFKPerwakilan.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelBMtrans.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.changeInt64Trans.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.changeModelMatauang.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addSeriTransaksi.resources
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.Cache
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.pdb
+C:\Users\Aldian Dasilva\Documents\kerjaan\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+I:\WaliAmanats\WaliAmanats\bin\roslyn\csc.exe
+I:\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+I:\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+I:\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+I:\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+I:\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+I:\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+I:\WaliAmanats\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+I:\WaliAmanats\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+I:\WaliAmanats\WaliAmanats\bin\roslyn\vbc.exe
+I:\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+I:\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+I:\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll.config
+I:\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll
+I:\WaliAmanats\WaliAmanats\bin\WaliAmanats.pdb
+I:\WaliAmanats\WaliAmanats\bin\Accordion.dll
+I:\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.dll
+I:\WaliAmanats\WaliAmanats\bin\Dapper.dll
+I:\WaliAmanats\WaliAmanats\bin\EntityFramework.dll
+I:\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.dll
+I:\WaliAmanats\WaliAmanats\bin\itextsharp.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+I:\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.dll
+I:\WaliAmanats\WaliAmanats\bin\Owin.dll
+I:\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+I:\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+I:\WaliAmanats\WaliAmanats\bin\Syncfusion.Licensing.dll
+I:\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+I:\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.dll
+I:\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.dll
+I:\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.dll
+I:\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.dll
+I:\WaliAmanats\WaliAmanats\bin\System.Web.Razor.dll
+I:\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+I:\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.dll
+I:\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+I:\WaliAmanats\WaliAmanats\bin\WebGrease.dll
+I:\WaliAmanats\WaliAmanats\bin\Accordion.pdb
+I:\WaliAmanats\WaliAmanats\bin\Accordion.xml
+I:\WaliAmanats\WaliAmanats\bin\Dapper.xml
+I:\WaliAmanats\WaliAmanats\bin\itextsharp.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+I:\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+I:\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+I:\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+I:\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.xml
+I:\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.xml
+I:\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.xml
+I:\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.xml
+I:\WaliAmanats\WaliAmanats\bin\System.Web.Razor.xml
+I:\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.xml
+I:\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+I:\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+I:\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.pdb
+I:\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.xml
+I:\WaliAmanats\WaliAmanats\bin\EntityFramework.xml
+I:\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+I:\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csprojAssemblyReference.cache
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.cache
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.CoreCompileInputs.cache
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.CopyComplete
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.dll
+I:\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\csc.exe
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\vbc.exe
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\project\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\project\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll.config
+D:\project\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll
+D:\project\WaliAmanats\WaliAmanats\bin\WaliAmanats.pdb
+D:\project\WaliAmanats\WaliAmanats\bin\Accordion.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Dapper.dll
+D:\project\WaliAmanats\WaliAmanats\bin\EntityFramework.dll
+D:\project\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\project\WaliAmanats\WaliAmanats\bin\itextsharp.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Owin.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\project\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.dll
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.dll
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.dll
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.Razor.dll
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.dll
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\project\WaliAmanats\WaliAmanats\bin\WebGrease.dll
+D:\project\WaliAmanats\WaliAmanats\bin\Accordion.pdb
+D:\project\WaliAmanats\WaliAmanats\bin\Accordion.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Dapper.xml
+D:\project\WaliAmanats\WaliAmanats\bin\itextsharp.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\project\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.xml
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.xml
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.xml
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.Razor.xml
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.xml
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\project\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\project\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\project\WaliAmanats\WaliAmanats\bin\EntityFramework.xml
+D:\project\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\project\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.cache
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.CoreCompileInputs.cache
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.CopyComplete
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\project\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csprojAssemblyReference.cache
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\csc.exe
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\vbc.exe
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll.config
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\WaliAmanats.pdb
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Accordion.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Dapper.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\EntityFramework.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\itextsharp.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Owin.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.Razor.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\WebGrease.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Accordion.pdb
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Accordion.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Dapper.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\itextsharp.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.Razor.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\EntityFramework.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addnewDB.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabel.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabelupdate.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updaterating.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahrating.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahratingratio.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairating.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairat.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRealisasi.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updatedetailperusahaan.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahdbdetail.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.subdetailperusahaan.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.newadd.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.laporankeuangantanggal.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.penambahantabelbaru.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnominal.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransaksidana.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransdana.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahjaminan.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tabelkejadian.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahkejadian.resources
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.Cache
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\Project BNI\Alia\Alia\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\csc.exe
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\vbc.exe
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll.config
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.pdb
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Dapper.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\itextsharp.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Owin.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Razor.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\WebGrease.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.pdb
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Dapper.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\itextsharp.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Razor.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.AssemblyReference.cache
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addnewDB.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabel.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabelupdate.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updaterating.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahrating.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahratingratio.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairating.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairat.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRealisasi.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updatedetailperusahaan.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahdbdetail.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.subdetailperusahaan.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.newadd.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.laporankeuangantanggal.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.penambahantabelbaru.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnominal.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransaksidana.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransdana.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahjaminan.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tabelkejadian.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahkejadian.resources
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.cache
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.CoreCompileInputs.cache
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.CopyComplete
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\Kantor\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\csc.exe
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\vbc.exe
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll.config
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.pdb
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Dapper.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\itextsharp.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Owin.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Razor.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\WebGrease.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.pdb
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Dapper.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\itextsharp.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Razor.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addnewDB.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabel.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabelupdate.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updaterating.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahrating.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahratingratio.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairating.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairat.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRealisasi.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updatedetailperusahaan.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahdbdetail.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.subdetailperusahaan.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.newadd.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.laporankeuangantanggal.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.penambahantabelbaru.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnominal.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransaksidana.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransdana.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahjaminan.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tabelkejadian.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahkejadian.resources
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.Cache
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csprojResolveAssemblyReference.cache
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\csc.exe
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\vbc.exe
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll.config
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\WaliAmanats.pdb
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Dapper.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\itextsharp.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Owin.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Razor.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\WebGrease.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.pdb
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Accordion.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Dapper.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\itextsharp.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.Razor.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addnewDB.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabel.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabelupdate.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updaterating.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahrating.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahratingratio.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairating.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairat.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRealisasi.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updatedetailperusahaan.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahdbdetail.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.subdetailperusahaan.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.newadd.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.laporankeuangantanggal.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.penambahantabelbaru.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnominal.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransaksidana.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransdana.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahjaminan.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tabelkejadian.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahkejadian.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.Cache
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\csc.exe
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\vbc.exe
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll.config
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\WaliAmanats.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\WaliAmanats.pdb
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Accordion.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Dapper.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\EntityFramework.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\itextsharp.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Owin.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.Razor.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\WebGrease.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Accordion.pdb
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Accordion.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Dapper.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\itextsharp.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.Helpers.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.Mvc.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.Optimization.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.Razor.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\EntityFramework.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addnewDB.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabel.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabelupdate.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updaterating.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahrating.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahratingratio.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairating.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairat.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRealisasi.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updatedetailperusahaan.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahdbdetail.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.subdetailperusahaan.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.newadd.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.laporankeuangantanggal.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.penambahantabelbaru.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnominal.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransaksidana.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransdana.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahjaminan.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tabelkejadian.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahkejadian.resources
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.Cache
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\Data Sebelumnya\Project BNI\LAST ALIA\bk\WaliAmanats\WaliAmanats\obj\Debug\WaliAmanats.csprojResolveAssemblyReference.cache
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\csc.exe
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\vbc.exe
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\WaliAmanats.dll.config
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\WaliAmanats.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\WaliAmanats.pdb
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Accordion.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Dapper.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\EntityFramework.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\itextsharp.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Owin.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.Helpers.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.Mvc.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.Optimization.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.Razor.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\WebGrease.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Accordion.pdb
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Accordion.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Dapper.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\itextsharp.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.Helpers.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.Mvc.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.Optimization.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.Razor.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\EntityFramework.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.csprojResolveAssemblyReference.cache
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addnewDB.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabel.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabelupdate.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updaterating.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahrating.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahratingratio.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairating.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairat.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRealisasi.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updatedetailperusahaan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahdbdetail.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.subdetailperusahaan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.newadd.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.laporankeuangantanggal.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.penambahantabelbaru.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnominal.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransaksidana.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransdana.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahjaminan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tabelkejadian.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahkejadian.resources
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.Cache
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\Aplikasi-BNI\New folder\WaliAmanat\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\csc.exe
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\vbc.exe
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\WaliAmanats.dll.config
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\WaliAmanats.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\WaliAmanats.pdb
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Accordion.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Dapper.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\EntityFramework.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\itextsharp.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Owin.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Helpers.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Mvc.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Optimization.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Razor.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\WebGrease.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Accordion.pdb
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Accordion.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Dapper.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\itextsharp.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Helpers.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Mvc.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Optimization.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Razor.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\EntityFramework.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.csprojResolveAssemblyReference.cache
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addnewDB.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabel.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabelupdate.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updaterating.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahrating.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahratingratio.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairating.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairat.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRealisasi.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updatedetailperusahaan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahdbdetail.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.subdetailperusahaan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.newadd.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.laporankeuangantanggal.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.penambahantabelbaru.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnominal.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransaksidana.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransdana.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahjaminan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tabelkejadian.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahkejadian.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.Cache
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.pdb
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.UpdateTargetTosString.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewString2.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewFieldTransaksiKejadian.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.test.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPerusahaan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.DropIdPer.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.AddPerushaan.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.AddPerushaan3.resources
+D:\Aplikasi-BNI\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.FixTransaksiKeajdian.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\csc.exe
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\System.Collections.Immutable.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\vbc.exe
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\VBCSCompiler.exe
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\roslyn\VBCSCompiler.exe.config
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\WaliAmanats.dll.config
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\WaliAmanats.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\WaliAmanats.pdb
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Accordion.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Antlr3.Runtime.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Dapper.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\EntityFramework.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\EntityFramework.SqlServer.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\itextsharp.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Google.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Web.Infrastructure.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Newtonsoft.Json.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Owin.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.Compression.Base.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.DocIO.Base.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.Licensing.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.OfficeChart.Base.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Net.Http.Formatting.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Helpers.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Mvc.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Optimization.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Razor.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Deployment.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Razor.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\WebGrease.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Accordion.pdb
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Accordion.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Dapper.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\itextsharp.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.Compression.Base.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.DocIO.Base.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Syncfusion.OfficeChart.Base.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Net.Http.Formatting.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Helpers.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Mvc.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Optimization.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.Razor.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Deployment.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\System.Web.WebPages.Razor.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Antlr3.Runtime.pdb
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Newtonsoft.Json.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\EntityFramework.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\EntityFramework.SqlServer.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Google.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.csprojResolveAssemblyReference.cache
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModels.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewModels.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodel.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addkodeefek.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPeriode.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addContactPerusahaan.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addtglbunga.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addm.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addUserTransaction.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelchild.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktransdet.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.fktranstgl.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.isdelete.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParam.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addParambool.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelOJK.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addmodelstatus.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addnewDB.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabel.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ratiotabelupdate.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updaterating.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahrating.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahratingratio.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairating.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnilairat.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addRealisasi.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.updatedetailperusahaan.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahdbdetail.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.subdetailperusahaan.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.newadd.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.laporankeuangantanggal.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.penambahantabelbaru.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahnominal.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransaksidana.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahtransdana.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.ubahjaminan.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tabelkejadian.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.tambahkejadian.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.UpdateTargetTosString.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewString2.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addNewFieldTransaksiKejadian.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.test.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.addModelPerusahaan.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.DropIdPer.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.AddPerushaan.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.AddPerushaan3.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.Migrations.FixTransaksiKeajdian.resources
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.csproj.GenerateResource.Cache
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.dll
+D:\Aplikasi-BNI\ALIA\New folder\WaliAmanatUpdate\WaliAmanat\WaliAmanats\obj\Debug\WaliAmanats.pdb

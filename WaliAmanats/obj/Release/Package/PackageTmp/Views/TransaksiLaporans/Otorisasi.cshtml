@@ -1,0 +1,542 @@
+﻿
+@{
+    ViewBag.Title = "Otorisasi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2 style="text-align:center">Cek Input Kelola Surat Utang</h2>
+
+<hr />
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Tambah Surat Utang</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <input type="hidden" id="TransaksiId" />
+                    <input type="hidden" id="JabatanId" />
+                    <div class="form-group row">
+                        <label class="col-sm-1 control-label">Perusahaan</label>
+                        <div class="col-sm-3">
+                            <select required id="Perusahaan" class="form-control" data-placement="choose"></select>
+                        </div>
+                        <label class="col-sm-1 control-label">Produk</label>
+                        <div class="col-sm-3">
+                            <select required id="Produk" class="form-control" data-placement="choose"></select>
+                        </div>
+
+                        <label class="col-sm-1 control-label">Nama Produk</label>
+                        <div class="col-sm-3">
+                            @*<input type="text" id="NamaProduk" class="form-control" placeholder="Nama Produk">*@
+                            <textarea id="NamaProduk" class="form-control disabled"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-1 control-label">Perwakilan</label>
+                        <div class="col-sm-3">
+                            <select required id="Perwakilan" class="form-control" data-placement="choose" disabled></select>
+                        </div>
+                        <label class="col-sm-1 control-label">Jabatan</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="Jabatan" class="form-control" placeholder="" readonly>
+                        </div>
+                        <label class="col-sm-1 control-label">Jenis Tugas</label>
+                        <div class="col-sm-3">
+                            <select required id="Tugas" class="form-control" data-placement="choose"></select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-1 control-label">Mata Uang</label>
+                        <div class="col-sm-3">
+                            <select required id="MataUang" class="form-control" data-placement="choose"></select>
+                        </div>
+                        <label class="col-sm-1 control-label">Jenis Pembayaran</label>
+                        <div class="col-sm-3">
+                            <select required id="JenisPembayaran" class="form-control" data-placement="choose">
+                                <option value="">Pilih Jenis Pembayaran</option>
+                                <option value="Bunga">Bunga</option>
+                                <option value="Bagi Hasil">Bagi Hasil</option>
+                                <option value="Bunga/Bagi Hasil">Bunga/Bagi Hasil</option>
+                            </select>
+                        </div>
+                        <label class="col-sm-1 control-label">Fee</label>
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="pre"></span>
+                                <input type="text" class="form-control number" placeholder="1,000,000,000" id="Fee">
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+                    <h4>Pembayaran</h4>
+                    <hr />
+                    <div class="form-group row">
+                        <label class="col-sm-1 control-label">Jenis Pengiriman</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="JenisPengiriman" class="form-control" placeholder="Jenis Pengiriman">
+                        </div>
+                        <label class="col-sm-1 control-label">Nama Bank</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="NamaBank" class="form-control" placeholder="Nama Bank">
+                        </div>
+                        <label class="col-sm-1 control-label">Nama Penerima</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="NamaPenerima" class="form-control" placeholder="Nama Penerima">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-1 control-label">No. Rekening</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="NoRekening" class="form-control" placeholder="Nomor Rekening Penerima">
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="detail">
+                    <h4>Detail</h4>
+                    <table class="table table-responsive">
+                        <tr>
+                            <td style="display:none;"></td>
+                            <td style="max-width:10px;">Seri</td>
+                            <td>Kode Efek</td>
+                            <td>Periode</td>
+                            <td style="width:180px;">Nominal</td>
+                            <td>Tanggal Terbit</td>
+                            <td>Bunga</td>
+                            <td>Jatuh Tempo</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr class="mycontainer" id="mainrow">
+                            <td style="width:50px">
+                                <input type="text" id="Seri" class="seri form-control" placeholder="Seri" />
+                            </td>
+                            <td style="width:150px">
+                                <input type="text" id="KodeEfek" class="kodeefek form-control disabled" placeholder="Kode Efek" />
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" id="Periode" class="periode form-control number" placeholder="Periode" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+                                </div>
+                            </td>
+                            <td>
+                                <input type="text" id="Nominal" class="nominal form-control number" placeholder="Nominal" />
+                            </td>
+                            <td>
+                                <input type="date" id="Terbit" class="terbit form-control" value="" />
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" id="Bunga" class="bunga form-control" placeholder="Bunga" />
+                                </div>
+                            </td>
+                            <td>
+                                <input type="date" id="JatuhTempo" class="jatuhtempo form-control" value="" />
+                            </td>
+                            <td>
+                                <input type="button" id="add" value="add" style="width:80px" class="btn btn-success" />
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div id="orderItems">
+                        <table class="table table-responsive" id="detailsItems"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearScreen()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="tglModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Daftar Tanggal Bayar Bunga</h4>
+            </div>
+            <div class="modal-body">
+                <table id="tableTglBunga" class="table-bordered table-responsive">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Tanggal Bunga</th>
+                            <th>Kupon ke-</th>
+                            <th>Bunga</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table id="table" class="table-bordered">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Nama Perusahaan</th>
+            <th>Produk</th>
+            <th>Nama Produk</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody class="tbody"></tbody>
+</table>
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+
+@section scripts{
+<script src="~/Scripts/moment-with-locales.min.js"></script>
+<script src="~/Scripts/sweetalert2.js"></script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var t = $("#table").DataTable({
+                "ajax": {
+                    "url": "@Url.Action("GetListApproval", "TransaksiLaporans")",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": null },
+                    { "data": "Perusahaan.Nama" },
+                    { "data": "Produk.Nama" },
+                    { "data": "NamaProduk" },
+                    {
+                        "render": function (data, type, row) {
+                            return "<span class='label label-" + row.Status.Warna + "'>" + row.Status.Nama + "</span>";
+                        }
+                    },
+
+                    {
+                        "render": function (data, type, row) {
+                            return "<a class='btn btn-success btn-sm' title='Approve / Reject' onclick = Otorisasi('" + row.Id + "');><i class='fa fa-check'></i></a> <a class='btn btn-default btn-sm detail' title='Lihat Detail' onclick = Detail('" + row.Id + "');><i class='fa fa-info-circle'></i></a> ";
+
+                        },
+
+                    },
+                ]
+            })
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+
+            GetPerusahaan();
+            GetProduk();
+            GetTugas();
+            GetMataUang();
+        });
+
+        function Detail(Id) {
+            $.ajax({
+                "url": "@Url.Action("GetById", "TransaksiLaporans")",
+                "type": "GET",
+                "datatype": "json",
+                "data": { Id: Id }
+            }).then((result) => {
+                if (result != null) {
+                    $("#Perusahaan").val(result.Perusahaan_Id);
+                    $("#Produk").val(result.Produk_Id);
+                    $("#NamaProduk").val(result.NamaProduk);
+                    $("input, select, textarea").prop("disabled", true);
+
+                    $.ajax({
+                        "url": "@Url.Action("GetPerwakilan", "TransaksiLaporans")",
+                        "type": "GET",
+                        "datatype": "json",
+                        "data": { Id: result.Perusahaan_Id }
+                    }).then((data) => {
+                        $("#Perwakilan").html('');
+                        $("<option></option>").val('').text('Pilih Perwakilan').appendTo(Perwakilan);
+                        $.each(data, function (i, value) {
+                            $("<option></option>").val(value.Id).text(value.Nama).appendTo(Perwakilan);
+                        });
+
+                        $("#Perwakilan").val(result.NamaPerwakilan_Id);
+
+                    })
+
+
+                    $("#JabatanId").val(result.Jabatan_Id);
+                    $("#Jabatan").val(result.NamaJabatan);
+                    $("#Tugas").val(result.JenisTugas_Id);
+                    $("#MataUang").val(result.MataUang_Id);
+                    $("#JenisPembayaran").val(result.JenisPembayaran);
+                    $("#Fee").val(pluskoma(result.Fee));
+                    $("#pre").text(result.Satuan);
+                    $("#JenisPengiriman").val(result.JenisPengiriman);
+                    $("#NamaBank").val(result.NamaBank);
+                    $("#NamaPenerima").val(result.NamaPenerima);
+                    $("#NoRekening").val(result.NoRekening);
+
+                    $.each(result.Detail, function (i, value) {
+
+                        var markup =
+                        '<tr class="mycontainer" id="mainrow">' +
+                            '<td style="width:50px"><input type="text" class="seri form-control" placeholder="Seri" style="width:50px;" value="' + value.Seri + '" readonly /></td>' +
+                            '<td style="width:150px"><input type="text" class="seri form-control" placeholder="Kode Efek"  value="' + value.KodeEfek + '" readonly /></td>' +
+                            '<td style="width:130px"><select required id="Periode" class="form-control disabled" data-placement="choose" disabled><option value="' + value.Periode_Id + '" selected>' + value.Periode.Penyebut + '</option></select></td>' +
+                            '<td style="width:180px;"><input type="text" class="form-control col-sm-4" style="width:180px;" value="' + pluskoma(value.Nominal) + '" readonly /></td>' +
+                            '<td style="width:170px"><input type="date" class="form-control" style="width:170px;" value="' + moment(value.TglTerbit).format('YYYY-MM-DD') + '" readonly /></td>' +
+                            '<td style="width:90px"><div class="input-group"><input type="text" class="form-control" style="width:90px;" value="' + value.Bunga + '" readonly /><span class="input-group-addon">%</span></div></td>' +
+                            '<td style="width:170px"><input type="date" class="form-control" style="width:170px;" value="' + moment(value.TglJatuhTempo).format('YYYY-MM-DD') + '" readonly /></td>' +
+                            '<td><input type="button" value="Detail" style="width:80px;" class="btn btn-info detailtgl" onclick="GetTglBunga(' + value.Id + ')" /></td>' +
+                        '</tr>';
+
+
+                        $('#detailsItems').append(markup);
+                    });
+
+                    $("#mainrow").css('visibility', 'hidden');
+                    $("#detailsItems").css('margin-top', '-70px');
+
+                    $('#myModal').modal({ backdrop: 'static', keyboard: false })
+                    $("#myModal").modal('show');
+                }
+            });
+        }
+
+        function Otorisasi(Id) {
+            var status = true;
+
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-info btn-lg',
+                    cancelButton: 'btn btn-danger btn-lg'
+                },
+                buttonsStyling: false
+            })
+
+            swalWithBootstrapButtons.fire({
+                title: 'Otorisasi',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Approve',
+                cancelButtonText: 'Reject',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("Approval", "TransaksiLaporans")",
+                        "type": "POST",
+                        "datatype": "json",
+                        "data": { Id: Id, status: status }
+                    }).then((data) => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Approved',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        $('#table').DataTable().ajax.reload();
+                    })
+
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    status = false;
+                    $.ajax({
+                        "url": "@Url.Action("Approval", "TransaksiLaporans")",
+                        "type": "POST",
+                        "datatype": "json",
+                        "data": { Id: Id, status: status }
+                    }).then((data) => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Rejected',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+
+        function GetTglBunga(Id) {
+            debugger;
+            var t = $("#tableTglBunga").DataTable({
+                "destroy": true,
+                "paging": false,
+                "info": false,
+                "searching": false,
+                "sorting": false,
+                "ajax": {
+                    "url": "@Url.Action("GetTglBunga", "TransaksiLaporans")",
+                    "type": "GET",
+                    "datatype": "json",
+                    "data": { Id: Id },
+                },
+                "columnDefs": [
+                {
+                    targets: 3,
+                    className: 'dt-body-right'
+                }],
+                "columns": [
+        { "data": null },
+        {
+            "data": "TglSuratBunga", "render": function (d) {
+                return moment(d).format("DD/MM/YYYY");
+            }
+        },
+        { "data": "NoKupon" },
+        {
+            "data": "NilaiBunga", "render": function (x) {
+                return pluskoma(x);
+            }
+        },
+        {
+            "render": function (data, type, row) {
+                if (row.Status == true) {
+                    return "<span class='label label-success'>Done</span>";
+                }
+                else {
+                    return "<span class='label label-warning'>Undone</span>"
+                }
+            }
+        }
+
+                ]
+            });
+
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+            $("#tglModal").modal('show');
+        }
+
+        function GetProduk() {
+            $.ajax({
+                "url": "@Url.Action("GetTipeProduk", "TransaksiLaporans")",
+                "type": "GET",
+                "datatype": "json"
+            }).then((result) => {
+                var Produk = $("#Produk");
+                Produk.html('');
+                $("<option></option>").val('').text('Pilih Produk').appendTo(Produk);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(Produk);
+                });
+            })
+        }
+
+        function GetPerusahaan() {
+            $.ajax({
+                "url": "@Url.Action("GetPerusahaan", "TransaksiLaporans")",
+                "type": "GET",
+                "datatype": "json"
+            }).then((result) => {
+                var Perusahaan = $("#Perusahaan");
+                Perusahaan.html('');
+                $("<option></option>").val('').text('Pilih Perusahaan').appendTo(Perusahaan);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(Perusahaan);
+                });
+            })
+        }
+
+        function GetPerwakilan() {
+            debugger;
+            var Perusahaan = $("#Perusahaan").val();
+
+            $.ajax({
+                "url": "@Url.Action("GetPerwakilan", "TransaksiLaporans")",
+                "type": "GET",
+                "datatype": "json",
+                "data": { Id: Perusahaan }
+            }).then((result) => {
+                $("#Perwakilan").html('');
+                $("<option></option>").val('').text('Pilih Perwakilan').appendTo(Perwakilan);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(Perwakilan);
+                });
+            })
+        }
+
+        function GetTugas() {
+            $.ajax({
+                "url": "@Url.Action("GetTipeTugas", "TransaksiLaporans")",
+                "type": "GET",
+                "datatype": "json"
+            }).then((result) => {
+                var Tugas = $("#Tugas");
+                Tugas.html('');
+                $("<option></option>").val('').text('Pilih Tugas').appendTo(Tugas);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(Tugas);
+                });
+            })
+        }
+        function GetMataUang() {
+            $.ajax({
+                "url": "@Url.Action("GetMataUang", "TransaksiLaporans")",
+                "type": "GET",
+                "datatype": "json"
+            }).then((result) => {
+                var MataUang = $("#MataUang");
+                MataUang.html('');
+                $("<option></option>").val('').text('Pilih Mata Uang').appendTo(MataUang);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(MataUang);
+                });
+            })
+        }
+
+        function ClearScreen() {
+            $('input, select').prop("disabled", false);
+
+            $("#TransaksiId, #Perusahaan, #Perwakilan, #Produk, #Jabatan, #JabatanId, #NamaProduk, #Tugas, #MataUang, #Fee").val("");
+            $('#JenisPengiriman, #NamaBank, #NamaPenerima, #NoRekening').val('');
+            $('#Seri, #Periode, #Nominal, #Terbit, #Bunga, #JatuhTempo').val('');
+
+            $('#Perwakilan').prop('disabled', true);
+            $('#Perwakilan').html('');
+
+            $('#detailsItems').empty();
+
+            $("#mainrow").css('visibility', 'visible');
+            $("#detailsItems").css('margin-top', '0px');
+        }
+
+        function minkoma(angka) {
+            var bil = angka;
+            var loop = Math.floor(angka.length / 3);
+            for (var i = 0; i < loop; i++) {
+                bil = bil.replace(',', '');
+            }
+            return bil;
+        }
+
+        function pluskoma(angka) {
+            var rupiah = '';
+            var angkarev = angka.toString().split('').reverse().join('');
+            for (var i = 0; i < angkarev.length; i++) if (i % 3 == 0) rupiah += angkarev.substr(i, 3) + ',';
+            return rupiah.split('', rupiah.length - 1).reverse().join('');
+        }
+
+        function formatDate(dates) {
+            date = new Date(parseInt(dates.substr(6)));
+            var year = date.getFullYear();
+            var month = (1 + date.getMonth()).toString();
+            month = month.length > 1 ? month : '0' + month;
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+            return year + '-' + month + '-' + day;
+        }
+    </script>
+}

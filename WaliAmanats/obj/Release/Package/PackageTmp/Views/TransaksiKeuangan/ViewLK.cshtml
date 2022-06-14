@@ -1,0 +1,239 @@
+﻿@model IEnumerable<WaliAmanats.ViewModel.DetailLpVM>
+@{
+    ViewBag.Title = "ViewLK";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+        View Laporan Keuangan
+    </h1>
+</section>
+<section>
+    <div class="well">
+        <div class="row">
+            @*@foreach (var item in Model)
+                {*@
+            <div>
+                <div class="col-xs-12">
+                    <br />
+                    @foreach (var item in Model)
+                    {
+
+                            <input type="hidden" class="Id" value="@item.IdDetail" id="Id" placeholder="Id" />
+                     
+                            <div class="form-group col-md-12">
+                                <label class="col-sm-2 control-label">Emiten</label>
+                                <div class="col-sm-4">
+                                    <input readonly type="text" value="@item.Perusahaan" class="form-control" />
+                                </div>
+                                <label class="col-sm-2 control-label">Produk</label>
+                                <div class="col-sm-4">
+                                    <input readonly type="text" value="@item.Produk" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label class="col-sm-2 control-label">Nama Produk</label>
+                                <div class="col-sm-4">
+                                    <input readonly type="text" value="@item.NamaProduk" class="form-control" />
+                                </div>
+                                <label class="col-sm-2 control-label">Tanggal Surat</label>
+                                <div class="col-sm-4">
+                                    <input readonly type="text" value="@item.TanggalSurat.ToString("dd/MM/yyyy")" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+
+                                <label class="col-sm-2 control-label">Tanggal Cetak</label>
+                                <div class="col-sm-4">
+                                    <input type="hidden" id="tglCetak" value="@item.TanggalCetak.ToString("yyyy/MM/dd")" class="form-control" />
+
+                                    <input readonly type="text" value="@item.TanggalCetak.ToString("dd/MM/yyyy")" class="form-control" />
+                                </div>
+                                <label class="col-sm-2 control-label">File Balasan</label>
+                                <div class="col-sm-4">
+                                    <a href="~/Files/Keuangan/@item.Path" target="_blank" class="btn btn-default"><i class="fa fa-download"> @item.Path</i></a>
+                                </div>
+                            </div>
+                    }
+
+                </div>
+
+                <div class="modal fade" id="ModalCore" tabindex="-1" role="dialog" aria-labelledby="ModalCoreLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="ModalCoreLabel"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">File Balasan</label>
+                                            <div class="col-sm-9" id="divFile">
+                                                <input type="file" class="form-control" id="File" accept="application/pdf" style="min-width:100%">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="AddCore" onclick="SaveCore()">Add</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer col-xs-12">
+
+                <a class="btn btn-default pull-right" href="@Url.Action("CetakLK", "TransaksiKeuangan" )">Kembali</a>
+                <a class="btn btn-warning pull-right" data-toggle="modal" data-target="#tglModal" data-backdrop="static" data-keyboard="false" id="Cetak">Cetak</a>
+                <span class="pull-right" style="margin:5px;"></span>
+                @foreach (var items in Model)
+                {
+                   
+                    if (items.Status == false && items.StatusCetakId == 5)
+                    {
+                        <a class="btn btn-primary" id="" onclick="Done();">Done</a>
+                        <a class="btn btn-success" onclick="AddModalCore()" data-target="#ModalCore" data-toggle="modal">Upload Bukti</a>
+                    }
+                    else
+                    {
+                        <span class="pull-right" style="margin:5px;"></span>
+                    }
+
+                    <span class="pull-right" style="margin:5px;"></span>
+
+                    <span class="pull-right" style="margin:5px;"></span>
+
+                    <div class="clearfix"></div>
+
+                    <div class="clearfix"></div>
+                }
+               
+                <span class="pull-right" style="margin:5px;"></span>
+                <div class="clearfix"></div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+@section Scripts{
+<script src="~/Scripts/sweetalert2.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#Cetak").click(function () {
+                debugger;
+                var tglCetak = $('#tglCetak').val();
+                var Idc = $("#Id").val();
+                console.log(tglCetak);
+
+                if (tglCetak == '') {
+                    alert("Tanggal Cetak tidak boleh kosong");
+                }
+                else {
+                    debugger;
+                    var url = '@Url.Action("CetakLaporanKeuangan", "TransaksiKeuangan")?TanggalCetak=' + tglCetak + '&Idc=' + Idc;
+                    console.log(url);
+                    document.location = url;
+                }
+
+            });
+        });
+        function AddModalCore() {
+            $("#ModalCoreLabel").html("Upload File");
+        }
+        function SaveCore() {
+
+            var Id = $('#Id').val();
+            $.ajax({
+                url: "@Url.Action("GetById", "TransaksiKeuangan")",
+                type: 'GET',
+            dataType: 'json',
+
+            data: { 'Id': Id },
+            success: function (result) {
+                var formData = new FormData();
+                var filepp = $("#File").get(0).files[0];
+                formData.append("file", filepp);
+
+                var DetBuku = result.Id;
+                formData.append('Id', DetBuku);
+
+                $.ajax({
+                    url: "@Url.Action("SubmitFile", "TransaksiKeuangan")",
+                    type: 'POST',
+                contentType: false,
+                processData: false,
+                data: formData,
+                success: function (result1) {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "The data has been saved!",
+                        type: "success",
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        timer: 3000,
+                    });
+                    $("#Id").val(result.Id);
+                    window.location.reload();
+
+                },
+                error: function (response) {
+                    Swal.fire("Oops", "We couldn't connect to the server!", "error");
+                }
+            });
+        },
+        error: function (response) {
+            Swal.fire("Oops", "We couldn't connect to the server!", "error");
+        }
+        });
+        }
+        function Done() {
+            Swal.fire({
+                title: 'Tandai Telah Selesai?',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya'
+            }).then((result) => {
+                if (result.value) {
+                    debugger;
+                    var id = [];
+                    $('.Id').each(function () {
+                        id.push($(this).val());
+                    })
+
+                    var Id = new Object;
+                    Id = id;
+
+                    $.ajax({
+                        "type": "POST",
+                        "url": "@Url.Action("Done","TransaksiKeuangan")",
+                        "datatype": "json",
+                        "data": { Id: Id }
+                }).then((result) => {
+                    if (result.data != 0) {
+                        Swal.fire(
+                            'Success!',
+                            '',
+                            'success'
+                        ).then(() => {
+                            location.reload();
+                        })
+                    }
+                })
+            }
+            })
+        }
+    </script>
+}

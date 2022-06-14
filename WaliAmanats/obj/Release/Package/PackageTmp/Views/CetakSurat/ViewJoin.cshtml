@@ -1,0 +1,283 @@
+﻿@model IEnumerable<WaliAmanats.ViewModel.ViewJoinVM>
+@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using WaliAmanats.Models;
+@{
+    ViewBag.Title = "Gabung Surat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var TglBunga = Request.Params["tanggal"];
+    var Id = Request.Params["Id"];
+}
+
+<h3>Detail Gabung Surat</h3>
+
+<br />
+
+
+@foreach (var item in Model)
+{
+    <div class="form-horizontal">
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Tanggal Bunga</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="TglBunga" value="@TglBunga" disabled />
+            </div>
+        </div>
+        <hr />
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Perusahaan</label>
+            <div class="col-sm-3">
+                <select required id="Perusahaan" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.Perusahaan_Id">@item.Perusahaan</option>
+                </select>
+            </div>
+            <label class="col-sm-1 control-label">Perwakilan</label>
+            <div class="col-sm-3">
+                <select required id="Perwakilan" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.NamaPerwakilan_Id">@item.Perwakilan</option>
+                </select>
+            </div>
+            <label class="col-sm-1 control-label">Jabatan</label>
+            <div class="col-sm-3">
+                <input type="text" id="Jabatan" class="form-control" placeholder="" readonly value="@item.Jabatan">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Jenis Tugas</label>
+            <div class="col-sm-3">
+                <select required id="Tugas" class="form-control" data-placement="choose" disabled>
+                    <option value="@item.JenisTugas_Id">@item.JenisTugas</option>
+                </select>
+            </div>
+        </div>
+
+        <br />
+
+        @*<h4>Detail Surat</h4>*@
+        <div class="detail">
+
+            <div class="panel-group">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1">Detail Surat untuk digabung</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <ul class="list-group">
+
+                            @foreach (var item2 in item.ListProduk)
+                            {
+                                <li class="list-group-item">
+                                    <div class="form-group row">
+                                        <label class="col-sm-1 control-label">Produk</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" id="JenisPengiriman" class="form-control" value="@item2.Produk" disabled>
+                                        </div>
+                                        <label class="col-sm-2 control-label">Nama Produk</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" id="JenisPengiriman" class="form-control" value="@item2.NamaProduk" style="min-width:100%" disabled>
+                                        </div>
+                                    </div>
+                                    <table class="table table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Seri</th>
+                                                <th>Kupon ke-</th>
+                                                <th>Bunga</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        @{int no = 1;}
+                                        @foreach (var item3 in item2.ListBunga)
+                                        {
+                                            <tbody class="tbody">
+                                                <tr>
+                                                    <td>@no</td>
+                                                    <td>@item3.TransaksiDetail.Seri</td>
+                                                    <td>@item3.NoKupon</td>
+                                                    <td>@item3.NilaiBunga.ToString("N2")</td>
+                                                    @if (item3.Status == false)
+                                                    {
+                                                        <td>
+                                                            <span class="label label-default">Belum Lunas</span>
+                                                        </td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>
+                                                            <span class="label label-success">Lunas</span>
+                                                        </td>
+                                                    }
+
+                                                </tr>
+                                            </tbody>
+                                            {
+                                                no++;
+                                            }
+                                        }
+                                    </table>
+
+                                </li>
+                                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <h4>Pembayaran</h4>
+        <hr />
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">Jenis Pembayaran</label>
+            <div class="col-sm-3">
+                <input type="text" id="JenisPengiriman" class="form-control" value="@item.JenisPengiriman" disabled>
+            </div>
+            <label class="col-sm-1 control-label">Nama Bank</label>
+            <div class="col-sm-3">
+                <input type="text" id="NamaBank" class="form-control" value="@item.NamaBank" disabled>
+            </div>
+            <label class="col-sm-1 control-label">Nama Penerima</label>
+            <div class="col-sm-3">
+                <input type="text" id="NamaPenerima" class="form-control" value="@item.NamaPenerima" disabled>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-1 control-label">No. Rekening</label>
+            <div class="col-sm-3">
+                <input type="text" id="NoRekening" class="form-control" value="@item.NoRekening" disabled>
+            </div>
+        </div>
+
+    </div>
+                       <hr />                     }
+<div class="footer">
+    <a class="btn btn-default pull-right" href="@Url.Action("Index", "CetakSurat")">Kembali</a>
+    <span class="pull-right" style="margin:5px;"></span>
+    <a class="pull-right btn btn-primary" Id="Save">Kirim Untuk Otorisasi</a>
+    <div class="clearfix"></div>
+
+</div>
+
+<div class="modal fade" id="tglModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Masukkan Nomor Referensi</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label class="col-sm-3 control-label">No. Referensi</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="NoRef" class="form-control" data-status="0">
+                    </div>
+                    <a class="btn btn-success btn-sm" id="SaveNoRef"><i class="fa fa-check"></i></a>
+                    <span class="error" style="color:red;">Mohon diisi</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" id="" href="">Simpan</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearScreen()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script src="~/Scripts/moment-with-locales.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            ClearScreen();
+
+            $('#SaveNoRef').click(function () {
+                var Id = $('#TransaksiId').val();
+                var noref = $('#NoRef')
+                var status = noref.data('status');
+
+
+                if (status == 0) {
+                    if (noref.val() == '') {
+                        $('span.error').show();
+                    } else {
+                        $('span.error').hide();
+                        noref.prop('readonly', true);
+                        noref.data('status', 1);
+                        $(this).removeClass('btn btn-success');
+                        $(this).addClass('btn btn-warning');
+                        $(this).find('i').removeClass('fa fa-check');
+                        $(this).find('i').addClass('fa fa-remove');
+
+                        debugger;
+                        var id = [@Id];
+                        var tgl = '@TglBunga';
+
+                        //for (var i = 0; i < id.length ; i++) {
+                        //    id.push(data[i]['Id']);
+                        //}
+                        var ids = "Id=" + id[0] + "&Id=" + id[1];
+
+                    }
+                } else {
+                    noref.prop('readonly', false);
+                    noref.data('status', 0);
+                    $(this).removeClass('btn btn-warning');
+                    $(this).addClass('btn btn-success');
+                    $(this).find('i').removeClass('fa fa-remove');
+                    $(this).find('i').addClass('fa fa-check');
+                }
+
+            });
+        });
+        $('#Save').on("click", function () {
+            var StatusCetak = true;
+            var Id = [@Id];
+
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-info btn-lg',
+                    cancelButton: 'btn btn-danger btn-lg'
+                },
+                buttonsStyling: false
+            })
+
+            swalWithBootstrapButtons.fire({
+                title: 'Kirim Untuk Otorisasi?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("SendOtorisasiGabungan", "CetakSurat")",
+                        "type": "POST",
+                        "datatype": "json",
+                        "data": { Id: Id, StatusCetak: StatusCetak }
+                    }).then((data) => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Terkirim',
+                            showConfirmButton: false,
+                            timer: 1500
+                        }).then(function(){
+                            @*window.location.href = "@Url.Action("Index","TransaksiCetak")/";*@
+                            window.location = "@Url.Action("History","CetakSurat")/";
+                        })
+                    })
+                }
+            })
+
+        })
+        function ClearScreen() {
+            $('span.error').hide();
+        }
+    </script>
+}

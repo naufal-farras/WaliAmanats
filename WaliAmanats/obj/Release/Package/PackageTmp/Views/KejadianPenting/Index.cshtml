@@ -1,0 +1,756 @@
+﻿@model WaliAmanats.ViewModel.KejadianVM
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+        Kelola Kejadian Penting
+    </h1>
+</section>
+<section>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                 
+                <div class="box-header with-border">
+
+                    <div class="col-md-6">
+                        <div class="pull-left">
+                            <a class="btn btn-success" onclick="AddModal()" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle"> Tambah</i></a>
+                            
+                           @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                               <i class="fa fa-plus-circle"></i>  Tambah Cetak MTN
+                            </button>*@
+
+                           
+                            @*<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Tambah MTN</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Emiten</label>
+                                                <div class="col-sm-6"  id="divEmiten">
+                                                    <input type="hidden" class="modalhide" id="EmitenHidden" value="0">
+                                                 
+                                                      <select required id="Emiten" data-placement="Choose" class="form-control select2" style="width: 70%" @*onchange="LoadProduk();"></select>
+                                                        
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" onclick="SaveMTN()">Simpan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Emiten</th>
+                                <th>Nama Produk</th>
+                                <th>Seri</th>
+                                <th>Kupon</th>
+                                <th>Kejadian</th>
+                                <th>Informasi/Peristiwa</th>
+                                <th>Tanggal Input</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody"></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="ModalCoreLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="ModalCoreLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <input type="hidden" id="Id" value="">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Emiten</label>
+                                <div class="col-sm-4" id="divEmiten">
+                                    <input type="hidden" class="modalhide" id="EmitenHidden" value="0">
+                                    <select required="required" class="form-control select2" id="EmitenId" onchange="LoadProduk();" style="width: 100%;">
+                                        <option selected="selected" value="" style="width:100%;"> Pilih Emiten </option>
+                                        @foreach (var data in Model.Perusahaan)
+                                        {
+                                            <option value="@data.Id">@data.Nama</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Nama Produk</label>
+                                <div class="col-sm-9" id="divProduk">
+                                    <input type="hidden" class="modalhide" id="ProdukHidden" value="0">
+                                    <select required id="Produk" data-placement="Choose" readonly disabled class="form-control select2" onchange="LoadSeri();" style="width: 70%"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Seri</label>
+                                <div class="col-sm-9" id="divSeri">
+                                    <input type="hidden" class="modalhide" id="SeriHidden" value="0">
+                                    <select required id="Seri" data-placement="Choose" readonly disabled class="form-control select2" onchance="LoadKupon();" style="width: 70%"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Kupon</label>
+                                <div class="col-sm-9" id="divKupon">
+                                    <input type="hidden" class="modalhide" id="KuponHidden" value="0">
+                                    <select required id="Kupon" data-placement="Choose" readonly disabled class="form-control select2" style="width: 70%"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Kejadian</label>
+                                <div class="col-sm-9" id="divKejadian">
+                                    <input type="hidden" class="modalhide" id="KejadianHidden" value="0">
+                                    <select required id="Kejadian" data-placement="Choose" class="form-control select2" style="width: 70%"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Keterangan</label>
+                                <div class="col-sm-9" id="divKeterangan">
+                                    <input required type="text" id="Keterangan" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Informasi/Peristiwa</label>
+                                <div class="col-sm-9" id="divInformasi">
+                                    <textarea class="form-control" rows="3" id="Informasi"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Tanggal Input</label>
+                                <div class="col-sm-9" id="divTanggal">
+                                    <input required type="date" name="Tanggal" id="Tanggal" class="form-control" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearScreen()">Close</button>
+                    <button type="button" class="btn btn-primary" id="Add" onclick="Save()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+</section>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            LoadKejadian();
+            $('#example1 thead tr').clone(true).appendTo('#example1 thead');
+
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetFilter", "KejadianPenting")",
+                async: false,
+            dataType: "JSON",
+            success: function (result) {
+                //console.log(result)
+                $('#example1 thead tr:eq(1) th').each(function (i) {
+                    if (i == 0 || i == 9) {
+                        $(this).html('');
+                    } else if (i == 1 || i == 5) {
+                        var title = $(this).text();
+                        var res = title.replace(" ", "").replace(" ", "").replace("-", "");
+                        var data = eval("result." + res);
+                        var html = '';
+                        html += '<select class="form-control select2 filter">';
+                        html += '<option value="" selected="selected">Search</option>';
+                        //html += '<option selected="selected">Search ' + title + '</option>';
+                        $.each(data, function (index, val) {
+                            html += '<option>' + val + '</option>';
+                        });
+                        html += '</select>';
+                        $(this).html(html);
+
+                        $('select', this).on('keyup change', function () {
+                            if ($("#example1").DataTable().column(i).search() !== this.value) {
+                                //t.column(i).search(this.value).draw();
+                                $("#example1").DataTable().column(i).search(this.value ? '^' + this.value + '$' : '', true, false).draw();
+                            }
+                        });
+
+
+                    }
+                        else if (i == 7) {
+                            var title = $(this).text();
+                            $(this).html('<input type="date" class="form-control filter" placeholder="Search" />');
+                            $('input', this).on('keyup change', function () {
+                                var year = this.value.substr(0, 4);
+                                var month = this.value.substr(5, 2);
+                                var day = this.value.substr(8, 2);
+                                var newdate = day + "/" + month + "/" + year;
+                                if (t.column(i).search() !== newdate) {
+                                    t.column(i).search(newdate).draw();
+                                }
+                            });
+                        }
+                    else {
+                        var title = $(this).text();
+                        $(this).html('<input type="text" class="form-control filter" placeholder="Search" />');
+                        //$(this).html('<input type="text" class="form-control" placeholder="Search ' + title + '" />');
+
+                        $('input', this).on('keyup change', function () {
+                            if ($("#example1").DataTable().column(i).search() !== this.value) {
+                                $("#example1").DataTable().column(i).search(this.value).draw();
+                            }
+                        });
+                    }
+
+                });
+            }
+        });
+
+
+            var t = $("#example1").DataTable({
+
+            "orderCellsTop": true,
+            "ajax": {
+                "url": "@Url.Action("GetAll", "KejadianPenting")",
+            "type": "GET",
+            "datatype": "json"
+            },
+
+                "columns": [
+
+        { "data": null },
+        { "data": "Perusahaan.Nama" },
+             //{
+             //    "render": function (data, type, val) {
+             //        debugger;
+             //        if (val.Perusahaan_Id != null) {
+
+             //             return '<span>' + val.Perusahaan.Nama + '</span>';
+             //        }
+             //        else {
+             //            return '<span>' + val.TransaksiDetail.TransaksiLaporan.Perusahaan.Nama + '</span>';
+
+             //        }
+                   
+
+                   
+             //    }
+             //},
+        
+        { "data": "TransaksiDetail.TransaksiLaporan.NamaProduk" },
+           
+            //{
+            //    "render": function (data, type, val) {
+            //        debugger;
+            //        if (val.Perusahaan_Id != null) {
+
+            //            return '<span>' + "-" + '</span>';
+            //        }
+            //        else {
+            //            return '<span>' + val.TransaksiDetail.TransaksiLaporan.NamaProduk + '</span>';
+
+            //        }
+
+
+
+            //    }
+            //},
+
+        { "data": "TransaksiDetail.Seri" },
+         //{
+         //    "render": function (data, type, val) {
+         //        debugger;
+         //        if (val.Perusahaan_Id != null) {
+
+         //            return '<span>' + "-" + '</span>';
+         //        }
+         //        else {
+         //            return '<span>' + val.TransaksiDetail.Seri + '</span>';
+
+         //        }
+
+
+
+         //    }
+         //},
+        //{
+        //    "render": function (data, type, val) {
+        //        debugger;
+        //        if (val.Perusahaan_Id != null) {
+
+        //            return '<span>' + "-" + '</span>';
+        //        }
+        //        else {
+        //            return '<span>' + val.TransaksiTanggal.NoKupon + '</span>';
+
+        //        }
+
+
+
+        //    }
+        //},
+        { "data": "TransaksiTanggal.NoKupon" },
+        
+
+        { "data": "KejadianPenting.Nama" },
+        { "data": "Informasi" },
+        {
+            "render": function (data, type, val) {
+                return formatDates(val.TanggalInput);
+
+            }
+        },
+        {
+            "render": function (data, type, val) {
+
+
+
+                if (val.Status == true) {
+                    return '<td class="text-center"><span class="label label-info">Done</span></td>';
+
+                } else {
+                    return '<td class="text-center"><span class="label label-warning">Unfinisihed</span></td>';
+                }
+            }
+        },
+        {
+            "render": function (data, type, val) {
+
+                html = '';
+                html += ' <a href="#" class="btn btn-sm btn-danger" onclick="Delete('+ val.Id +')"><i class="fa fa-trash"></i></a>';
+
+                return html;
+            }
+        }
+
+
+        ],
+                "pageLength": 10,
+                "scrollX": true,
+                "scrollCollapse": true,
+                "dom": "<'row'<'col-sm-4'B><'col-sm-2'l><'col-sm-6'p>>" + "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                "columnDefs": [
+                    {
+
+                        "visible": false,
+                        "searchable": false
+                    },
+                    {
+                        "searchPanes": {
+                            "show": true,
+                        },
+                        "targets": [1, 2, 3, 4,5,6,7,8],
+                    }, {
+                        "searchPanes": {
+                            "show": false,
+                        },
+                        "targets": [1, 2, 3, 4,5,6,7,8],
+                    }, {
+                        "sortable": false,
+                        "class": "index",
+                        "targets": [0, 9]
+                    }, {
+                        "width": 200,
+                        "targets": 9
+
+                    }],
+                "searchPanes": {
+                    "layout": 'columns-6'
+                },
+                "select": {
+                    "style": 'multi'
+                },
+                "buttons": {
+                    "buttons": [
+                        {
+                            "text": '<i class="fa fa-file-excel-o"></i> Download',
+                            "extend": 'excelHtml5',
+                            "className": 'btn-success',
+                            "autoFilter": false,
+                            "sheetName": 'Data',
+                            "title": "Report Data Jaminan",
+                            "exportOptions": {
+                                "columns": [1, 2, 3, 4]
+                            }
+
+                        },
+                        {
+                            "extend": 'searchPanes',
+                            "config": {
+                                "cascadePanes": true
+                            },
+                            "className": 'btn-info'
+                        },
+                        {
+                            "text": '<i class="fa fa-refresh"></i> Reset',
+                            "className": 'btn-warning',
+                            "action": function (e, dt, node, config) {
+                                $('.filter').each(function () {
+                                    $(this).val('').change();
+                                })
+
+                                //// Redraw table (and reset main search filter)
+                                $("#example1").DataTable().search('').draw();
+                                $("#example1").DataTable().column(7).search('').draw();
+
+
+                            },
+                        }
+                    ],
+                    "dom": {
+                        "button": {
+                            "className": 'btn btn-sm'
+                        },
+                        "buttonLiner": {
+                            "tag": null
+                        }
+                    }
+                },
+                "language": {
+                    "searchPanes": {
+                        "clearMessage": 'Clear',
+                        "collapse": { 0: '<i class="fa fa-search"></i> Search', _: '<i class="fa fa-search"></i> Search (%d)' }
+                    }
+                }
+
+        });
+
+        t.on('order.dt search.dt', function () {
+            t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                cell.innerHTML = i + 1;
+            });
+        }).draw();
+        });
+        function AddModal() {
+            ClearError();
+            ClearScreen();
+
+            $('#ModalCoreLabel').html('Tambah Data');
+        }
+
+        function ClearError() {
+            $(".has-error").removeClass("has-error");
+        }
+        function LoadKejadian() {
+            var kate = $('#KejadianHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetKejadian", "KejadianPenting")",
+                type: 'GET',
+            dataType: 'json',
+            success: function (result) {
+                var kategori = $("#Kejadian");
+                kategori.html('');
+                $("<option></option>").val('').text('Pilih Kejadian').appendTo(kategori);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(kategori);
+
+                });
+                if (kate != 0) {
+                    $("#Kejadian").val(kate).trigger('change');
+
+                }
+            }
+        });
+        }
+
+        @*function LoadEmiten() {
+            var kate = $('#EmitenHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetPerusahaan", "KejadianPenting")",
+                type: 'GET',
+            dataType: 'json',
+            success: function (result) {
+                var kategori = $("#Emiten");
+                kategori.html('');
+                $("<option></option>").val('').text('Pilih Emiten').appendTo(kategori);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(kategori);
+                    //console.log(value.Nama);
+                });
+                if (kate != 0) {
+                    $("#Emiten").val(kate).trigger('change');
+                    //LoadNasabah();
+                }
+            }
+        });
+        }*@
+     
+        function LoadProduk() {
+            var DataId = $('#EmitenId').val();
+            var nasa = $('#ProdukHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetProduk", "KejadianPenting")",
+                type: 'GET',
+            data: { 'DataId': DataId },
+            dataType: 'JSON',
+            success: function (result) {
+
+                $("#Produk").html('');
+                var Nasabah = $("#Produk");
+                Nasabah.removeAttr("readonly");
+                Nasabah.removeAttr("disabled");
+                $("<option></option>").val('').text('Pilih Produk').appendTo(Nasabah);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(Nasabah);
+                });
+                //if (DataId != 0) {
+                //    $("#Produk").val(nasa).trigger('change');
+
+                //}
+            }
+        });
+        }
+        function LoadSeri() {
+            var DataId = $('#Produk').val();
+            var nasa = $('#SeriHidden').val(); 
+
+            $.ajax({
+                url: "@Url.Action("GetSeri", "KejadianPenting")",
+                type: 'GET',
+            data: { 'DataId': DataId },
+            dataType: 'JSON',
+            success: function (result) {
+
+                $("#Seri").html('');
+                var Nasabah = $("#Seri");
+                Nasabah.removeAttr("readonly");
+                Nasabah.removeAttr("disabled");
+                $("<option></option>").val('').text('Pilih Seri').appendTo(Nasabah);
+                $.each(result, function (i, value) {
+                    $("<option></option>").val(value.Id).text(value.Nama).appendTo(Nasabah);
+                });
+                //if (DataId != 0) {
+                //    $("#Seri").val(nasa).trigger('change');
+
+                //}
+            }
+        });
+        }
+
+        $('#Seri').on("change", function () {
+            var DataId = $("#Seri").val();
+                $.ajax({
+                    url: "@Url.Action("GetKupon", "KejadianPenting")",
+                    type: "GET",
+                data: { 'DataId': DataId },
+                dataType: "json",
+                success: function (result) {
+                    $('#Kupon').prop("disabled", false);
+                    $('#Kupon').html('');
+                    var Sumber = $("#Kupon");
+                    $("<option></option>").val('').text('Pilih Kupon').appendTo(Sumber);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.Kupon).appendTo(Sumber);
+                    });
+                }
+
+            });
+        })
+        function Save() {
+            if ($.trim($("#Seri").val()) == "") { $("#divSeri").addClass("has-error"); return; }
+            if ($.trim($("#Kupon").val()) == "") { $("#divKupon").addClass("has-error"); return; }
+            if ($.trim($("#Tanggal").val()) == "") { $("#divTanggal").addClass("has-error"); return; }
+            if ($.trim($("#Kejadian").val()) == "") { $("#divKejadian").addClass("has-error"); return; }
+            if ($.trim($("#Keterangan").val()) == "") { $("#divKeterangan").addClass("has-error"); return; }
+            if ($.trim($("#Informasi").val()) == "") { $("#divInformasi").addClass("has-error"); return; }
+            //  if ($.trim($("#Keterangan").val()) == "") { $("#divKeterangan").addClass("has-error"); return; }
+            //var TanggalInput = $("#Tanggal").val();
+            //if ($.trim($("#Tanggal").val()) == "") { TanggalInput = new Date(); }
+            debugger;
+
+            var s = $("#EmitenId").val();
+            console.log(s);
+            var kejadian = new Object();
+            kejadian = {
+                Id: $("#Id").val(),
+                Perusahaan_Id: $("#EmitenId").val(),
+                TransaksiDetail_Id: $("#Seri").val(),
+                TransaksiTanggal_Id: $("#Kupon").val(),
+                Kejadian_Id: $("#Kejadian").val(),
+                Keterangan: $("#Keterangan").val(),
+                Informasi: $("#Informasi").val(),
+                TanggalInput: $("#Tanggal").val()
+            }
+            console.log(kejadian);
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Save", "KejadianPenting")",
+                data: { 'kejadian': kejadian },
+                success: function (result) {
+                    $('#ModalCore').hide();
+
+                    swal({
+                        position: 'center',
+                        type: 'success',
+                        title: 'Insert Successfully',
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        timer: 1000,
+                    },
+                      function () {
+                          window.location.reload();
+                      });
+                },
+                error: function (response) {
+                    swal('Error', 'Insert Fail', 'error');
+                    ClearScreen();
+                }
+            });
+        }
+        function SaveMTN() {
+            debugger;
+            //var kejadian = new Object();
+            //kejadian = {
+            //    IdPer: $("#EmitenIdMTN").val()
+            //}
+            var IdKej = 1;
+            var IdPer = $("#EmitenIdMTN").val();
+            var url1 = '@Url.Action("GetMTN", "KejadianPenting")?id=' + IdPer;
+                $.ajax({
+                url: url1,
+                type: 'GET',
+            dataType: 'json',
+            success: function (result) {
+
+                //console.log(result);
+                var url = '@Url.Action("SaveMTN", "KejadianPenting")?IdPer=' + IdPer + '&IdKej=' + IdKej;
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: { 'IdPer': IdPer },
+                    success: function (result) {
+                        $('#ModalCore').hide();
+
+                        swal({
+                            position: 'center',
+                            type: 'success',
+                            title: 'Insert Successfully',
+                            showCancelButton: false,
+                            showConfirmButton: false,
+                            timer: 1000,
+                        },
+                          function () {
+                              window.location.reload();
+                          });
+                    },
+                    error: function (response) {
+                        swal('Error', 'Insert Fail', 'error');
+                        ClearScreen();
+                    }
+                });
+
+
+            },
+                    error: function (response) {
+                        swal('Error', 'Emiten tidak memiliki MTN', 'error');
+                        ClearScreen();
+                    }
+
+                });
+
+              
+
+
+
+
+        }
+       
+        function Delete(Id) {
+            swal({
+                title: "Are you sure to delete this?",
+                text: "You will not be able to recover this imaginary data!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes",
+                closeOnConfirm: false
+            }, function () {
+                $.ajax({
+                    url: "@Url.Action("Delete", "KejadianPenting")",
+                    type: "POST",
+                data: { 'Id': Id },
+                success: function (response) {
+                    swal({
+                        title: "Deleted!",
+                        text: "That data has been delete!",
+                        type: "success"
+                    },
+                    function () {
+                        window.location.href = '@Url.Action("Index", "KejadianPenting")';
+                    });
+                },
+                error: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                }
+            });
+        });
+        }
+        function ClearScreen() {
+            $("#Id").val('');
+            $("#EmitenId").val('').trigger('change');
+            $("#Produk").val('').trigger('change');
+            $("#Seri").val('').trigger('change');
+            $("#Kupon").val('').trigger('change');
+            $("#Kejadian").val('').trigger('change');
+            $("#Keterangan").val('');
+            $("#Informasi").val('');
+            $("#Tanggal").val('');
+            $("#Add").show();
+            var x = document.getElementsByClassName("modalhide");
+            for (var i = 0; i < x.length; i++) {
+                x[i].value = 0;
+            }
+        }
+        function formatDates(dates) {
+            date = new Date(parseInt(dates.substr(6)));
+            var year = date.getFullYear();
+            var month = (1 + date.getMonth()).toString();
+            month = month.length > 1 ? month : '0' + month;
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+            return day + '/' + month + '/' + year;
+        }
+        function formatDate(dates) {
+            date = new Date(parseInt(dates.substr(6)));
+            var year = date.getFullYear();
+            var month = (1 + date.getMonth()).toString();
+            month = month.length > 1 ? month : '0' + month;
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+            //return day + '/' + month + '/' + year;
+            return year + '-' + month + '-' + day;
+        }
+    </script>
+}

@@ -1,0 +1,57 @@
+﻿@using WaliAmanats.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = null;
+}
+
+<head>
+    <title>
+        Login - AliA
+    </title>
+    <link rel="icon" href="~/Content/Img/favicon.ico" type="image/x-icon" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <link href="~/Content/util.css" rel="stylesheet" />
+</head>
+<body style="background-color: #78d337;">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="login100-more" style="background-image: url('../Content/Assets/bg-login.jpg');"></div>
+
+            <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <form class="login100-form validate-form">
+                        <span class="login100-form-title p-b-59">
+                            <img src="~/Content/Img/img-01.png" width="20%" /> <h4>Aplikasi Wali Amanat (AliA)</h4>
+                        </span>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="wrap-input100 validate-input" data-validate="Username is required">
+                            @Html.LabelFor(m => m.UserName, new { @class = "label-input100" })
+                            @Html.TextBoxFor(m => m.UserName, new { @class = "input100", @name = "username" })
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate="Password is required">
+                            @Html.LabelFor(m => m.Password, new { @class = "label-input100" })
+                            @Html.PasswordFor(m => m.Password, new { @class = "input100" })
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="container-login100-form-btn">
+                            <div class="wrap-login100-form-btn">
+                                <div class="login100-form-bgbtn"></div>
+                                @*<input type="submit" value="Log in" class="login100-form-btn" />*@
+                                <button class="login100-form-btn" type="submit" value="Log in">
+                                    Log in
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

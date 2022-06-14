@@ -1,0 +1,676 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="text-align:center;">Master Perusahaan</h1>
+
+<hr />
+<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="ClearScreen()" data-backdrop="static" data-keyboard="false" ;>Tambah</button>
+<hr />
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Input Data</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <input type="hidden" id="PerusahaanId" />
+                        <label class="col-sm-3 control-label" for="Perusahaan">Perusahaan</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Perusahaan" placeholder="Nama Perusahaan" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Persentase Kredit</label>
+                        <div class="col-sm-6">
+                            <input type="text" style="width:50px;" class="form-control" id="Kredit" />
+                        </div>
+                    </div>
+                    <h4>Kontak</h4>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">No Telpon</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Telp" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Email" placeholder="" />
+                        </div>
+                    </div>
+                    <h4>Alamat</h4>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Gedung</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Gedung" placeholder="Jika Tidak Ada isi dengan - " />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Jalan</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Jalan" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Kota</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Kota" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Rating</label>
+                        <div class="col-sm-9" id="divRating">
+                            <input type="hidden" class="modalhide" id="RatingHidden" value="0">
+                            <select required id="Rating" data-placement="Choose" class="form-control select2 section1" style="width: 100%"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @*<label class="col-sm-3 control-label">Nilai</label>*@
+                        <div class="col-sm-9" id="divNilai">
+                            <input required type="hidden" name="Nilai" id="Nilai" readongly disabled class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="Save" onclick="Validation();">Tambah</button>
+                <button type="button" class="btn btn-primary" id="Update" onclick="Validation();">Perbarui</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="NotesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Ratio</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+
+                    <div class="detail">
+
+                        <table class="table table-responsive">
+                            <tr>
+                                <td style="display:none;"></td>
+                                <td class="hidden">Id</td>
+                                <td style="width:150px">Id Perusahaan</td>
+                                <td style="width:150px">Ratio</td>
+                                <td style="width:150px">Measurement</td>
+                                <td style="width:150px">Target</td>
+                                @*<td style="width:100px;">Realisasi</td>
+                                    <td style="width:100px">Tanggal Input</td>*@
+
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr class="mycontainer" id="mainrow">
+                                <td class="hidden"><input type="text" readonly disabled class="iddetail form-control" id="Iddetail" />/td>
+                                <td><input type="text" readonly disabled class="detailid form-control" id="Idperusahaan" /></td>
+                                <td>
+                                    <input type="hidden" class="modalhide" id="RatioHidden" value="0">
+                                    <select required id="Ratio" class="form-control disabled ratio" style="width:200px" data-placement="choose"></select>
+                                </td>
+                                <td>
+                                    <input type="hidden" class="modalhide" id="MeasureHidden" value="0">
+                                    <select required id="Measure" class="form-control disabled measure" style="width:200px" data-placement="choose"></select>
+                                </td>
+                                <td>
+                                    <input type="text" id="Target" class="target form-control number disabled" placeholder="Target" style="width:200px;" />
+
+                                </td>
+                                @*<td>
+                                        <input type="text" id="Realisasi" class="nominal form-control number disabled" placeholder="Realisasi" style="width:180px;" />
+
+                                    </td>*@
+
+                                @*<td>
+                                        <input type="date" id="Tanggal" class="terbit form-control disabled" style="width:170px;" />
+
+                                    </td>*@
+
+                                <td>
+
+                                    <a class='btn btn-success btn-sm' id="add" title='Tambah Ratio'><i class='fa fa-plus'></i></a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div id="orderItems">
+                            <table class="table table-responsive " id="detailsItems"></table>
+                            <span id="ItemError" style="color:red"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="ClearRatio()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table id="table" class="table-bordered">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Nama Perusahaan</th>
+            <th>Gedung</th>
+            <th>Jalan</th>
+            <th>Kota</th>
+            <th>Rating</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+</table>
+
+
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+
+
+@section scripts{
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+    <script>
+        $(document).ready(function () {
+            LoadRating();
+            LoadRatio();
+            LoadMeasure();
+            var t = $("#table").DataTable({
+                "ajax": {
+                    "url": "@Url.Action("GetAll", "Perusahaan")",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": null },
+                    { "data": "Nama" },
+                    { "data": "Gedung" },
+                    { "data": "Jalan" },
+                    { "data": "Kota" },
+                    { "data": "Rating.Nama" },
+                    //{ "data": "Nilai" },
+                    //{
+                    //    "render": function (data, type, row) {
+                    //        console.log(row.RatingId)
+                    //        return null;
+                    //}},
+                    {
+                        "render": function (data, type, row) {
+                            return "<a class='btn btn-warning btn-sm' onclick = GetById('" + row.Id + "');><i class='fa fa-edit'></i>Edit</a> " +
+                                //"<a class='btn btn-default btn-sm' onclick = Note('" + row.Id + "');><i class='fa fa-eye'></i></a> " +
+                            "<a class='btn btn-danger btn-sm' onclick = Delete('" + row.Id + "');><i class='fa fa-trash'></i>Delete</a>" +
+                            "<a href='@Url.Action("TambahRatio","Perusahaan")/" + row.Id + "' class='btn btn-sm btn-success'><i class='fa fa-plus'></i>Ratio</a>";
+                        },
+
+                    },
+                ]
+            })
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+
+
+        })
+        function LoadRating() {
+            var rat = $('#RatingHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetRating","Perusahaan")",
+                type: 'GET',
+
+                dataType: 'JSON',
+                success: function (result) {
+                    var Rating = $("#Rating");
+                    Rating.removeAttr("readonly");
+                    Rating.removeAttr("disabled");
+                    Rating.html('');
+                    $("<option></option>").val('').text('Pilih Rating').appendTo(Rating);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.Nama).appendTo(Rating);
+                    });
+                    if (rat != 0) {
+                        $("#Rating").val(rat).trigger('change');
+
+                    }
+                }
+            });
+        }
+        $("#Rating").on('change', function () {
+            var Rating = $(this).val();
+            $.ajax({
+                url: '@Url.Action("GetNilai", "Perusahaan")',
+                type: 'GET',
+                data: { 'Rating': Rating },
+                dataType: 'json',
+                success: function (result) {
+                    $('#Nilai').val(result.Nilai);
+                }
+            });
+        })
+        function LoadRatio() {
+            var rat = $('#RatioHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetData","Ratio")",
+                type: 'GET',
+
+                dataType: 'JSON',
+                success: function (result) {
+                    var Rating = $("#Ratio");
+                    Rating.removeAttr("readonly");
+                    Rating.removeAttr("disabled");
+                    Rating.html('');
+                    $("<option></option>").val('').text('Pilih Ratio').appendTo(Rating);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.Nama).appendTo(Rating);
+                    });
+                    if (rat != 0) {
+                        $("#Ratio").val(rat).trigger('change');
+
+                    }
+                }
+            });
+        }
+        function LoadMeasure() {
+            var rat = $('#MeasureHidden').val();
+            $.ajax({
+                url: "@Url.Action("GetMeasure","Perusahaan")",
+                type: 'GET',
+
+                dataType: 'JSON',
+                success: function (result) {
+                    var Rating = $("#Measure");
+                    Rating.removeAttr("readonly");
+                    Rating.removeAttr("disabled");
+                    Rating.html('');
+                    $("<option></option>").val('').text('Pilih Measurement').appendTo(Rating);
+                    $.each(result, function (i, value) {
+                        $("<option></option>").val(value.Id).text(value.Nama).appendTo(Rating);
+                    });
+                    if (rat != 0) {
+                        $("#Measure").val(rat).trigger('change');
+
+                    }
+                }
+            });
+        }
+        $('#add').click(function () {
+            var ratio = new Object();
+            ratio.Id = $("#Iddetail").val();
+            ratio.Perusahaan_Id = $("#Idperusahaan").val();
+            ratio.Ratio_Id = $("#Ratio").val();
+            ratio.Measurement_Id = $("#Measure").val();
+            ratio.Target = $("#Target").val();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddRatio", "Perusahaan")",
+                data: { 'ratio': ratio },
+                success: function (result) {
+                    swal({
+                        position: 'center',
+                        type: 'success',
+                        title: 'Insert Successfully'
+
+                    },
+                function () {
+                    $('#NotesModal').modal('hide');
+                    window.location.href = "@Url.Action("Index", "Perusahaan")";
+                });
+                },
+                error: function (response) {
+                    swal('Error', 'Insert Fail', 'error');
+                    ClearRatio();
+                }
+            });
+
+        });
+        function Note(Id) {
+            $.ajax({
+                "url": "@Url.Action("GetById","Perusahaan")",
+                "type": "GET",
+                "datatype": "json",
+                "data": { Id: Id }
+            }).then((result) => {
+                if (result != null) {
+                    GetNotes(result.data.Id);
+                    $("#Idperusahaan").val(result.data.Id);
+                    $('#NotesModal').modal({ backdrop: 'static', keyboard: false })
+                    $("#NotesModal").modal('show');
+                }
+            })
+        }
+      
+        function Save() {
+            var perusahaan = new Object();
+            perusahaan.Nama = $("#Perusahaan").val();
+            perusahaan.Gedung = $("#Gedung").val();
+            perusahaan.Jalan = $("#Jalan").val();
+            perusahaan.Kota = $("#Kota").val();
+            perusahaan.NoTelp = $("#Telp").val();
+            perusahaan.Email = $("#Email").val();
+            perusahaan.PersentaseKredit = $("#Kredit").val();
+            perusahaan.Rating_Id = $('#Rating').find(":selected").val();
+            perusahaan.Nilai = $('#Nilai').val();
+            $.ajax({
+                "url": "@Url.Action("Save","Perusahaan")",
+                "type": "POST",
+                "datatype": "json",
+                "data": perusahaan
+            }).then((result) => {
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Data Berhasil diinputkan',
+                        'success'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+                else {
+                    Swal.fire(
+                        'Failed!',
+                        'data gagal diinputkan',
+                        'Failed'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+        function Edit(Id) {
+            debugger;
+            var perusahaan = new Object();
+            perusahaan.Id = $("#PerusahaanId").val();
+            perusahaan.Nama = $("#Perusahaan").val();
+            perusahaan.Gedung = $("#Gedung").val();
+            perusahaan.Jalan = $("#Jalan").val();
+            perusahaan.Kota = $("#Kota").val();
+            perusahaan.Email = $("#Email").val();
+            perusahaan.NoTelp = $("#Telp").val();
+            perusahaan.PersentaseKredit = $("#Kredit").val();
+            perusahaan.Rating_Id = $("#Rating").val();
+            perusahaan.Nilai = $('#Nilai').val();
+            $.ajax({
+                "url": "@Url.Action("Save","Perusahaan")",
+                "type": "POST",
+                "datatype": "json",
+                "data": {
+                    Id: perusahaan.Id,
+                    Nama: perusahaan.Nama,
+                    Gedung: perusahaan.Gedung,
+                    Jalan: perusahaan.Jalan,
+                    Kota: perusahaan.Kota,
+                    NoTelp: perusahaan.NoTelp,
+                    Email: perusahaan.Email,
+                    PersentaseKredit: perusahaan.PersentaseKredit,
+                    Rating_Id: perusahaan.Rating_Id,
+                    Nilai: perusahaan.Nilai
+                }
+            }).then((result) => {
+                debugger;
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Data berhasil diperbarui',
+                        'success'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+                else {
+                    Swal.fire(
+                        'Failed!',
+                        'Data gagal diperbarui',
+                        'Failed'
+                    ).then(() => {
+                        $("#myModal").modal('hide');
+                        $('#table').DataTable().ajax.reload();
+                    })
+                }
+
+            })
+        }
+
+        function AddNotes(Id) {
+            debugger;
+            var EN = new Object();
+            EN.Perusahaan_Id = $("#NoteId").val();
+            EN.notes = $("#Notes").val();
+            $.ajax({
+                "url": "@Url.Action("AddNote", "Perusahaan")",
+                "type": "POST",
+                "datatype": "json",
+                "data": EN
+            }).then((result) => {
+                debugger;
+                if (result != null) {
+                    Swal.fire(
+                        'Success!',
+                        'Data berhasil diperbarui',
+                        'success'
+                    ).then(() => {
+                        $('#NotesTable').DataTable().ajax.reload();
+                    })
+                }
+                else {
+                    Swal.fire(
+                        'Failed!',
+                        'Data gagal diperbarui',
+                        'Failed'
+                    ).then(() => {
+                        $('#NotesTable').DataTable().ajax.reload();
+                    })
+                }
+
+            })
+        }
+
+        function GetNotes(Id) {
+            $.ajax({
+                "url": "@Url.Action("GetNotes","Perusahaan")",
+                "type": "GET",
+                "datatype": "json",
+                "data": { Id: Id },
+                success: function(result){
+                    $.each(result, function (i, value) {
+                        var markup =
+                        '<tr class="mycontainer" id="mainrow">' +
+                            '<td style="width:50px"><input type="text" class="iddetail form-control" placeholder="Seri" style="width:50px;" value="' + value.Perusahaan_Id + '" readonly /></td>' +
+                            '<td style="width:130px"><select required id="Ratio" class="form-control ratio disabled" data-placement="choose" disabled><option value="' + value.Ratio_Id + '" selected>' + value.Ratio.Nama + '</option></select></td>' +
+                            '<td style="width:130px"><select required id="Measure" class="form-control measure disabled" data-placement="choose" disabled><option value="' + value.Measurement.Id + '" selected>' + value.Measurement.Nama + '</option></select></td>' +
+                            '<td style="width:180px;"><input type="text" class="target form-control col-sm-4" style="width:180px;" value="' + value.Target + '" readonly /></td>' +
+
+                        '</tr>';
+
+
+                        $('#detailsItems').append(markup);
+                    });
+                }
+            });
+        }
+
+        function ClearRatio() {
+            ('#iddetail').val("");
+            $('#Ratio').val("");
+            $('#Measure').val("");
+            // $('#Persentase').val("");
+            $('#Update').hide();
+            $('#add').show();
+            // $('#Nama').css('border-color', 'lightgrey');
+            $('#detailsItems').empty();
+            $("#detailsItems").css('margin-top', '0px');
+        }
+
+        function GetById(Id) {
+            $.ajax({
+                "url": "@Url.Action("GetById","Perusahaan")",
+                "type": "GET",
+                "datatype": "json",
+                "data": { Id: Id }
+            }).then((result) => {
+                if (result != null) {
+                    $("#PerusahaanId").val(result.data.Id);
+                    $("#Perusahaan").val(result.data.Nama);
+                    $("#Gedung").val(result.data.Gedung);
+                    $("#Jalan").val(result.data.Jalan);
+                    $("#Kota").val(result.data.Kota);
+                    $("#Nilai").val(result.data.Nilai);
+                    $("#Email").val(result.data.Email);
+                    $("#Telp").val(result.data.NoTelp);
+                    $("#Kredit").val(result.data.PersentaseKredit);
+                    $("#RatingHidden").val(result.data.Rating_Id);
+                    LoadRating();
+                    $('#myModal').modal({ backdrop: 'static', keyboard: false })
+                    $("#myModal").modal('show');
+                    $("#Update").show();
+
+                    $("#Save").hide();
+                }
+            })
+        }
+        function Delete(Id) {
+            Swal.fire({
+                title: 'Apakah Anda Yakin?',
+                text: "Data Terhapus Tidak Bisa Dikembalikan!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, Hapus Data Ini!'
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("Delete","Perusahaan")",
+                        "datatype": "json",
+                        "data": { Id: Id }
+                    }).then((result) => {
+                        debugger;
+                        if (result.data != 0) {
+                            Swal.fire(
+                                'Success!',
+                                'Data Terhapus.',
+                                'success'
+                            ).then(() => {
+                                $('#table').DataTable().ajax.reload();
+                            })
+                        }
+                        else {
+                            Swal.fire(
+                               'Failed!',
+                               'Data Tidak Terhapus.',
+                               'failed'
+                            ).then(() => {
+                                $('#table').DataTable().ajax.reload();
+                            })
+                        }
+                        $("#myModal").modal('hide');
+                        $('#table_role').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+
+        function RemoveNote(Id) {
+            Swal.fire({
+                title: 'Apakah Anda Yakin?',
+                text: "Data Terhapus Tidak Bisa Dikembalikan!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, Hapus Data Ini!'
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        "url": "@Url.Action("RemoveNote", "Perusahaan")",
+                        "datatype": "json",
+                        "data": { Id: Id }
+                    }).then((result) => {
+                        debugger;
+                        if (result.data != 0) {
+                            Swal.fire(
+                                'Success!',
+                                'Data Terhapus.',
+                                'success'
+                            ).then(() => {
+                                $('#NotesTable').DataTable().ajax.reload();
+                            })
+                        }
+                        else {
+                            Swal.fire(
+                               'Failed!',
+                               'Data Tidak Terhapus.',
+                               'failed'
+                            ).then(() => {
+                                $('#NotesTable').DataTable().ajax.reload();
+                            })
+                        }
+                        $('#NotesTable').DataTable().ajax.reload();
+                    })
+                }
+            })
+        }
+
+        function ClearScreen() {
+            $("#PerusahaanId").val('');
+            $("#Rating").val("");
+            $("#Gedung").val("");
+            $("#Nilai").val("");
+            $("#Jalan").val('');
+            $("#Kota").val('');
+            $("#Perusahaan").val('');
+            $("#Kredit").val('');
+            $("#Email").val('');
+            $("#Telp").val('');
+            $("#Update").hide();
+            $("#Save").show();
+        }
+        function Validation() {
+            if ($("#Perusahaan").val() == "" || $("#Perusahaan").val() == " ") {
+                Swal.fire('Nama Perusahaan Belum di Isi!');
+            }
+            else if ($("#Jalan").val() == "" || $("#Jalan").val() == " ") {
+                Swal.fire('Jalan Belum di Isi!');
+            }
+            else if ($("#Kota").val() == "" || $("#Kota").val() == " ") {
+                Swal.fire('Kota Belum di Isi!');
+            }
+            else if ($("#Email").val() == "" || $("#Email").val() == " ") {
+                Swal.fire('Email Belum di Isi!');
+            }
+            else if ($("#Telp").val() == "" || $("#Telp").val() == " ") {
+                Swal.fire('No. Telpon Belum di Isi!');
+            }
+            else if ($("#Kredit").val() == "" || $("#Kredit").val() == " ") {
+                Swal.fire('Persetanse Kredit Belum di Isi!');
+            }
+            else if ($("#PerusahaanId").val() == "" || $("#PerusahaanId").val() == " ") {
+                Save();
+            }
+            else {
+                Edit($("#PerusahaanId").val());
+            }
+        }
+
+        function Validation2() {
+            if ($("#Notes").val() == "" || $("#Notes").val() == " ") {
+                Swal.fire('Masukkan Notes');
+            }
+            else {
+                AddNotes();
+            }
+        }
+    </script>
+}

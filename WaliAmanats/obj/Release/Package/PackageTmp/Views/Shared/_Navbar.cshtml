@@ -1,0 +1,95 @@
+﻿@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using WaliAmanats.Models;
+
+
+@{
+    ApplicationDbContext _context = new ApplicationDbContext();
+    var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(_context));
+    var currentUser = manager.FindById(User.Identity.GetUserId());
+}
+
+<div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#78d337">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("AliA", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            @if (Request.IsAuthenticated)
+            {
+                <ul class="nav navbar-nav">
+
+                    @if (User.IsInRole("Maker"))
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Master Data<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="item">@Html.ActionLink("Master Perusahaan", "Index", "Perusahaan")</li>
+                                <li class="item">@Html.ActionLink("Master PIC", "Index", "Perwakilan")</li>
+                                <li class="item">@Html.ActionLink("Master Hari Libur", "Index", "HariLibur")</li>
+                                <li class="item">@Html.ActionLink("Master Aturan OJK", "Index", "AturanOJK")</li>
+                                <li class="item">@Html.ActionLink("Master Alamat OJK", "Index", "OJK")</li>
+                            </ul>
+                        </li>
+                    }
+                    @if (User.IsInRole("Checker"))
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Surat Utang<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Cek Input", "Otorisasi", "TransaksiLaporans", null, new { @class = "fGreen" })</li>
+                                <li>@Html.ActionLink("History", "History", "TransaksiLaporans", null, new { @class = "fGreen" })</li>
+                            </ul>
+                        </li>
+                    }
+                    @if (User.IsInRole("Maker"))
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Surat Utang<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Kelola Surat Utang", "Index", "TransaksiLaporans", null, new { @class = "fGreen" })</li>
+                            </ul>
+                        </li>
+                    }
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Proses Pembuatan Surat<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            
+                            @if (User.IsInRole("Maker"))
+                            {
+                                <li>@Html.ActionLink("Kirim Untuk Dicek", "Index", "CetakSurat")</li>
+                                <li>@Html.ActionLink("Cetak Surat OJK", "Index_OJK", "TransaksiOJK")</li>
+
+                            }
+                            @if (User.IsInRole("Checker"))
+                            {
+                                <li>@Html.ActionLink("Cek Surat", "cek", "CetakSurat")</li>
+                            }
+                            @if (User.IsInRole("Pimkel"))
+                            {
+                                <li>@Html.ActionLink("Otorisasi", "Otorisasi", "CetakSurat")</li>
+
+                            }
+                            <li>@Html.ActionLink("Cetak Surat Emiten", "History", "CetakSurat")</li>
+                        </ul>
+                    </li>
+                   
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("User Management", "Index", "UserManagement")</li>
+                    }
+
+                </ul>
+            }
+
+            @Html.Partial("_LoginPartial")
+
+        </div>
+    </div>
+</div>
