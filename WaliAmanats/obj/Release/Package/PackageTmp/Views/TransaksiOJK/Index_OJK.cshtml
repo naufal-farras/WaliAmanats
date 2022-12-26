@@ -11,14 +11,14 @@
 <div class="form-group row">
     <label class="col-sm-2 control-label" for="tahun">Tanggal Awal</label>
     <div class="col-sm-3">
-        <input type="text" class="form-control" id="startDate" placeholder="Pilih Tanggal Awal" autocomplete="off" />
+        <input type="date" class="form-control" id="startDate" placeholder="Pilih Tanggal Awal" autocomplete="off" />
     </div>
 
     <label class="col-sm-2 control-label" for="tahun">Tahun Akhir</label>
     <div class="col-sm-3">
-        <input type="text" class="form-control" id="endDate" placeholder="Pilih Tanggal Akhir" autocomplete="off" />
+        <input type="date" class="form-control" id="endDate" placeholder="Pilih Tanggal Akhir" autocomplete="off" />
     </div>
-    
+
 
     @*<label class="col-sm-1 control-label" for="periode">Periode</label>
         <div class="col-sm-5">
@@ -38,9 +38,17 @@
     <div class="col-sm-3">
         <select required Id="User" data-placement="choose" class="form-control"></select>
     </div>
-</div>
 
-<input class="btn btn-primary" type="submit" id="Cetak" value="Cetak Laporan">
+</div>
+<div class="form-group row">
+    <label class="col-sm-2 control-label" for="Pimkel">Pilih Emisi</label>
+    <div class="col-sm-3">
+        <select required Id="Emisi" data-placement="choose" class="form-control"></select>
+    </div>
+    <input class="btn btn-primary" type="submit" id="Cetak" value="Cetak Laporan">
+</div>
+ 
+
 
 
 <link href="~/Content/jquery-ui.css" rel="stylesheet" />
@@ -50,20 +58,25 @@
     <script>
         $(document).ready(function () {
             GetAturan();
+            GetEmisi();
             GetUser();
 
-            $('#startDate').datepicker({
-                showAnim: "slide"
-            });
+            //$('#startDate').datepicker({
+            //    showAnim: "slide"
+            //});
 
-            $('#endDate').datepicker({
-                showAnim: "slide"
-            });
+            //$('#endDate').datepicker({
+            //    showAnim: "slide"
+            //});
             $("#Cetak").click(function () {
                 var startDate = $('#startDate').val();;
                 var endDate = $("#endDate").val();
+
+                console.log({ startDate, endDate })
                 var Aturan = $("#Aturan").val();
                 var User = $("#User").val();
+                var Emisi = $("#Emisi").val();
+
 
                 if (startDate == '' || endDate == '') {
                     alert("Form tidak boleh kosong");
@@ -72,7 +85,7 @@
                 }
                 else {
                     debugger;
-                    var url = '@Url.Action("LaporanOJKalt", "TransaksiOJK")?startDate=' + startDate + '&endDate=' + endDate + '&Aturan=' + Aturan + '&User=' + User;
+                    var url = '@Url.Action("LaporanOJKalt", "TransaksiOJK")?startDate=' + startDate + '&endDate=' + endDate + '&Aturan=' + Aturan + '&User=' + User + '&IdProduk=' + Emisi;
                     document.location = url;
                 }
 
@@ -90,6 +103,24 @@
             $("<option></option>").val('').text('Pilih Aturan OJK').appendTo(Aturan);
             $.each(result, function (i, value) {
                 $("<option></option>").val(value.Id).text(value.Aturan).appendTo(Aturan);
+            });
+        })
+        }
+
+          function GetEmisi() {
+            $.ajax({
+                "url": "@Url.Action("GetProduk", "TransaksiOJK")",
+                "type": "Get",
+                "datatype": "json"
+        }).then((result) => {
+            var Emisi = $("#Emisi");
+            Emisi.html('');
+            $("<option></option>").val('0').text('--Pilih Emisi--').appendTo(Emisi);
+            $("<option></option>").val('0').text('Semua Emisi').appendTo(Emisi);
+
+            $.each(result, function (i, value) {
+                console.log(value);
+                $("<option></option>").val(value.Id).text(value.Nama).appendTo(Emisi);
             });
         })
         }

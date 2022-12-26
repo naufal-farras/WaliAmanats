@@ -162,6 +162,7 @@ namespace WaliAmanats.Controllers.Transactions
             //_context.Entry(Lap).State = EntityState.Modified;
             _context.Entry(trsCetak).State = EntityState.Modified;
             _context.SaveChanges();
+
             var data = _context.TransaksiKejadian
                 .Include(x => x.TransaksiTanggal)
                 .Include(x => x.TransaksiDetail)

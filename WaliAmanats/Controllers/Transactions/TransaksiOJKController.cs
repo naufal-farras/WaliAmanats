@@ -58,7 +58,11 @@ namespace WaliAmanats.Controllers.Transactions
                           }).ToList();
             return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }
-
+        public ActionResult GetProduk()
+        {
+            var result = _context.Produk.ToList();
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
         public ActionResult GetById(Int64 Id, DateTime StartDate, DateTime EndDate)
         {
             var result = (from tgl in _context.TransaksiTanggal.ToList()
@@ -164,17 +168,17 @@ namespace WaliAmanats.Controllers.Transactions
             return View();
         }
 
-        public void LaporanOJKAlt(string startDate, string endDate, Int64 Aturan, string User)
+        public void LaporanOJKAlt(DateTime startDate, DateTime endDate, Int64 Aturan, string User, int IdProduk)
         {
-            DateTime sDate;
-            DateTime eDates;
-            DateTime.TryParse(startDate, out sDate);
-            DateTime.TryParse(endDate, out eDates);
-            var eDate = eDates.AddHours(24).AddMinutes(59).AddSeconds(59);
+            DateTime sDate = startDate;
+            DateTime eDates = endDate;
+            //DateTime.TryParse(startDate, out sDate);
+            //DateTime.TryParse(endDate, out eDates);
+            //var eDate = eDates.AddHours(24).AddMinutes(59).AddSeconds(59);
 
             var tahun = sDate.Year;
             var bulan = sDate.ToString("MMMM", new System.Globalization.CultureInfo("id-ID"));
-            var bulan2 = eDate.ToString("MMMM", new System.Globalization.CultureInfo("id-ID"));
+            var bulan2 = eDates.ToString("MMMM", new System.Globalization.CultureInfo("id-ID"));
             //backup
             //"select " +
             //    "tt.Detail_Id as Detail_Id," +
@@ -199,14 +203,32 @@ namespace WaliAmanats.Controllers.Transactions
             //    "and tl.Produk_Id != '1' " +
             //    "and tl.Produk_Id != '4' " +
             //    "order by p.Nama",
+            List<OjkVM> result = new List<OjkVM>();
 
-            var result = _con.Query<OjkVM>(
-               "EXEC SP_GetLaporanOjk @startDate, @endDate",
-                new
-                {
-                    startDate = startDate,
-                    endDate = endDate
-                }).ToList();
+            if (IdProduk == 0) // pilih all
+            {
+                 result = _con.Query<OjkVM>(
+                                 "EXEC SP_GetLaporanOjkAll @startDate, @endDate",
+                                  new
+                                  {
+                                      startDate = startDate,
+                                      endDate = endDate
+                                  }).ToList();
+            }
+            else
+            {
+                 result = _con.Query<OjkVM>(
+                 "EXEC SP_GetLaporanOjk @startDate, @endDate, @IdProduk",
+                  new
+                  {
+                      startDate = startDate,
+                      endDate = endDate,
+                      IdProduk = IdProduk
+
+
+                  }).ToList();
+            }
+
 
             var aturan = _context.AturanOJK.Single(x => x.Id == Aturan);
             var alamatOJK = _context.OJK.FirstOrDefault();
@@ -214,7 +236,7 @@ namespace WaliAmanats.Controllers.Transactions
 
             string _path = Path.Combine(Server.MapPath("~/Content/Template"), "OJK6"); //mengambil path lokasi file
             WordDocument document = new WordDocument(_path, FormatType.Docx); // membaca isi file 
-            if (eDate.Month <= 6)
+            if (eDates.Month <= 6)
             {
                 document.Replace("%%Tipe2%%", "TENGAH TAHUNAN", false, true);
                 document.Replace("%%Tipe1%%", "Tengah Tahunan", false, true);
@@ -586,7 +608,6 @@ namespace WaliAmanats.Controllers.Transactions
                 cell_c.AddParagraph().AppendText("-").CharacterFormat.FontSize = 9;
                 cell_c.CellFormat.VerticalAlignment = VerticalAlignment.Middle;
             }
-
             document.Save("LaporanOJK.doc", FormatType.Word2007, HttpContext.ApplicationInstance.Response, HttpContentDisposition.Attachment);
             document.Close();
 
