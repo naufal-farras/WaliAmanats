@@ -481,6 +481,7 @@
     <Compile Include="ViewModel\ViewJoinVM.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.css" />
     <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.min.css" />
     <Content Include="Content\AdminLTE\bower\bootstrap-datepicker\bootstrap-datepicker.standalone.css" />

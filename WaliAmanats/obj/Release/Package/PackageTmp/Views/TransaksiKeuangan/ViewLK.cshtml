@@ -94,16 +94,22 @@
                 <span class="pull-right" style="margin:5px;"></span>
                 @foreach (var items in Model)
                 {
-                   
-                    if (items.Status == false && items.StatusCetakId == 5)
+
+
+                    if (items.Status == false && items.StatusCetakId==2 && items.Path == null)
                     {
-                        <a class="btn btn-primary" id="" onclick="Done();">Done</a>
                         <a class="btn btn-success" onclick="AddModalCore()" data-target="#ModalCore" data-toggle="modal">Upload Bukti</a>
+
                     }
-                    else
+                    else if (items.Status == false && items.Path != null)
                     {
                         <span class="pull-right" style="margin:5px;"></span>
+
+                        <a class="btn btn-primary" id="" onclick="Done();">Done</a>
+
                     }
+                    
+
 
                     <span class="pull-right" style="margin:5px;"></span>
 
